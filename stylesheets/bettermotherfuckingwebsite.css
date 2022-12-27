@@ -13,9 +13,9 @@ body {
   color: #fff;
 }
 h1,h2,h3{ line-height:1.2; }
-h1 { color: chocolate; }
-h2 { color: sandybrown; }
-h3 { color: tan; }
-h4 { color: wheat; }
+h1 { color: blueviolet; }
+h2 { color:  rebeccapurple; }
+h3 { color: steelblue; }
+h4 { color: thistle; }
 h5, h6 { color: cornsilk; }
-a { color: aquamarine; }
+a { color: mediumaquamarine; }
