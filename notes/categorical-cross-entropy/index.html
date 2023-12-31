@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Categorical Cross Entropy | Ali Osman Berk Şapcı</title>
+	<link rel="canonical" href="https://asapci.xyz/">
+	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1 id="tag_Categorical Cross Entropy">Categorical Cross Entropy</h1></header>
+<hr>
+<article>
+<p>Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.</p>
+<p>Let $K$ be the number of categories.</p>
+<p>$$
+L = - \sum_{j=1}^K t_j \hat{y_i}
+$$</p>
+<p>Using chain rule we can write the partial derivative as follows;</p>
+<p>$$
+\frac{\delta L}{z_i} = \sum_j \frac{\delta L}{\hat{y_j}} \frac{\delta \hat{y_j}}{\delta z_i}.
+$$</p>
+<p>We can substitute $\frac{\delta L}{\delta \hat{y_j}}$;</p>
+<p>$$
+\frac{\delta L}{\delta \hat{y_j}} = \frac{\delta \left (- \sum_{j=1}^K t_j \hat{y_i} \right)}{\delta \hat{y_j}} = - t_i \frac{1}{\hat{y_j}}.
+$$</p>
+<p>Then $\frac{\delta L}{z_i}$ becomes;</p>
+<p>$$
+\frac{\delta L}{z_i} = \sum_j - t_i \frac{1}{\hat{y_j}} \frac{\delta \hat{y_j}}{\delta z_i}
+$$</p>
+<p>We can also substitute $\frac{\hat{y_j}}{z_i}$ for $i = j$ and $i \neq j$ separately,</p>
+<p>$$
+\frac{\delta \hat{y_j}}{\delta z_i} = \frac{\delta \left (\frac{e^{z_j}}{\sum_{k=1}^K e^{z_k}} \right )}{\delta z_i}.
+$$</p>
+<p>If $i=j$ it becomes;</p>
+<p>$$
+\frac{\delta \hat{y_i}}{\delta z_i}
+= \frac{\delta \left (\frac{e^{z_i}}{\sum_{k=1}^K e^{z_k}} \right )}{\delta z_i}
+= \frac{e^{z_i}\sum_{\substack{k=1 \ k \neq i}}^K e^{z_k}}{\left (\sum_{k=1}^K e^{z_k} \right )^2}
+= \frac{\sum_{\substack{k=1 \ k \neq i}}^K e^{z_k}}{\left (\sum_{k=1}^K e^{z_k} \right )} \frac{e^{z_i}}{\left (\sum_{k=1}^K e^{z_k} \right )}
+= \left ( 1- \frac{e^{z_i}}{\left (\sum_{k=1}^K e^{z_k} \right )} \right ) \frac{e^{z_i}}{\left (\sum_{k=1}^K e^{z_k} \right )},
+$$</p>
+<p>$$
+\frac{\delta \hat{y_i}}{\delta z_i} = \hat{y_i} (1-\hat{y_i}).
+$$</p>
+<p>Otherwise if $i \neq j$ it becomes;</p>
+<p>$$
+\frac{\delta \hat{y_i}}{\delta z_i}
+= \frac{\delta \left (\frac{e^{z_i}}{\sum_{k=1}^K e^{z_k}} \right )}{\delta z_i}
+=  - \frac{e^{z_j} e^{z_i}}{\left ( \sum_{k=1}^K e^{z_k} \right )^2}
+= - \hat{y_j} \hat{y_i}.
+$$</p>
+<p>Going back to initial statement and substituting $\frac{\delta \hat{y_j}}{\delta z_i}$ gives;</p>
+<p>$$
+\frac{\delta L}{z_i} = \frac{-t_i}{\hat{y_i}}\frac{\delta \hat{y_i}}{\delta z_i} + \sum_{\substack{j=1 \ j \neq i}}^K \frac{-t_j}{\hat{y_j}} \frac{\delta \hat{y_j}}{\delta z_i}
+$$</p>
+<p>$$
+\frac{\delta L}{z_i} = \frac{-t_i}{\hat{y_i}}\hat{y_i}(1-\hat{y_i}) + \sum_{\substack{j=1 \ j \neq i}}^K \left ( \frac{-t_j}{\hat{y_j}} \right ) (-\hat{y_j} \hat{y_i})
+$$</p>
+<p>$$
+\frac{\delta L}{z_i} = - t_i + t_i \hat{y_i} + \sum_{\substack{j=1 \ j \neq i}}^K t_j \hat{y_i}
+$$</p>
+<p>Since sum of the targets $\sum_{k=1}^K t_k = 1$, we finally end up with</p>
+<p>$$
+\frac{\delta L}{z_i} = t_i + \sum_{j=1}^K t_j \hat{y_i} = \hat{y_i} - t_i.
+$$</p>
+
+<div id="nextprev"><a href="/notes/percolation-theory/"><div id="nextart">Next:<br>Percolation Theory in Network Science</div></a>
+</div>
+<br clear=both>
+</article>
+<hr>
+</main>
+
+<footer>
+	<a href="https://asapci.xyz/">https://asapci.xyz/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</body>
+</html>

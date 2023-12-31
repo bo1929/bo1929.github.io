@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Percolation Theory in Network Science | Ali Osman Berk Şapcı</title>
+	<link rel="canonical" href="https://asapci.xyz/">
+	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Consider a lattice, where we place pebbles with probability $p$ at each intersection.
+Neighboring pebbles are considered to be connected, forming clusters of size two or more.
+We are mainly interested in sizes of these clusters.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1 id="tag_Percolation Theory in Network Science">Percolation Theory in Network Science</h1></header>
+<hr>
+<article>
+<p>Consider a lattice, where we place pebbles with probability $p$ at each intersection.
+Neighboring pebbles are considered to be connected, forming clusters of size two or more.
+We are mainly interested in sizes of these clusters.</p>
+<p><strong>Key questions:</strong></p>
+<ul>
+<li>What is the expected size of the largest cluster?</li>
+<li>What is the average cluster size?</li>
+<li>What is the mean distance between two nodes the belong the same cluster?</li>
+<li>What is the probability that a randomly chosen node belongs to the largest cluster?</li>
+</ul>
+<p>As $p$ increases, clusters obviously become larger and average cluster size gets much bigger.
+If $p$ approaches a critical value, $p_c$ small clusters grow and coalesce, leading to the emergence of a huge cluster at $p_c$.
+This is not a gradual process, rather it is kind of a phase transition occurring at $p_c$</p>
+<h2 id="average-cluster-size-langle-s-rangle">Average Cluster Size: $\langle s \rangle$</h2>
+<p>$$
+\langle s \rangle \sim {\mid p-p_c \mid}^{-\gamma_p}
+$$</p>
+<p>Average cluster size diverges as we approach $p_c$.</p>
+<h2 id="order-parameter-p_infty">Order Parameter: $P_\infty$</h2>
+<p>The probability $P_\infty$ that a randomly chosen pebble belongs to the largest cluster, for $p&gt;p_c$ is given by;</p>
+<p>$$
+P_\infty \sim (p-p_c)^{\beta_p}.
+$$</p>
+<p>As $p$ decreases towards $p_c$ the $P_\infty$ drops zero by definition.</p>
+<h2 id="correlation-length-xi">Correlation Length: $\xi$</h2>
+<p>The mean distance between two pebbles that belong to the same cluster follows</p>
+<p>$$
+\xi \sim {\mid p-p_c \mid}^{-\nu}.
+$$</p>
+<h2 id="critical-exponents-gamma_p-beta_p-nu">Critical Exponents: $\gamma_p, \beta_p, \nu$</h2>
+<p>The exponents $\gamma_p, \beta_p, \nu$ are called <em>critical exponents</em>.
+They characterize system&rsquo;s behavior near critical point $p_c$.
+Percolation theory predicts critical exponents are <em>universal</em>, they are independent of the nature of the lattice (e.g. square or triangle) or the precise value of $p_c$.
+They only depend on the dimensionality of the lattice, in fact for dimension $d&gt;6$, critical exponents stay constant.</p>
+<h2 id="percolation-and-network-breakdown-as-inverse-percolation">Percolation and Network Breakdown as Inverse Percolation</h2>
+<p>We can further define $f=1-p$, as removing a pebble/node from the lattice and investigate how network is damaged and what kind of dynamics govern network breakdown process.</p>
+<figure ><img src="/images/network-percolation.jpg"  />
+    <figcaption>
+      <h4>Fig. 1 - Percolation on a grid.</h4>
+    </figcaption>
+</figure>
+
+<figure ><img src="/images/network-inverse-percolation.jpg"  />
+    <figcaption>
+      <h4>Fig. 2 - Inverse percolation.</h4>
+    </figcaption>
+</figure>
+
+<p>See <a href="http://fafnir.phyast.pitt.edu/myjava/perc/percTest.html">An Introduction to Percolation</a> for more details.</p>
+
+<div id="nextprev">
+    <a href="/notes/categorical-cross-entropy/"><div id="prevart">Previous:<br>Categorical Cross Entropy</div></a>
+</div>
+<br clear=both>
+</article>
+<hr>
+</main>
+
+<footer>
+	<a href="https://asapci.xyz/">https://asapci.xyz/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</body>
+</html>
