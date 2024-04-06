@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CONSULT for Contamination Removal - Ali Osman Berk Şapcı</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Ali Osman Berk Şapcı" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Ali Osman Berk Şapcı</div>
+					<div class="logo__tagline">Personal website for news, notes, and maybe bl*g posts.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">CONSULT for Contamination Removal</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset. Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.</p>
+<h2 id="building-consult">Building CONSULT</h2>
+<p>To compile, go to the directory where core programs for map construction and query search are located and run the below commands.</p>
+<ul>
+<li>
+<p>You can use <code>make</code> to compile CONSULT.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make all <span style="color:#75715e"># for all components of CONSULT</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span>make minimize <span style="color:#75715e"># for the minimization script</span>
+</span></span><span style="display:flex;"><span>make map <span style="color:#75715e"># for consult_map to construct a library</span>
+</span></span><span style="display:flex;"><span>make search <span style="color:#75715e"># for consult_search to query</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Alternatively, you can run <code>g++</code> directly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g++ minimize.cpp -std<span style="color:#f92672">=</span>c++11 -o minimize <span style="color:#75715e"># for the minimization script</span>
+</span></span><span style="display:flex;"><span>g++ consult_map.cpp -std<span style="color:#f92672">=</span>c++11 -O3 -o consult_map  <span style="color:#75715e"># for consult_map to construct a library</span>
+</span></span><span style="display:flex;"><span>g++ consult_search.cpp -std<span style="color:#f92672">=</span>c++11 -fopenmp -O3 -o consult_search <span style="color:#75715e"># for consult_search to query</span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="constructing-a-consult-reference-library">Constructing a CONSULT reference library</h2>
+<ul>
+<li>Our custom CONSULT libraries constructed using different genomic reference sets:
+<ul>
+<li><a href="https://ter-trees.ucsd.edu/data/consult/v1.0.0/all_nbrhood_kmers_k32_p3l2clmn7_K15-map2-171_gtdb.tar.gz">GTDB</a></li>
+<li><a href="https://ter-trees.ucsd.edu/data/consult/v1.0.0/all_nbrhood_kmers_k32_p3l2clmn7_K15-map2-171_ToL.tar.gz">TOL</a></li>
+<li><a href="https://ter-trees.ucsd.edu/data/consult/v1.0.0/all_nbrhood_kmers_k32_p3l2clmn7_K15-map2-171_kraken.tar.gz">Bacterial/Archaeal Kraken</a></li>
+<li><a href="https://ter-trees.ucsd.edu/data/consult/v1.0.0/consult_mito_k32_p3l2clmn7_K15_tag2_v171.tar.gz">Mitochondrial CONSULT database</a></li>
+<li><a href="https://ter-trees.ucsd.edu/data/consult/v1.0.0/consult_plastid_k32_p3l2clmn7_K15_tag2_v171.tar.gz">Plastid CONSULT database</a></li>
+</ul>
+</li>
+<li>Alternatively our custom CONSULT libraries can be downloaded from drive:
+<ul>
+<li><a href="https://drive.google.com/file/d/1MQJAXmZiTurumlZpvNoMLB0tKWGM_VE4/view?usp=sharing">GTDB</a></li>
+<li><a href="https://drive.google.com/file/d/1sA9HFjWoU2jZ2vjd98pHVDEFRzOKMImk/view?usp=sharing">TOL</a></li>
+<li><a href="https://drive.google.com/file/d/1jeZB6b6aXl06BpPPsjM8oQA4xingJ1Dq/view?usp=sharing">Bacterial/Archaeal Kraken</a></li>
+<li><a href="https://drive.google.com/file/d/1mFD3dYFrJKqUkWlkRHbrQt-6eG-_K5vI/view?usp=sharing">Mitochondrial CONSULT database</a></li>
+</ul>
+</li>
+</ul>
+<p>To construct a reference library, go to the place where CONSULT is compiled and use the following command to run <code>consult_map</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./consult_map -i /path/to/file --output-library-dir /path/to/directory
+</span></span></code></pre></div><p>Alternatively, one can use long command-line arguments:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./consult_map --input-fasta-file /path/to/file --output-library-dir /path/to/directory
+</span></span></code></pre></div><p><strong>Description of command-line arguments for <code>consult_map</code>:</strong></p>
+<ul>
+<li>
+<p><code>-i</code> or <code>--input-fasta-file</code>: input <code>.fasta</code> file of list of <em>k</em>-mers to construct library.</p>
+</li>
+<li>
+<p><code>-o</code> or <code>--output-library-dir</code>: output path to the directory that will store the CONSULT library.</p>
+</li>
+<li>
+<p><code>-t</code> or <code>--tag-size</code>: (<em>optional</em>) number of bits to be used as tag, default value is 2.</p>
+</li>
+<li>
+<p><code>-p</code> or <code>--distance-threshold</code>: (<em>optional</em>) Hamming distance threshold value for a match to be counted, default value is 3.</p>
+</li>
+<li>
+<p><code>-h</code> or <code>--number-of-postitions</code>: (<em>optional</em>) number of randomly positioned bits to compute LSH.</p>
+</li>
+<li>
+<p><code>-l</code> or <code>--number-of-tables</code>: (<em>optional</em>) number of tables, i.e., number of hash functions.</p>
+</li>
+<li>
+<p><code>-b</code> or <code>--column-per-tag</code>: (<em>optional</em>) number of columns per each tag partition, i.e., number of <em>k</em>-mers each encoding can map to.</p>
+</li>
+</ul>
+<p>Default parameter values of optional arguments are determined by a heuristic using the genome size given with the <code>-i</code> argument.</p>
+<h2 id="searching-queries-against-a-reference-library">Searching Queries against a Reference Library</h2>
+<p>To query a set of sequences against a reference, go to the directory where executables are and execute the <code>consult_search</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ./consult_search -i /path/to/directory -q /path/to/queries -o /path/to/directory
+</span></span></code></pre></div><p>Alternatively, one can use long command-line arguments:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ./consult_search --input-library-dir /path/to/directory --query-path /path/to/queries --output-library-dir /path/to/directory
+</span></span></code></pre></div><p><strong>Description of command-line arguments for <code>consult_search</code>:</strong></p>
+<ul>
+<li>
+<p><code>-i</code> or <code>input-library-dir</code>: directory of the CONSULT library that will be used as the reference database.</p>
+</li>
+<li>
+<p><code>-q</code> or <code>--query-path</code>: the path to the query file, or to the directory containing query files.</p>
+</li>
+<li>
+<p><code>-o</code> or <code>output-result-dir</code>: <em>(optional)</em> directory in which classified reads, unclassified reads and matched <em>k</em>-mer counts will be saved. Default is the current working directory.</p>
+</li>
+<li>
+<p><code>-c</code> or <code>--number-of-matches</code>: <em>(optional)</em> the minimum number of matched <em>k</em>-mers that is required to call sequencing read classified.
+For instance, if at least one <em>k</em>-mer match is enough to classify a read (default setting mentioned in a paper), <code>-c</code> should be set to 1 in the software.
+If at least two <em>k</em>-mer matches are required to call the entire read a match, <code>-c</code> should be set to 2.
+Default value is 1.</p>
+</li>
+<li>
+<p><code>--thread-count</code>: <em>(optional)</em> number of threads to be used, default value is 1.</p>
+</li>
+<li>
+<p><code>--unclassified-out</code>: to output reads that are unclassified in a file with a name query file name prefixed with <em>&ldquo;unclassified-seq_&rdquo;</em>.
+This is given by default.</p>
+</li>
+<li>
+<p><code>--classified-out</code>: to output reads that are classified in a file with a name query file name prefixed with <em>&ldquo;classified-seq_&rdquo;</em>.</p>
+</li>
+</ul>
+<h3 id="input">Input</h3>
+<p>The files containing query sequences to be classified should be located in <code>/path/to/queries</code> and be in a FASTQ format (one uncompressed <code>.fq</code>/<code>.fastq</code> file per each sample).
+The path <code>/path/to/queries</code> can be a directory or a <code>.fastq</code>.
+If it is a directory, each query file in the directory will be queried against the library, and separate outputs will be generated for each.
+FASTA format is not supported at the moment.
+Quality factors are not being utilized by CONSULT but FASTQ labels will be used to identify the sequences in the output file.</p>
+<h3 id="output">Output</h3>
+<p>CONSULT is designed for filtering out contaminants from sequencing reads.
+So, its default output is a FASTQ file that contains <strong>unclassified</strong> reads and their corresponding sequence IDs, obtained from the input FASTQ headers.
+Files are stored in the directory given in <code>--output-library-dir</code> (or <code>-o</code>), and the default is where software is run.
+Every sample retains its original file name prefixed with <em>&ldquo;unclassified-seq_&rdquo;</em>.
+CONSULT also is able to generate a file that contains the <strong>classified reads</strong>, in the same format with <strong>unclassified</strong> described above, and the output file name will be prefixed with <em>&ldquo;classified-seq_&rdquo;</em>.
+To make CONSULT behave this way, give the <code>--classified-out</code> flag.</p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/metagenomics/" rel="tag">metagenomics</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/contamination-removal/" rel="tag">contamination removal</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/locality-sensitive-hashing/" rel="tag">locality-sensitive-hashing</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Ali Osman Berk Şapcı.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KRANK has been accepted in RECOMB 2024 - Ali Osman Berk Şapcı</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Ali Osman Berk Şapcı" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Ali Osman Berk Şapcı</div>
+					<div class="logo__tagline">Personal website for news, notes, and maybe bl*g posts.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">KRANK has been accepted in RECOMB 2024</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>Our paper titled &ldquo;Memory-bound <em>k</em>-mer selection for large evolutionary diverse reference libraries&rdquo; has been accepted to RECOMB 2024.
+Hopefully, I&rsquo;ll be in Cambridge (April 29 - May 2, 2024).</p>
+<p>We introduced a tool, called KRANK, to sample <em>k</em>-mers from a large set of reference genomes for taxonomic identification or profiling purposes.
+The abstract of the paper is below.</p>
+<blockquote>
+<p>Using long k-mers to find sequence matches is increasingly used in many bioinformatic applications, including metagenomic sequence classification. The accuracy of these downstream applications relies on the density of the reference databases, which, luckily, are rapidly growing. While the increased density provides hope for dramatic improvements in accuracy, scalability is a concern. The k-mers are kept in the memory during the query time, and saving all k-mers of these ever-expanding databases is fast becoming impractical. Several strategies for subsampling k-mers have been proposed, including minimizers and finding taxon-specific k-mers.
+However, we contend that these strategies are inadequate, especially when reference sets are taxonomically imbalanced, as are most microbial libraries. In this paper, we specifically ask the question: Given limited memory, what is the best strategy to select a subset of k-mers from an ultra-large dataset to include in a library such that the classification of reads suffers the least? We make an attempt to make this goal more formal and show a set of experiments demonstrating the limitations of existing approaches, especially for novel and poorly sampled groups. We propose a library construction algorithm called KRANK (k-mer RANKer) that combines several components, including a hierarchical selection strategy with adaptive size restrictions and a min-max coverage strategy. We implement KRANK in highly optimized code and combine it with the locality-sensitive-hashing classifier CONSULT-II. Our method is able to reduce the memory consumption from roughly 144Gb down to 6, 12, or 24Gb, with only a 3.8%, 2.5%, or 0.5% loss in F1 score. We show in extensive analyses that KRANK outperforms alternatives in both taxonomic classification and taxonomic profiling, using reasonable memory sizes.</p>
+</blockquote>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Ali Osman Berk Şapcı.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

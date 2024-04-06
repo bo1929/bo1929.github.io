@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>basty for Behavioral Analysis of Sleep in *Drosophila melanogaster* - Ali Osman Berk Şapcı</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Ali Osman Berk Şapcı" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Ali Osman Berk Şapcı</div>
+					<div class="logo__tagline">Personal website for news, notes, and maybe bl*g posts.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.</p>
+<p>The behavior mapping task consists of two essential steps:</p>
+<ol>
+<li>computing meaningful representations capturing the interesting characteristics and dynamics of the,</li>
+<li>analyzing and interpreting the behavioral representations to explore and categorize animal behaviors.</li>
+</ol>
+<p>A recent trend for achieving the first step is applying manifold-based dimensionality reduction algorithms to high-dimensional time series of features.
+Many methods, such as MotionMapper and B-SOID, embeds different behavior experiments and many animals in a single joint behavioral space.
+However, we observed that animal behavior is a highly-unstructured phenomenon with a great variance among experiments.
+Hence, relying on manifold-based dimensionality reduction algorithms such as UMAP and t-SNE too much and expecting them to create a joint behavioral space describing all the dynamics could easily end up in having hard-to-interpret and mixed-up behavioral representations.</p>
+<p>Our preliminary analysis revealed that some behavioral repertoires exhibited during different experiments tend might or might not have similarities.
+It is often the case that behavior is exhibited only in a subgroup of experiments.
+Using this observation, we approach the problem based on the idea of providing different &ldquo;views&rdquo; on the behavioral repertoire that we want to map, guided by annotated experiments and predefined behavioral categories.
+More explicitly, we generate a semi-supervised behavioral embedding for each annotation experiment in our data using an extension of UMAP.
+Each embedding can be considered a view of the experiment we want to analyze, guided by the behavioral repertoire of the corresponding annotated experiment.
+This approach is called semi-supervised pair embeddings.</p>
+<p>So, what is the benefit of semi-supervised pair embeddings over straightforwardly generating a joint behavioral space?
+Especially when the behavioral repertoires of the pair of experiments are similar, the provided “view” turns out to be an accurate, easy-to-interpret low-dimensional representation of the behavioral repertoire of the unannotated experiment.
+When the behavioral repertoire and/or feature distribution are dissimilar<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> the resulting embedding may not provide useful information about the unannotated experiment, but an advantage of this approach is that the other pair embeddings do not get distorted by poor matches, providing robustness to noise and behavioral variations.</p>
+<figure><img src="/images/basty-pipeline.png"/><figcaption>
+            <h4>Illustration of the main stages of the pipeline. The output of the pipeline is a distribution of scores for behavioral categories, per video frame.</h4>
+        </figcaption>
+</figure>
+
+<p>Then, the question becomes the following.
+How one can combine and interpret these different views, and end up with behavior mapping?
+For instance, if one has $N$ different annotated experiments, the semi-supervised embeddings approach would generate $N$ different embeddings.
+To this end, we designed a nearest neighbor based analysis scheme to assign behavioral similarity scores to each time point.
+Here, the main idea is computing a behavior mapping by incorporating uncertainties of the views and dissimilarities between repertoires.
+So, using the categorical distributions of nearest neighbors&rsquo; annotations and local distances in the semi-supervised pair embedding space, our method tune the contributions of each annotated experiment.
+Moreover, our method considers the imbalanced distribution of behavior occurrences and scarcity of particular behaviors.
+Computational experiments show that <strong>basty</strong> attains capturing rarely exhibited behaviors and even is able to detect and discover unseen unannotated behavioral categories using behavioral scores.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Worse than that, it might be the case where tracking of the annotated experiment is erroneous.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/computational-ethology/" rel="tag">computational ethology</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/machine-learning/" rel="tag">machine learning</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/time-series/" rel="tag">time series</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/semi-supervised-learning/" rel="tag">semi-supervised learning</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/dimensionality-reduction/" rel="tag">dimensionality reduction</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Ali Osman Berk Şapcı.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

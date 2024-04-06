@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>metagenomics on Ali Osman Berk Şapcı</title>
+    <link>https://bo1929.github.io/tags/metagenomics/</link>
+    <description>Recent content in metagenomics on Ali Osman Berk Şapcı</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bo1929.github.io/tags/metagenomics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CONSULT for Contamination Removal</title>
+      <link>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</guid>
+      <description>&lt;p&gt;Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset. Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

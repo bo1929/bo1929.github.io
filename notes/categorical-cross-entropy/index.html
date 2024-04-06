@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Categorical Cross Entropy - Ali Osman Berk Şapcı</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Ali Osman Berk Şapcı" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Ali Osman Berk Şapcı</div>
+					<div class="logo__tagline">Personal website for news, notes, and maybe bl*g posts.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Categorical Cross Entropy</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.</p>
+<p>Let $K$ be the number of categories.</p>
+<p>$$
+L = - \sum_{j=1}^K t_j \hat{y_i}
+$$</p>
+<p>Using chain rule we can write the partial derivative as follows;</p>
+<p>$$
+\frac{\delta L}{z_i} = \sum_j \frac{\delta L}{\hat{y_j}} \frac{\delta \hat{y_j}}{\delta z_i}.
+$$</p>
+<p>We can substitute $\frac{\delta L}{\delta \hat{y_j}}$;</p>
+<p>$$
+\frac{\delta L}{\delta \hat{y_j}} = \frac{\delta \left (- \sum_{j=1}^K t_j \hat{y_i} \right)}{\delta \hat{y_j}} = - t_i \frac{1}{\hat{y_j}}.
+$$</p>
+<p>Then $\frac{\delta L}{z_i}$ becomes;</p>
+<p>$$
+\frac{\delta L}{z_i} = \sum_j - t_i \frac{1}{\hat{y_j}} \frac{\delta \hat{y_j}}{\delta z_i}
+$$</p>
+<p>We can also substitute $\frac{\hat{y_j}}{z_i}$ for $i = j$ and $i \neq j$ separately,</p>
+<p>$$
+\frac{\delta \hat{y_j}}{\delta z_i} = \frac{\delta \left (\frac{e^{z_j}}{\sum_{k=1}^K e^{z_k}} \right )}{\delta z_i}.
+$$</p>
+<p>If $i=j$ it becomes;</p>
+<p>$$
+\frac{\delta \hat{y_i}}{\delta z_i}
+= \frac{\delta \left (\frac{e^{z_i}}{\sum_{k=1}^K e^{z_k}} \right )}{\delta z_i}
+= \frac{e^{z_i}\sum_{\substack{k=1 \ k \neq i}}^K e^{z_k}}{\left (\sum_{k=1}^K e^{z_k} \right )^2}
+= \frac{\sum_{\substack{k=1 \ k \neq i}}^K e^{z_k}}{\left (\sum_{k=1}^K e^{z_k} \right )} \frac{e^{z_i}}{\left (\sum_{k=1}^K e^{z_k} \right )}
+= \left ( 1- \frac{e^{z_i}}{\left (\sum_{k=1}^K e^{z_k} \right )} \right ) \frac{e^{z_i}}{\left (\sum_{k=1}^K e^{z_k} \right )},
+$$</p>
+<p>$$
+\frac{\delta \hat{y_i}}{\delta z_i} = \hat{y_i} (1-\hat{y_i}).
+$$</p>
+<p>Otherwise if $i \neq j$ it becomes;</p>
+<p>$$
+\frac{\delta \hat{y_i}}{\delta z_i}
+= \frac{\delta \left (\frac{e^{z_i}}{\sum_{k=1}^K e^{z_k}} \right )}{\delta z_i}
+=  - \frac{e^{z_j} e^{z_i}}{\left ( \sum_{k=1}^K e^{z_k} \right )^2}
+= - \hat{y_j} \hat{y_i}.
+$$</p>
+<p>Going back to initial statement and substituting $\frac{\delta \hat{y_j}}{\delta z_i}$ gives;</p>
+<p>$$
+\frac{\delta L}{z_i} = \frac{-t_i}{\hat{y_i}}\frac{\delta \hat{y_i}}{\delta z_i} + \sum_{\substack{j=1 \ j \neq i}}^K \frac{-t_j}{\hat{y_j}} \frac{\delta \hat{y_j}}{\delta z_i}
+$$</p>
+<p>$$
+\frac{\delta L}{z_i} = \frac{-t_i}{\hat{y_i}}\hat{y_i}(1-\hat{y_i}) + \sum_{\substack{j=1 \ j \neq i}}^K \left ( \frac{-t_j}{\hat{y_j}} \right ) (-\hat{y_j} \hat{y_i})
+$$</p>
+<p>$$
+\frac{\delta L}{z_i} = - t_i + t_i \hat{y_i} + \sum_{\substack{j=1 \ j \neq i}}^K t_j \hat{y_i}
+$$</p>
+<p>Since sum of the targets $\sum_{k=1}^K t_k = 1$, we finally end up with</p>
+<p>$$
+\frac{\delta L}{z_i} = t_i + \sum_{j=1}^K t_j \hat{y_i} = \hat{y_i} - t_i.
+$$</p>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Ali Osman Berk Şapcı.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

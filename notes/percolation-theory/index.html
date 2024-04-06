@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Percolation Theory in Network Science - Ali Osman Berk Şapcı</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Ali Osman Berk Şapcı" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Ali Osman Berk Şapcı</div>
+					<div class="logo__tagline">Personal website for news, notes, and maybe bl*g posts.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Percolation Theory in Network Science</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>Consider a lattice, where we place pebbles with probability $p$ at each intersection.
+Neighboring pebbles are considered to be connected, forming clusters of size two or more.
+We are mainly interested in sizes of these clusters.</p>
+<p><strong>Key questions:</strong></p>
+<ul>
+<li>What is the expected size of the largest cluster?</li>
+<li>What is the average cluster size?</li>
+<li>What is the mean distance between two nodes the belong the same cluster?</li>
+<li>What is the probability that a randomly chosen node belongs to the largest cluster?</li>
+</ul>
+<p>As $p$ increases, clusters obviously become larger and average cluster size gets much bigger.
+If $p$ approaches a critical value, $p_c$ small clusters grow and coalesce, leading to the emergence of a huge cluster at $p_c$.
+This is not a gradual process, rather it is kind of a phase transition occurring at $p_c$</p>
+<h2 id="average-cluster-size-langle-s-rangle">Average Cluster Size: $\langle s \rangle$</h2>
+<p>$$
+\langle s \rangle \sim {\mid p-p_c \mid}^{-\gamma_p}
+$$</p>
+<p>Average cluster size diverges as we approach $p_c$.</p>
+<h2 id="order-parameter-p_infty">Order Parameter: $P_\infty$</h2>
+<p>The probability $P_\infty$ that a randomly chosen pebble belongs to the largest cluster, for $p&gt;p_c$ is given by;</p>
+<p>$$
+P_\infty \sim (p-p_c)^{\beta_p}.
+$$</p>
+<p>As $p$ decreases towards $p_c$ the $P_\infty$ drops zero by definition.</p>
+<h2 id="correlation-length-xi">Correlation Length: $\xi$</h2>
+<p>The mean distance between two pebbles that belong to the same cluster follows</p>
+<p>$$
+\xi \sim {\mid p-p_c \mid}^{-\nu}.
+$$</p>
+<h2 id="critical-exponents-gamma_p-beta_p-nu">Critical Exponents: $\gamma_p, \beta_p, \nu$</h2>
+<p>The exponents $\gamma_p, \beta_p, \nu$ are called <em>critical exponents</em>.
+They characterize system&rsquo;s behavior near critical point $p_c$.
+Percolation theory predicts critical exponents are <em>universal</em>, they are independent of the nature of the lattice (e.g. square or triangle) or the precise value of $p_c$.
+They only depend on the dimensionality of the lattice, in fact for dimension $d&gt;6$, critical exponents stay constant.</p>
+<h2 id="percolation-and-network-breakdown-as-inverse-percolation">Percolation and Network Breakdown as Inverse Percolation</h2>
+<p>We can further define $f=1-p$, as removing a pebble/node from the lattice and investigate how network is damaged and what kind of dynamics govern network breakdown process.</p>
+<figure ><img src="/images/network-percolation.jpg"  />
+    <figcaption>
+      <h4>Fig. 1 - Percolation on a grid.</h4>
+    </figcaption>
+</figure>
+
+<figure ><img src="/images/network-inverse-percolation.jpg"  />
+    <figcaption>
+      <h4>Fig. 2 - Inverse percolation.</h4>
+    </figcaption>
+</figure>
+
+<p>See <a href="http://fafnir.phyast.pitt.edu/myjava/perc/percTest.html">An Introduction to Percolation</a> for more details.</p>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Ali Osman Berk Şapcı.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

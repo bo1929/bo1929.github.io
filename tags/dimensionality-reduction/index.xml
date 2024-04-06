@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dimensionality reduction on Ali Osman Berk Şapcı</title>
+    <link>https://bo1929.github.io/tags/dimensionality-reduction/</link>
+    <description>Recent content in dimensionality reduction on Ali Osman Berk Şapcı</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bo1929.github.io/tags/dimensionality-reduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*</title>
+      <link>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</guid>
+      <description>&lt;p&gt;Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
