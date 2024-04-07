@@ -1,92 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Ali Osman Berk Şapcı</title>
-    <link>https://bo1929.github.io/tags/</link>
-    <description>Recent content in Tags on Ali Osman Berk Şapcı</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bo1929.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>contamination removal</title>
-      <link>https://bo1929.github.io/tags/contamination-removal/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/contamination-removal/</guid>
-      <description></description>
-    </item>
+	<title>Ali Osman Berk Şapcı</title>
+	<link>https://bo1929.github.io/tags/</link>
+	<description>Recent content in Tags on Ali Osman Berk Şapcı</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate>
     
-    <item>
-      <title>locality-sensitive-hashing</title>
-      <link>https://bo1929.github.io/tags/locality-sensitive-hashing/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/locality-sensitive-hashing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>metagenomics</title>
-      <link>https://bo1929.github.io/tags/metagenomics/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/metagenomics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://bo1929.github.io/tags/tutorial/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>computational ethology</title>
-      <link>https://bo1929.github.io/tags/computational-ethology/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/computational-ethology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dimensionality reduction</title>
-      <link>https://bo1929.github.io/tags/dimensionality-reduction/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/dimensionality-reduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>https://bo1929.github.io/tags/machine-learning/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>semi-supervised learning</title>
-      <link>https://bo1929.github.io/tags/semi-supervised-learning/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/semi-supervised-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>time series</title>
-      <link>https://bo1929.github.io/tags/time-series/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bo1929.github.io/tags/time-series/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+        <atom:link href="https://bo1929.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Curriculum vitae</title>
+		<link>https://bo1929.github.io/curriculum-vitae/</link>
+		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/curriculum-vitae/</guid>
+		<description>Professional services Paper review ISMB 2022 (sub-reviewer) ACML 2022 (sub-reviewer) ACML 2021 (sub-reviewer) Machine Learning, Springer (sub-reviewer) Proceedings of Machine Learning Research (sub-reviewer) Bioinformatics Advances (sub-reviewer) </description>
+	</item>
+	
+	<item>
+		<title>Presentations</title>
+		<link>https://bo1929.github.io/presentations/</link>
+		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/presentations/</guid>
+		<description> RECOMB, 2024, Boston USA RECOMB-CG, 2023, Istanbul Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
+	</item>
+	
+	<item>
+		<title>Relevant links</title>
+		<link>https://bo1929.github.io/links/</link>
+		<pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/links/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Publications</title>
+		<link>https://bo1929.github.io/publications/</link>
+		<pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/publications/</guid>
+		<description>Preprints and accepted papers Sapci, Ali Osman Berk, and Siavash Mirarab. &amp;ldquo;Memory-bound k-mer selection for large evolutionary diverse reference libraries.&amp;rdquo; bioRxiv (2024): 2024-02.
+Keles, Mehmet F., Ali Sapci, Casey Brody, Isabelle Palmer, Christin Le, Oznur Tastan, Sunduz Keles, and Mark N. Wu. &amp;ldquo;Deep Phenotyping of Sleep in Drosophila.&amp;rdquo; bioRxiv (2023).
+Peer-reviewed journal publications -Ali Osman Berk Şapcı, Eleonora Rachtman, Siavash Mirarab, CONSULT-II: accurate taxonomic identification and profiling using locality-sensitive hashing, Bioinformatics, Volume 40, Issue 4, April 2024, btae150, https://doi.</description>
+	</item>
+	
+	<item>
+		<title>KRANK has been accepted in RECOMB 2024</title>
+		<link>https://bo1929.github.io/news/accepted-paper-recomb-2024/</link>
+		<pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/accepted-paper-recomb-2024/</guid>
+		<description>&lt;p&gt;Our paper titled &amp;ldquo;Memory-bound &lt;em&gt;k&lt;/em&gt;-mer selection for large evolutionary diverse reference libraries&amp;rdquo; has been accepted to RECOMB 2024.
+Hopefully, I&amp;rsquo;ll be in Cambridge (April 29 - May 2, 2024).&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>Our paper has been published in Bioinformatics</title>
+		<link>https://bo1929.github.io/news/published-paper-in-bioinformatics-2023/</link>
+		<pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/published-paper-in-bioinformatics-2023/</guid>
+		<description>&lt;p&gt;We published a &lt;a href=&#34;https://doi.org/10.1093/bioinformatics/btad592&#34;&gt;paper&lt;/a&gt; in Bioinformatics.
+In this paper, we developed a new approach for community detection in multi-subject and dynamic networks, in particular networks constructed from scRNA-seq data.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>Our paper has been published in Natural Language Engineering</title>
+		<link>https://bo1929.github.io/news/published-paper-in-natural-language-engineering-2023/</link>
+		<pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/published-paper-in-natural-language-engineering-2023/</guid>
+		<description>&lt;p&gt;We just published a &lt;a href=&#34;https://doi.org/10.1017/S1351324923000165&#34;&gt;paper&lt;/a&gt; in Natural Language Engineering after a long revision process.
+This work was a continuation and an extension of my undergraduate graduation project.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>CONSULT-II won the best paper award</title>
+		<link>https://bo1929.github.io/news/best-paper-award-at-recombcg-2023/</link>
+		<pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/best-paper-award-at-recombcg-2023/</guid>
+		<description>&lt;p&gt;I presented at RECOMB Comparative Genomics 2023, in Istanbul (see my &lt;a href=&#34;https://bo1929.github.io/presentations/consultii-recombcg-presentation-2023.pdf&#34;&gt;slides&lt;/a&gt;).
+Our paper, with Elenora Rachtman and Siavash Mirarab, &lt;a href=&#34;https://www.doi.org/10.1007/978-3-031-36911-7_13&#34;&gt;CONSULT-II: Taxonomic Identification Using Locality Sensitive Hashing&lt;/a&gt; won the best paper award.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>CONSULT for Contamination Removal</title>
+		<link>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</link>
+		<pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</guid>
+		<description>&lt;p&gt;Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset. Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*</title>
+		<link>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</link>
+		<pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</guid>
+		<description>&lt;p&gt;Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>I successfully defended my MSc thesis</title>
+		<link>https://bo1929.github.io/news/completed-msc-degree-2022/</link>
+		<pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/completed-msc-degree-2022/</guid>
+		<description>I have finished my thesis, titled &amp;ldquo;Automated behavioral analysis of asleep fruit fly&amp;rdquo; &amp;ndash; which is now available online, and obtained my MSc degree. The defense was on 26 July 2022, you can find my slides here. Jury members are listed below, I do appreciate their time and invaluable comments.
+Öznur Taştan, Sabancı Üniversitesi (advisor) Sündüz Keleş, University of Wisconsin-Madison (advisor) Onur Varol, Sabancı Üniversitesi Gözde Akar, Orta Doğu Teknik Üniversitesi Ercüment Çiçek, Bilkent Üniversitesi </description>
+	</item>
+	
+	<item>
+		<title>Percolation Theory in Network Science</title>
+		<link>https://bo1929.github.io/notes/percolation-theory/</link>
+		<pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/notes/percolation-theory/</guid>
+		<description>&lt;p&gt;Consider a lattice, where we place pebbles with probability $p$ at each intersection.
+Neighboring pebbles are considered to be connected, forming clusters of size two or more.
+We are mainly interested in sizes of these clusters.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>Categorical Cross Entropy</title>
+		<link>https://bo1929.github.io/notes/categorical-cross-entropy/</link>
+		<pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/notes/categorical-cross-entropy/</guid>
+		<description>&lt;p&gt;Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
+		<title>I presented a poster and a spotlight presentation at MLCB 2021</title>
+		<link>https://bo1929.github.io/news/spotlight-presentation-at-mlcb-2021/</link>
+		<pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/spotlight-presentation-at-mlcb-2021/</guid>
+		<description>I attended to 16th Machine Learning for Computational Biology Conference (MLCB), and presented our work in progress, titled &amp;ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&amp;rdquo; (see my slides, note that I ended up using a simplified version due to the time constraint). The 2-page long abstract is not available online, but hopefully a preprint will be soon. We also had a poster presentation on the second day.</description>
+	</item>
+	
+	</channel>
 </rss>
