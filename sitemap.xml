@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bo1929.github.io/news/presentation-in-biosys-2024/</loc>
+    <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/news/</loc>
+    <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bo1929.github.io/curriculum-vitae/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,9 +23,6 @@
     <loc>https://bo1929.github.io/news/accepted-paper-recomb-2024/</loc>
     <lastmod>2023-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/</loc>
-    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bo1929.github.io/news/published-paper-in-bioinformatics-2023/</loc>
     <lastmod>2023-09-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -29,7 +32,7 @@
     <loc>https://bo1929.github.io/news/published-paper-in-natural-language-engineering-2023/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/best-paper-award-at-recombcg-2023/</loc>
+    <loc>https://bo1929.github.io/news/best-paper-award-in-recombcg-2023/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</loc>
@@ -83,7 +86,7 @@
     <loc>https://bo1929.github.io/notes/categorical-cross-entropy/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/spotlight-presentation-at-mlcb-2021/</loc>
+    <loc>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</loc>
     <lastmod>2021-11-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bo1929.github.io/categories/</loc>
