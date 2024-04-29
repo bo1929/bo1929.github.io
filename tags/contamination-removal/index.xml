@@ -11,6 +11,15 @@
 	
 	
 	<item>
+		<title>I gave a short talk in BioSys 2024</title>
+		<link>https://bo1929.github.io/news/presentation-in-biosys-2024/</link>
+		<pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/presentation-in-biosys-2024/</guid>
+		<description></description>
+	</item>
+	
+	<item>
 		<title>Curriculum vitae</title>
 		<link>https://bo1929.github.io/curriculum-vitae/</link>
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
@@ -80,11 +89,11 @@ This work was a continuation and an extension of my undergraduate graduation pro
 	
 	<item>
 		<title>CONSULT-II won the best paper award</title>
-		<link>https://bo1929.github.io/news/best-paper-award-at-recombcg-2023/</link>
+		<link>https://bo1929.github.io/news/best-paper-award-in-recombcg-2023/</link>
 		<pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/best-paper-award-at-recombcg-2023/</guid>
-		<description>&lt;p&gt;I presented at RECOMB Comparative Genomics 2023, in Istanbul (see my &lt;a href=&#34;https://bo1929.github.io/presentations/consultii-recombcg-presentation-2023.pdf&#34;&gt;slides&lt;/a&gt;).
+		<guid>https://bo1929.github.io/news/best-paper-award-in-recombcg-2023/</guid>
+		<description>&lt;p&gt;I presented in RECOMB Comparative Genomics 2023, in Istanbul (see my &lt;a href=&#34;https://bo1929.github.io/presentations/consultii-recombcg-presentation-2023.pdf&#34;&gt;slides&lt;/a&gt;).
 Our paper, with Elenora Rachtman and Siavash Mirarab, &lt;a href=&#34;https://www.doi.org/10.1007/978-3-031-36911-7_13&#34;&gt;CONSULT-II: Taxonomic Identification Using Locality Sensitive Hashing&lt;/a&gt; won the best paper award.&lt;/p&gt;</description>
 	</item>
 	
@@ -138,11 +147,11 @@ We are mainly interested in sizes of these clusters.&lt;/p&gt;</description>
 	
 	<item>
 		<title>I presented a poster and a spotlight presentation at MLCB 2021</title>
-		<link>https://bo1929.github.io/news/spotlight-presentation-at-mlcb-2021/</link>
+		<link>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</link>
 		<pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/spotlight-presentation-at-mlcb-2021/</guid>
-		<description>I attended to 16th Machine Learning for Computational Biology Conference (MLCB), and presented our work in progress, titled &amp;ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&amp;rdquo; (see my slides, note that I ended up using a simplified version due to the time constraint). The 2-page long abstract is not available online, but hopefully a preprint will be soon. We also had a poster presentation on the second day.</description>
+		<guid>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</guid>
+		<description>I attended to 16th Machine Learning for Computational Biology Conference (MLCB), and presented our work in progress, titled &amp;ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&amp;rdquo; (see my slides, note that I ended up using a simplified version due to limited time). The 2-page long abstract is not available online, but hopefully a preprint will be soon. We also had a poster presentation on the second day.</description>
 	</item>
 	
 	</channel>
