@@ -37,6 +37,16 @@
 	</item>
 	
 	<item>
+		<title>Research</title>
+		<link>https://bo1929.github.io/research/</link>
+		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/research/</guid>
+		<description>Primarily, I am interested in sequence analysis in the context of metagenomics and phylogenetics. I develop tools that target efficient analysis of large-scale datasets. Some examples are:
+CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification KRANK &amp;ndash; memory-bound and taxonomy-aware k-mer selection algorithm In the past, I also worked on network analysis (MuDCoD &amp;ndash; community detection in multi-subject temporal networks from scRNA-seq data), time series analysis in computational ethology (basty &amp;ndash; behavioral analysis of sleep in fruit flies), and natural language processing (active learning for named entity detection).</description>
+	</item>
+	
+	<item>
 		<title>Relevant links</title>
 		<link>https://bo1929.github.io/links/</link>
 		<pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
