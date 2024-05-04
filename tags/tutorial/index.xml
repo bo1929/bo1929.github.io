@@ -11,12 +11,24 @@
 	
 	
 	<item>
+		<title>I attended RECOMB 2024 and presented KRANK</title>
+		<link>https://bo1929.github.io/news/presentation-in-recomb-2024/</link>
+		<pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/presentation-in-recomb-2024/</guid>
+		<description>I gave a talk on KRANK in RECOMB 2024. My slides are available here.
+In summary:
+This was my first time visiting Boston, and I enjoyed it very much. I think the organization was much better last year, in Istanbul. Poster sessions are definitely the best place to meet relevant people. Being the first speaker early in the morning was unfortunate, many people missed the entire (or a considerable portion of) the talk.</description>
+	</item>
+	
+	<item>
 		<title>I gave a short talk in BioSys 2024</title>
 		<link>https://bo1929.github.io/news/presentation-in-biosys-2024/</link>
 		<pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/news/presentation-in-biosys-2024/</guid>
-		<description></description>
+		<description>I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine) which held in conjunction with the ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
+My slides are available here.</description>
 	</item>
 	
 	<item>
@@ -161,7 +173,7 @@ We are mainly interested in sizes of these clusters.&lt;/p&gt;</description>
 		<pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</guid>
-		<description>I attended to 16th Machine Learning for Computational Biology Conference (MLCB), and presented our work in progress, titled &amp;ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&amp;rdquo; (see my slides, note that I ended up using a simplified version due to limited time). The 2-page long abstract is not available online, but hopefully a preprint will be soon. We also had a poster presentation on the second day.</description>
+		<description>I attended to 16th Machine Learning for Computational Biology Conference (MLCB), and presented our work in progress, titled &amp;ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&amp;rdquo; (see my slides, note that I ended up using a simplified version due to limited time). The 2-page long abstract is not available online, but hopefully, a preprint will be soon. We also had a poster presentation on the second day.</description>
 	</item>
 	
 	</channel>
