@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/computational-ethology/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/dimensionality-reduction/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/machine-learning/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/posts/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/semisupervised-learning/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/time-series/</loc>
+    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bo1929.github.io/news/presentation-in-recomb-2024/</loc>
     <lastmod>2024-04-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -56,40 +80,28 @@
     <loc>https://bo1929.github.io/tags/metagenomics/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/posts/</loc>
-    <lastmod>2023-02-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/</loc>
-    <lastmod>2023-02-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bo1929.github.io/tags/tutorial/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/computational-ethology/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/dimensionality-reduction/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/machine-learning/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/semi-supervised-learning/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/time-series/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bo1929.github.io/news/completed-msc-degree-2022/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/network-clusters/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/network-communities/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/networks/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bo1929.github.io/notes/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bo1929.github.io/notes/percolation-theory/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bo1929.github.io/tags/percolation-theory/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bo1929.github.io/notes/categorical-cross-entropy/</loc>

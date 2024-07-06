@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<title>Basty for Behavioral Analysis of Sleep in *Drosophila Melanogaster* | Ali Osman Berk Şapcı</title>
-	<link rel="canonical" href="https://bo1929.github.io">
+	<link rel="canonical" href="https://bo1929.github.io/">
 	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
 	<meta name="description" content="Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.">
-	<meta name="keywords" content="computational ethology, machine learning, time series, semi-supervised learning, dimensionality reduction">
+	<meta name="keywords" content="computational-ethology, machine-learning, time-series, semisupervised-learning, dimensionality-reduction">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
@@ -15,9 +15,7 @@
 <body>
 <nav>
     <ul>
-	<li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li>
-	<li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li>
-	<li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li>
+  <li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li>
     </ul>
 </nav>
 <main>
@@ -199,9 +197,9 @@ This approach is called semi-supervised pair embeddings.</p>
 <p>So, what is the benefit of semi-supervised pair embeddings over straightforwardly generating a joint behavioral space?
 Especially when the behavioral repertoires of the pair of experiments are similar, the provided “view” turns out to be an accurate, easy-to-interpret low-dimensional representation of the behavioral repertoire of the unannotated experiment.
 When the behavioral repertoire and/or feature distribution are dissimilar<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> the resulting embedding may not provide useful information about the unannotated experiment, but an advantage of this approach is that the other pair embeddings do not get distorted by poor matches, providing robustness to noise and behavioral variations.</p>
-<figure><img src="/images/basty-pipeline.png"/><figcaption>
-            <h4>Illustration of the main stages of the pipeline. The output of the pipeline is a distribution of scores for behavioral categories, per video frame.</h4>
-        </figcaption>
+<figure><img src="/images/basty-pipeline.png"><figcaption>
+      <h4>Illustration of the main stages of the pipeline. The output of the pipeline is a distribution of scores for behavioral categories, per video frame.</h4>
+    </figcaption>
 </figure>
 
 <p>Then, the question becomes the following.
@@ -212,6 +210,7 @@ Here, the main idea is computing a behavior mapping by incorporating uncertainti
 So, using the categorical distributions of nearest neighbors&rsquo; annotations and local distances in the semi-supervised pair embedding space, our method tune the contributions of each annotated experiment.
 Moreover, our method considers the imbalanced distribution of behavior occurrences and scarcity of particular behaviors.
 Computational experiments show that <strong>basty</strong> attains capturing rarely exhibited behaviors and even is able to detect and discover unseen unannotated behavioral categories using behavioral scores.</p>
+<p>See <a href="https://mfkeles.github.io/FlyVISTA/">FlyVISTA</a> for the details about entire experimental setup, including both hardware and software. The sofware repository of <strong>basty</strong>, implemented in Python, is available on <a href="https://github.com/bo1929/basty">GitHub</a>.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -221,15 +220,16 @@ Computational experiments show that <strong>basty</strong> attains capturing rar
 </ol>
 </div>
 
-<div id="nextprev"><a href="/posts/consult-contamination-removal-tutorial/"><div id="nextart">Next:<br>CONSULT for Contamination Removal</div></a>
+<div id="nextprev">
+    <a href="/posts/consult-contamination-removal-tutorial/"><div id="prevart">Previous:<br>CONSULT for Contamination Removal</div></a>
 </div>
-<br clear=both><div style="clear:both" class=taglist>Related<br><a id="tag_computational ethology" href="https://bo1929.github.io/tags/computational-ethology">computational ethology</a> &middot; <a id="tag_machine learning" href="https://bo1929.github.io/tags/machine-learning">machine learning</a> &middot; <a id="tag_time series" href="https://bo1929.github.io/tags/time-series">time series</a> &middot; <a id="tag_semi-supervised learning" href="https://bo1929.github.io/tags/semi-supervised-learning">semi-supervised learning</a> &middot; <a id="tag_dimensionality reduction" href="https://bo1929.github.io/tags/dimensionality-reduction">dimensionality reduction</a></div>
+<br clear=both><div style="clear:both" class=taglist>Related<br><a id="tag_computational-ethology" href="https://bo1929.github.io/tags/computational-ethology">computational-ethology</a> &middot; <a id="tag_machine-learning" href="https://bo1929.github.io/tags/machine-learning">machine-learning</a> &middot; <a id="tag_time-series" href="https://bo1929.github.io/tags/time-series">time-series</a> &middot; <a id="tag_semisupervised-learning" href="https://bo1929.github.io/tags/semisupervised-learning">semisupervised-learning</a> &middot; <a id="tag_dimensionality-reduction" href="https://bo1929.github.io/tags/dimensionality-reduction">dimensionality-reduction</a></div>
 </article>
 <hr>
 </main>
 
 <footer>
-	<a href="https://bo1929.github.io">https://bo1929.github.io</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<a href="https://bo1929.github.io/">https://bo1929.github.io/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
 </footer>
 
 <script type="text/x-mathjax-config">

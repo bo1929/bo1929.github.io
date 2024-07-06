@@ -2,13 +2,22 @@
   <channel>
 	<title>Ali Osman Berk Şapcı</title>
 	<link>https://bo1929.github.io/tags/tutorial/</link>
-	<description>Recent content in tutorial on Ali Osman Berk Şapcı</description>
+	<description>Recent content in Tutorial on Ali Osman Berk Şapcı</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
 	<lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://bo1929.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
 	
+	
+	<item>
+		<title>basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*</title>
+		<link>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</link>
+		<pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</guid>
+		<description>&lt;p&gt;Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.&lt;/p&gt;</description>
+	</item>
 	
 	<item>
 		<title>I attended RECOMB 2024 and presented KRANK</title>
@@ -18,7 +27,7 @@
 		<guid>https://bo1929.github.io/news/presentation-in-recomb-2024/</guid>
 		<description>I gave a talk on KRANK in RECOMB 2024. My slides are available here.
 In summary:
-This was my first time visiting Boston, and I enjoyed it very much. I think the organization was much better last year, in Istanbul. Poster sessions are definitely the best place to meet relevant people. Being the first speaker early in the morning was unfortunate, many people missed the entire (or a considerable portion of) the talk.</description>
+This was my first time visiting Boston, and I enjoyed it very much. I think the organization was much better last year, in Istanbul. Poster sessions are definitely the best place to meet relevant people. Being the first speaker early in the morning was unfortunate, many people missed the entire (or a considerable portion) talk.</description>
 	</item>
 	
 	<item>
@@ -28,8 +37,8 @@ This was my first time visiting Boston, and I enjoyed it very much. I think the 
 		
 		<guid>https://bo1929.github.io/news/presentation-in-biosys-2024/</guid>
 		<description>I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine) which held in conjunction with the ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
-My slides are available here.
-A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego. </description>
+My slides are available here, and the recording can be found here.
+A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego.</description>
 	</item>
 	
 	<item>
@@ -47,7 +56,7 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/presentations/</guid>
-		<description> RECOMB, 2024, Boston USA RECOMB-CG, 2023, Istanbul Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
+		<description> RECOMB, 2024, Boston USA BioSys, 2024, La Jolla, USA RECOMB-CG, 2023, Istanbul Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
 	</item>
 	
 	<item>
@@ -56,7 +65,7 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/research/</guid>
-		<description>Primarily, I am interested in sequence analysis in the context of metagenomics and phylogenetics. I develop tools that target efficient analysis of large-scale datasets. Some examples are:
+		<description>I am primarily interested in sequence analysis in the context of metagenomics and phylogenetics. I develop tools that target efficient analysis of large-scale genomic datasets. Some examples are:
 CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification KRANK &amp;ndash; memory-bound and taxonomy-aware k-mer selection algorithm In the past, I also worked on network analysis (MuDCoD &amp;ndash; community detection in multi-subject dynamic networks from scRNA-seq data), time series analysis in computational ethology (basty &amp;ndash; behavioral analysis of sleep in fruit flies), and natural language processing (active learning for named entity detection).</description>
 	</item>
 	
@@ -136,15 +145,6 @@ Our paper, with Elenora Rachtman and Siavash Mirarab, &lt;a href=&#34;https://ww
 		
 		<guid>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</guid>
 		<description>&lt;p&gt;Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset. Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.&lt;/p&gt;</description>
-	</item>
-	
-	<item>
-		<title>basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*</title>
-		<link>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</link>
-		<pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</guid>
-		<description>&lt;p&gt;Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.&lt;/p&gt;</description>
 	</item>
 	
 	<item>

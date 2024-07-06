@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>CONSULT-II Has Been (Finally) Published in Bioinformatics | Ali Osman Berk Şapcı</title>
-	<link rel="canonical" href="https://bo1929.github.io">
+	<link rel="canonical" href="https://bo1929.github.io/">
 	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
@@ -14,9 +14,7 @@
 <body>
 <nav>
     <ul>
-	<li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li>
-	<li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li>
-	<li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li>
+  <li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li>
     </ul>
 </nav>
 <main>
@@ -192,9 +190,9 @@ Here is the abstract:</p>
 <p><strong>Motivation:</strong> Taxonomic classification of short reads and taxonomic profiling of metagenomic samples are well-studied yet challenging problems. The presence of species belonging to groups without close representation in a reference dataset is particularly challenging. While k-mer-based methods have performed well in terms of running time and accuracy, they tend to have reduced accuracy for such novel species. Thus, there is a growing need for methods that combine the scalability of k-mers with increased sensitivity.</p>
 <p><strong>Results:</strong> Here, we show that using locality-sensitive hashing (LSH) can increase the sensitivity of the k-mer-based search. Our method, which combines LSH with several heuristics techniques including soft lowest common ancestor labeling and voting, is more accurate than alternatives in both taxonomic classification of individual reads and abundance profiling.</p>
 <p><strong>Availability and implementation</strong>: CONSULT-II is implemented in C++, and the software, together with reference libraries, is publicly available on GitHub <a href="https://github.com/bo1929/CONSULT-II">https://github.com/bo1929/CONSULT-II</a>.</p>
-<figure><img src="/images/illustration-CONSULT-II.jpeg"/><figcaption>
-            <h4>(a) The expected number of 32-mers matched by the LSH approach for a short read of length L=150 as the normalized distance d/k of the read to the closest match varies: (L-k&#43;1)p(d). Lines show different settings of l and h for an infinite b, i.e. all reference k-mers are stored in the library. The black line corresponds to k=35, h=35-7, and l=1, mimicking the default Kraken-II settings. (b) The probability of updating the LCA per each new k-mer goes down with the number of reference genomes in which that k-mer appears; we use w=4 and s=5 as shown. (c) Overview of the classification algorithm, consisting of three main stages: (i) finding the closest inexact k-mer match using LSH, (ii) computing vote values based on the Hamming distances (HD) and aggregating vote values on the taxonomic tree, and (iii) determining the most specific taxon, i.e. the lowest rank, above the threshold.</h4>
-        </figcaption>
+<figure><img src="/images/illustration-CONSULT-II.jpeg"><figcaption>
+      <h4>(a) The expected number of 32-mers matched by the LSH approach for a short read of length L=150 as the normalized distance d/k of the read to the closest match varies: (L-k&#43;1)p(d). Lines show different settings of l and h for an infinite b, i.e. all reference k-mers are stored in the library. The black line corresponds to k=35, h=35-7, and l=1, mimicking the default Kraken-II settings. (b) The probability of updating the LCA per each new k-mer goes down with the number of reference genomes in which that k-mer appears; we use w=4 and s=5 as shown. (c) Overview of the classification algorithm, consisting of three main stages: (i) finding the closest inexact k-mer match using LSH, (ii) computing vote values based on the Hamming distances (HD) and aggregating vote values on the taxonomic tree, and (iii) determining the most specific taxon, i.e. the lowest rank, above the threshold.</h4>
+    </figcaption>
 </figure>
 
 
@@ -208,7 +206,7 @@ Here is the abstract:</p>
 </main>
 
 <footer>
-	<a href="https://bo1929.github.io">https://bo1929.github.io</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<a href="https://bo1929.github.io/">https://bo1929.github.io/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
 </footer>
 
 <script type="text/x-mathjax-config">
