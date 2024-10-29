@@ -2,114 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</loc>
+    <loc>http://localhost:1313/publications/</loc>
+    <lastmod>2024-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/k-mers/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/krank-mapping-baits/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/metagenomics/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mitochondrial-baits/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/taxonomic-clasification/</loc>
+    <lastmod>2024-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/basty-for-behavioral-sleep-analysis/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/computational-ethology/</loc>
+    <loc>http://localhost:1313/tags/computational-ethology/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/dimensionality-reduction/</loc>
+    <loc>http://localhost:1313/tags/dimensionality-reduction/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/machine-learning/</loc>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/posts/</loc>
+    <loc>http://localhost:1313/tags/semisupervised-learning/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/semisupervised-learning/</loc>
+    <loc>http://localhost:1313/tags/time-series/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/</loc>
-    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/tags/time-series/</loc>
-    <lastmod>2024-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/news/presentation-in-recomb-2024/</loc>
+    <loc>http://localhost:1313/news/presentation-in-recomb-2024/</loc>
     <lastmod>2024-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/</loc>
+    <loc>http://localhost:1313/news/</loc>
     <lastmod>2024-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/presentation-in-biosys-2024/</loc>
+    <loc>http://localhost:1313/news/presentation-in-biosys-2024/</loc>
     <lastmod>2024-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/curriculum-vitae/</loc>
+    <loc>http://localhost:1313/curriculum-vitae/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/presentations/</loc>
+    <loc>http://localhost:1313/presentations/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/research/</loc>
+    <loc>http://localhost:1313/research/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/links/</loc>
+    <loc>http://localhost:1313/links/</loc>
     <lastmod>2024-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/publications/</loc>
-    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/news/published-paper-in-bioinformatics-2024/</loc>
+    <loc>http://localhost:1313/news/published-paper-in-bioinformatics-2024/</loc>
     <lastmod>2024-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/accepted-paper-recomb-2024/</loc>
+    <loc>http://localhost:1313/news/accepted-paper-recomb-2024/</loc>
     <lastmod>2023-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/published-paper-in-bioinformatics-2023/</loc>
+    <loc>http://localhost:1313/news/published-paper-in-bioinformatics-2023/</loc>
     <lastmod>2023-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/published-paper-in-natural-language-engineering-2023/</loc>
+    <loc>http://localhost:1313/news/published-paper-in-natural-language-engineering-2023/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/best-paper-award-in-recombcg-2023/</loc>
+    <loc>http://localhost:1313/news/best-paper-award-in-recombcg-2023/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</loc>
+    <loc>http://localhost:1313/posts/consult-contamination-removal-tutorial/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/contamination-removal/</loc>
+    <loc>http://localhost:1313/tags/contamination-removal/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/locality-sensitive-hashing/</loc>
+    <loc>http://localhost:1313/tags/locality-sensitive-hashing/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/metagenomics/</loc>
+    <loc>http://localhost:1313/tags/tutorial/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/tutorial/</loc>
-    <lastmod>2023-02-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/news/completed-msc-degree-2022/</loc>
+    <loc>http://localhost:1313/news/completed-msc-degree-2022/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/network-clusters/</loc>
+    <loc>http://localhost:1313/tags/network-clusters/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/network-communities/</loc>
+    <loc>http://localhost:1313/tags/network-communities/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/networks/</loc>
+    <loc>http://localhost:1313/tags/networks/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/notes/</loc>
+    <loc>http://localhost:1313/notes/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/notes/percolation-theory/</loc>
+    <loc>http://localhost:1313/notes/percolation-theory/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/tags/percolation-theory/</loc>
+    <loc>http://localhost:1313/tags/percolation-theory/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/notes/categorical-cross-entropy/</loc>
+    <loc>http://localhost:1313/notes/categorical-cross-entropy/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</loc>
+    <loc>http://localhost:1313/news/spotlight-presentation-in-mlcb-2021/</loc>
     <lastmod>2021-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bo1929.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

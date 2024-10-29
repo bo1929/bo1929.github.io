@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<title>Publications | Ali Osman Berk Şapcı</title>
-	<link rel="canonical" href="https://bo1929.github.io/">
+	<link rel="canonical" href="http://localhost:1313/">
 	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
-	<meta name="description" content="Preprints Şapcı, A. O. B., &amp; Mirarab, S. (2024). Memory-bound k-mer selection for large and evolutionary diverse reference libraries (p. 2024.02.12.580015). bioRxiv. https://doi.org/10.1101/2024.02.12.580015
-Keles, M., Şapcı, A. O. B., Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. https://doi.org/10.1101/2023.1030.564733
-Peer-reviewed journal publications Şapcı, A. O. B., Rachtman, E., &amp; Mirarab, S. (2024). CONSULT-II: Accurate taxonomic identification and profiling using locality-sensitive hashing.">
+	<meta name="description" content="Preprints Keles, M., Şapcı, A. O. B., Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. https://doi.org/10.1101/2023.1030.564733 Peer-reviewed journal publications Şapcı, A. O. B., &amp; Mirarab, S. (2024). Memory-bound k-mer selection for large and evolutionary diverse reference libraries. Genome Research, gr.279339.124. https://doi.org/10.1101/gr.279339.124
+Şapcı, A. O. B., Rachtman, E., &amp; Mirarab, S. (2024). CONSULT-II: Accurate taxonomic identification and profiling using locality-sensitive hashing.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
@@ -21,6 +20,12 @@ Peer-reviewed journal publications Şapcı, A. O. B., Rachtman, E., &amp; Mirara
 </nav>
 <main>
 <header><h1 id="tag - Publications">Publications</h1></header>
+
+
+
+<link rel="preload stylesheet" as="style" href="http://localhost:1313/syntax_light.min.css" />
+<link rel="preload stylesheet" as="style" href="http://localhost:1313/syntax_dark.min.css" />
+
 <div class="js-toggle-wrapper">
     <div class="js-toggle">
         <div class="js-toggle-track">
@@ -155,24 +160,36 @@ Peer-reviewed journal publications Şapcı, A. O. B., Rachtman, E., &amp; Mirara
 </style>
 
 <script>
-    var body = document.body;
+	function getStyleSheet(file_name) {
+		for (var i = 0; i < document.styleSheets.length; i++) {
+			var sheet = document.styleSheets[i];
+			if (sheet.href.includes(file_name)) {
+				return sheet;
+			}
+		}
+	}
+  sheet_dark = getStyleSheet("syntax_dark");
+  sheet_light = getStyleSheet("syntax_light");
+  var body = document.body;
 	var switcher = document.getElementsByClassName('js-toggle')[0];
 	switcher.addEventListener("click", function() {
-        this.classList.toggle('js-toggle--checked');
-        this.classList.add('js-toggle--focus');
+		this.classList.toggle('js-toggle--checked');
+		this.classList.add('js-toggle--focus');
 		if (this.classList.contains('js-toggle--checked')) {
 			body.classList.add('dark-mode');
 			localStorage.setItem('darkMode', 'true');
+      sheet_dark.disabled = false;
+      sheet_light.disabled = true;
 		} else {
 			body.classList.remove('dark-mode');
-			setTimeout(function() {
-				localStorage.removeItem('darkMode');
-			}, 100);
+			setTimeout(function() {localStorage.removeItem('darkMode');}, 100);
+      sheet_dark.disabled = true;
+      sheet_light.disabled = false;
 		}
 	})
 	if (localStorage.getItem('darkMode')) {
-        switcher.classList.add('js-toggle--checked');
-        body.classList.add('dark-mode');
+      switcher.classList.add('js-toggle--checked');
+      body.classList.add('dark-mode');
 	}
 </script>
   
@@ -181,15 +198,13 @@ Peer-reviewed journal publications Şapcı, A. O. B., Rachtman, E., &amp; Mirara
 <article>
 <h2 id="preprints">Preprints</h2>
 <ul>
-<li>
-<p><strong>Şapcı, A. O. B.</strong>, &amp; Mirarab, S. (2024). Memory-bound k-mer selection for large and evolutionary diverse reference libraries (p. 2024.02.12.580015). bioRxiv. <a href="https://doi.org/10.1101/2024.02.12.580015">https://doi.org/10.1101/2024.02.12.580015</a></p>
-</li>
-<li>
-<p>Keles, M., <strong>Şapcı, A. O. B.</strong>, Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. <a href="https://doi.org/10.1101/2023.1030.564733">https://doi.org/10.1101/2023.1030.564733</a></p>
-</li>
+<li>Keles, M., <strong>Şapcı, A. O. B.</strong>, Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. <a href="https://doi.org/10.1101/2023.1030.564733">https://doi.org/10.1101/2023.1030.564733</a></li>
 </ul>
 <h2 id="peer-reviewed-journal-publications">Peer-reviewed journal publications</h2>
 <ul>
+<li>
+<p><strong>Şapcı, A. O. B.</strong>, &amp; Mirarab, S. (2024). Memory-bound <em>k</em>-mer selection for large and evolutionary diverse reference libraries. Genome Research, gr.279339.124. <a href="https://doi.org/10.1101/gr.279339.124">https://doi.org/10.1101/gr.279339.124</a></p>
+</li>
 <li>
 <p><strong>Şapcı, A. O. B.</strong>, Rachtman, E., &amp; Mirarab, S. (2024). CONSULT-II: Accurate taxonomic identification and profiling using locality-sensitive hashing. Bioinformatics, 40(4), btae150. <a href="https://doi.org/10.1093/bioinformatics/btae150">https://doi.org/10.1093/bioinformatics/btae150</a></p>
 </li>
@@ -220,7 +235,7 @@ Peer-reviewed journal publications Şapcı, A. O. B., Rachtman, E., &amp; Mirara
 </main>
 
 <footer>
-	<a href="https://bo1929.github.io/">https://bo1929.github.io/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<a href="http://localhost:1313/">http://localhost:1313/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
 </footer>
 
 <script type="text/x-mathjax-config">
