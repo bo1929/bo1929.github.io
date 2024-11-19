@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+<head>
 	<title>Dimensionality-Reduction | Ali Osman Berk Şapcı</title>
-	<link rel="canonical" href="http://localhost:1313/">
+	<link rel="canonical" href="https://bo1929.github.io/">
 	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
@@ -11,18 +12,10 @@
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
 </head>
-<body>
-<nav>
-    <ul>
-  <li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li>
-    </ul>
-</nav>
-<main>
-<header><h1 id="tag - Dimensionality-Reduction">Dimensionality-Reduction</h1></header>
 
 
-<link rel="preload stylesheet" as="style" href="http://localhost:1313/syntax_light.min.css" />
-<link rel="preload stylesheet" as="style" href="http://localhost:1313/syntax_dark.min.css" />
+<link rel="preload stylesheet" as="style" href="https://bo1929.github.io/syntax_light.min.css" />
+<link rel="preload stylesheet" as="style" href="https://bo1929.github.io/syntax_dark.min.css" />
 
 <div class="js-toggle-wrapper">
     <div class="js-toggle">
@@ -41,11 +34,13 @@
 
 <style>
   .js-toggle-wrapper {
-      display: table;
-      margin: 0 auto;
+    display: table;
+    margin: 0 auto;
+    position:relative;
+    top:1em
   }
 
-.js-toggle {
+  .js-toggle {
     touch-action: pan-x;
     display: inline-block;
     position: relative;
@@ -76,7 +71,7 @@
     padding: 0;
     border-radius: 30px;
     background-color: hsl(222, 14%, 7%);
-    transition: all 0.2s ease;
+    transition: all 0.0s ease;
   }
   
   .js-toggle-track-check {
@@ -90,12 +85,12 @@
     margin-bottom: auto;
     line-height: 0;
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.0s ease;
   }
   
   .js-toggle--checked .js-toggle-track-check {
     opacity: 1;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.0s ease;
   }
   
   .js-toggle-track-x {
@@ -109,7 +104,7 @@
     margin-bottom: auto;
     line-height: 0;
     opacity: 1;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.0s ease;
   }
   
   .js-toggle--checked .js-toggle-track-x {
@@ -125,7 +120,7 @@
     border-radius: 50%;
     background-color: #fafafa;
     box-sizing: border-box;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transition: all 0.0s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     transform: translateX(0);
   }
   
@@ -144,8 +139,8 @@
 
   body.dark-mode, 
   body.dark-mode body * {
-  background: #1b1b1b;
-  color: navajowhite;
+    background: #1b1b1b;
+    color: navajowhite;
   }
 
   body.dark-mode h1 { color: darksalmon; }
@@ -166,8 +161,6 @@
       }
     }
   }
-  sheet_dark = getStyleSheet("syntax_dark");
-  sheet_light = getStyleSheet("syntax_light");
   var body = document.body;
   var switcher = document.getElementsByClassName('js-toggle')[0];
   switcher.addEventListener("click", function() {
@@ -176,26 +169,37 @@
     if (this.classList.contains('js-toggle--checked')) {
       body.classList.add('dark-mode');
       localStorage.setItem('darkMode', 'true');
-      sheet_dark.disabled = false;
-      sheet_light.disabled = true;
+      getStyleSheet("syntax_dark").disabled = false;
+      getStyleSheet("syntax_light").disabled = true;
     } else {
       body.classList.remove('dark-mode');
       setTimeout(function() {localStorage.removeItem('darkMode');}, 100);
-      sheet_dark.disabled = true;
-      sheet_light.disabled = false;
+      getStyleSheet("syntax_dark").disabled = true;
+      getStyleSheet("syntax_light").disabled = false;
     }
   })
   if (localStorage.getItem('darkMode')) {
     switcher.classList.add('js-toggle--checked');
     body.classList.add('dark-mode');
-    sheet_dark.disabled = false;
-    sheet_light.disabled = true;
+    getStyleSheet("syntax_dark").disabled = false;
+    getStyleSheet("syntax_light").disabled = true;
   } else {
-    sheet_dark.disabled = true;
-    sheet_light.disabled = false;
+    getStyleSheet("syntax_dark").disabled = true;
+    getStyleSheet("syntax_light").disabled = false;
   }
 </script>
+
   
+
+
+<body>
+<nav>
+    <ul>
+      <li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li>
+    </ul>
+</nav>
+<main>
+<header><h1 id="tag - Dimensionality-Reduction">Dimensionality-Reduction</h1></header>
 
 <hr>
 <article>
@@ -207,11 +211,13 @@
 </ul>
 
 </article>
+
 <hr>
 </main>
 
+
 <footer>
-	<a href="http://localhost:1313/">http://localhost:1313/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<a href="https://bo1929.github.io/">https://bo1929.github.io/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
 </footer>
 
 <script type="text/x-mathjax-config">
@@ -227,4 +233,5 @@
 </script>
 
 </body>
+
 </html>
