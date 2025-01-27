@@ -5,7 +5,7 @@
 	<description>Recent content in News on Ali Osman Berk Şapcı</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Tue, 30 Apr 2024 00:00:00 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 29 Aug 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://bo1929.github.io/news/index.xml" rel="self" type="application/rss+xml" />
 	
@@ -16,8 +16,9 @@
 		<pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/publications/</guid>
-		<description>Preprints Keles, M., Şapcı, A. O. B., Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp;amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. https://doi.org/10.1101/2023.1030.564733 Peer-reviewed journal publications Şapcı, A. O. B., &amp;amp; Mirarab, S. (2024). Memory-bound k-mer selection for large and evolutionary diverse reference libraries. Genome Research, gr.279339.124. https://doi.org/10.1101/gr.279339.124
-Şapcı, A. O. B., Rachtman, E., &amp;amp; Mirarab, S. (2024). CONSULT-II: Accurate taxonomic identification and profiling using locality-sensitive hashing.</description>
+		<description>Preprints Şapcı, A. O. B., &amp;amp; Mirarab, S. (2025). A k-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement. (p. 2025.01.20.633730). bioRxiv. https://doi.org/10.1101/2025.01.20.633730
+Keles, M., Şapcı, A. O. B., Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp;amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. https://doi.org/10.1101/2023.10.30.564733
+Peer-reviewed journal publications Şapcı, A. O. B., &amp;amp; Mirarab, S. (2024). Memory-bound k-mer selection for large and evolutionary diverse reference libraries.</description>
 	</item>
 	
 	<item>
@@ -27,6 +28,16 @@
 		
 		<guid>https://bo1929.github.io/posts/krank-mapping-baits/</guid>
 		<description>Mapping mitochondrial baits to taxonomic groups using KRANK and all mitogenomes on RefSeq.</description>
+	</item>
+	
+	<item>
+		<title>Our paper has been published in Genome Research</title>
+		<link>https://bo1929.github.io/news/published-paper-in-genome-research-2024/</link>
+		<pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/published-paper-in-genome-research-2024/</guid>
+		<description>KRANK has been published in Genome Research (RECOMB 2024 Special Issue). The tool is available at GitHub, together with links to pre-built indexes of varying sizes, utilizing WoL reference database and a RefSeq snapshot. Using these indexes, KRANK showed superior performance in taxonomic classification and abundance profiling on CAMI benchmarking datasets to many existing methods. I hope you find it useful! Here is the abstract:
+Using k-mers to find sequence matches is increasingly used in many bioinformatic applications, including metagenomic sequence classification.</description>
 	</item>
 	
 	<item>
@@ -75,7 +86,7 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/presentations/</guid>
-		<description> RECOMB, 2024, Boston USA BioSys, 2024, La Jolla, USA RECOMB-CG, 2023, Istanbul Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
+		<description> RECOMB, 2024, Boston USA BioSys, 2024, La Jolla, USA UCSD CSE290 - Seminar in Computer Science and Engineering, Jan 2024, San Diego, USA RECOMB-CG, 2023, Istanbul, Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
 	</item>
 	
 	<item>
@@ -85,7 +96,10 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		
 		<guid>https://bo1929.github.io/research/</guid>
 		<description>I am primarily interested in sequence analysis in the context of metagenomics and phylogenetics. I develop tools that target efficient analysis of large-scale genomic datasets. Some examples are:
-CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification KRANK &amp;ndash; memory-bound and taxonomy-aware k-mer selection algorithm In the past, I also worked on network analysis (MuDCoD &amp;ndash; community detection in multi-subject dynamic networks from scRNA-seq data), time series analysis in computational ethology (basty &amp;ndash; behavioral analysis of sleep in fruit flies), and natural language processing (active learning for named entity detection).</description>
+CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification
+KRANK &amp;ndash; memory-bound and taxonomy-aware k-mer selection algorithm
+krepp &amp;ndash; reads to genome distance estimation and phylogenetic placement
+I also briefly worked in network analysis: see our community detection method for dynamic gene co-expression networks (MuDCoD &amp;ndash; community detection in multi-subject dynamic networks from scRNA-seq data).</description>
 	</item>
 	
 	<item>

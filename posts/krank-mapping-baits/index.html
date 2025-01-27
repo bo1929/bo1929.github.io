@@ -259,7 +259,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> grep <span class="s2">&#34;^&gt;&#34;</span> mitochondrion.1.1.genomic.fna <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;//&#39;</span> &gt; seqids_mitochondrion.txt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>This part is somewhat due to a idiosyncratic of KRANK; it requires a mapping between taxonomic IDs and files. So we have to split concatenated mitochondrion genomes into separate files:</p>
+</div><p>This part is somewhat idiosyncratic because of the input KRANK requires: a mapping between taxonomic IDs and files. So we have to split concatenated mitochondrion genomes into separate files:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -278,7 +278,9 @@
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ../
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Now, we can map each mitochondrion sequence to a taxonomic group which will be found in <code>RefSeq-release226.catalog</code>. The file <code>input_map-mitochondrion.tsv</code> is just a mapping between taxonomic IDs and mitochondrion sequences we found in RefSeq which we have already split into separate files. This file is going to be the input to KRANK.</p>
+</div><p>Now, we can map each mitochondrion sequence to a taxonomic group which will be found in <code>RefSeq-release226.catalog</code>.
+The file <code>input_map-mitochondrion.tsv</code> is just a mapping between taxonomic IDs and mitochondrion sequences we found in RefSeq which we have already split into separate files.
+This file is going to be the input to KRANK.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
