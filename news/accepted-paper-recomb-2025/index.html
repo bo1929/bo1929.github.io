@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-	<title>Percolation-Theory | Ali Osman Berk Şapcı</title>
+	<title>Our Paper Has Been Accepted in RECOMB 2025 | Ali Osman Berk Şapcı</title>
 	<link rel="canonical" href="http://localhost:1313/">
 	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
-	<meta name="description" content="">
+	<meta name="description" content="Our paper titled “A k-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement” has been accepted in RECOMB 2025.
+I’m looking forward to my presentation in Seoul, which will be my first visiting East Asia.
+We introduced a technique to estimate read-to-genome distances from k-mer hits.
+The idea is based on the search for matching k-mers up to a certain Hamming distance in a colored k-mer index, and then finding the maximum likelihood distance based on k-mer matches and corresponding distances for each hitting reference.
+These distances approximate alignment Hamming distance at the read level, and 1-ANI between a query genome and the matching reference(s) on average across all reads.
+We then propose an intuitive and accurate heuristic to place reads on an existing backbone phylogeny in a principled way using a likelihood ratio test.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
@@ -199,17 +204,38 @@
     </ul>
 </nav>
 <main>
-<header><h1 id="tag - Percolation-Theory">Percolation-Theory</h1></header>
+<header><h1 id="tag - Our paper has been accepted in RECOMB 2025">Our paper has been accepted in RECOMB 2025</h1></header>
 
 <hr>
 <article>
+<p>Our paper titled “A <em>k</em>-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement” has been accepted in RECOMB 2025.
+I’m looking forward to my presentation in Seoul, which will be my first visiting East Asia.</p>
+<p>We introduced a technique to estimate read-to-genome distances from <em>k</em>-mer hits.
+The idea is based on the search for matching <em>k</em>-mers up to a certain Hamming distance in a colored <em>k</em>-mer index, and then finding the maximum likelihood distance based on <em>k</em>-mer matches and corresponding distances for each hitting reference.
+These distances approximate alignment Hamming distance at the read level, and 1-ANI between a query genome and the matching reference(s) on average across all reads.
+We then propose an intuitive and accurate heuristic to place reads on an existing backbone phylogeny in a principled way using a likelihood ratio test.</p>
+<p><strong>Abstract</strong>:
+Consider comparing a sequencing read of unknown origin to a set of reference genomes.
+This problem underlines many applications, including metagenomic analyses.
+The exact genome generating the read is not in the reference set but may be evolutionarily related to some references.
+Ideally, we need not just the identity of the closest references to the read but also their distance to the read.
+The distances can help us identify the read at the right taxonomic level and, more ambitiously, place it on a reference phylogeny.
+Aligning reads to reference genomes, the only available approach for computing such distances, becomes impractical for very large reference sets.
+It is also not effective at higher distances when used with efficient indexes (e.g., Bowtie2).
+While <em>k</em>-mers can create scalable indexes, existing <em>k</em>-mer-based methods are incapable of distance calculation.
+Thus, estimating distances between short reads and large, diverse reference sets remains challenging and seldom used.
+We introduce a method called krepp that combines four ideas to solve this challenge and to further enable placing reads on a reference phylogeny.
+We use i) locality-sensitive hashing to find inexact <em>k</em>-mer matches, ii) a phylogeny-guided colored <em>k</em>-mer index to map each <em>k</em>-mer to all references containing it, iii) a maximum likelihood framework to estimate read-genome distances using <em>k</em>-mer matches, and iv) an extension of distances to clades of the reference tree, which enables placement using a likelihood ratio test.
+We show that krepp matches true distances using a fraction of time compared to alignment, extends to higher distances, and accurately places short reads coming from any part of the genome (not just marker genes) on the reference phylogeny.
+We demonstrate that krepp easily extends to databases with tens of thousands of reference genomes and performs well in characterizing real microbial samples.</p>
+<p><strong>Availability:</strong>
+The tool is available on <a href="github.com/bo1929/krepp">GitHub</a>, and under active development.
+All results, auxiliary data, and scripts used in the analyses can be found <a href="github.com/bo1929/shared.krepp">here</a>.</p>
 
-<ul>
-<li>
-	<time datetime="2022-05-19T00:00:00Z">2022 May 19</time> &ndash; <a href="/notes/percolation-theory/">notes / Percolation Theory in Network Science</a>
-</li>
-</ul>
-
+<div id="nextprev">
+    <a href="/news/published-paper-in-genome-research-2024/"><div id="prevart">Previous:<br>Our paper has been published in Genome Research</div></a>
+</div>
+<br clear=both>
 </article>
 
 <hr>

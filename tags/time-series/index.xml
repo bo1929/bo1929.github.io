@@ -1,60 +1,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Ali Osman Berk Şapcı</title>
-	<link>https://bo1929.github.io/tags/time-series/</link>
+	<link>http://localhost:1313/tags/time-series/</link>
 	<description>Recent content in Time-Series on Ali Osman Berk Şapcı</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
 	<lastBuildDate>Sat, 06 Jul 2024 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://bo1929.github.io/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
+		<title>Our paper has been accepted in RECOMB 2025</title>
+		<link>http://localhost:1313/news/accepted-paper-recomb-2025/</link>
+		<pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/news/accepted-paper-recomb-2025/</guid>
+		<description>&lt;p&gt;Our paper titled “A &lt;em&gt;k&lt;/em&gt;-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement” has been accepted in RECOMB 2025.
+I’m looking forward to my presentation in Seoul, which will be my first visiting East Asia.&lt;/p&gt;
+&lt;p&gt;We introduced a technique to estimate read-to-genome distances from &lt;em&gt;k&lt;/em&gt;-mer hits.
+The idea is based on the search for matching &lt;em&gt;k&lt;/em&gt;-mers up to a certain Hamming distance in a colored &lt;em&gt;k&lt;/em&gt;-mer index, and then finding the maximum likelihood distance based on &lt;em&gt;k&lt;/em&gt;-mer matches and corresponding distances for each hitting reference.
+These distances approximate alignment Hamming distance at the read level, and 1-ANI between a query genome and the matching reference(s) on average across all reads.
+We then propose an intuitive and accurate heuristic to place reads on an existing backbone phylogeny in a principled way using a likelihood ratio test.&lt;/p&gt;</description>
+	</item>
+	
+	<item>
 		<title>Publications</title>
-		<link>https://bo1929.github.io/publications/</link>
+		<link>http://localhost:1313/publications/</link>
 		<pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/publications/</guid>
-		<description>Preprints Şapcı, A. O. B., &amp;amp; Mirarab, S. (2025). A k-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement. (p. 2025.01.20.633730). bioRxiv. https://doi.org/10.1101/2025.01.20.633730
-Keles, M., Şapcı, A. O. B., Brody, C., Palmer, I., Le, C., Tastan, O., Keles, S., &amp;amp; Wu, M. (2023). Deep Phenotyping of Sleep in Drosophila. bioRxiv. https://doi.org/10.1101/2023.10.30.564733
-Peer-reviewed journal publications Şapcı, A. O. B., &amp;amp; Mirarab, S. (2024). Memory-bound k-mer selection for large and evolutionary diverse reference libraries.</description>
+		<guid>http://localhost:1313/publications/</guid>
+		<description>Preprints Şapcı, A. O. B., &amp;amp; Mirarab, S. (2025). A k-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement. (p. 2025.01.20.633730). bioRxiv. https://doi.org/10.1101/2025.01.20.633730 Peer-reviewed journal publications Keleş, M. F., Şapcı, A. O. B., Brody, C., Palmer, I., Mehta, A., Ahmadi, S., Le, C., Taştan, Ö., Keleş, S., &amp;amp; Wu, M. N. (2025). FlyVISTA, an integrated machine learning platform for deep phenotyping of sleep in Drosophila.</description>
 	</item>
 	
 	<item>
 		<title>Mapping mitochondrial baits to taxonomic groups using KRANK</title>
-		<link>https://bo1929.github.io/posts/krank-mapping-baits/</link>
+		<link>http://localhost:1313/posts/krank-mapping-baits/</link>
 		<pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/posts/krank-mapping-baits/</guid>
+		<guid>http://localhost:1313/posts/krank-mapping-baits/</guid>
 		<description>Mapping mitochondrial baits to taxonomic groups using KRANK and all mitogenomes on RefSeq.</description>
 	</item>
 	
 	<item>
 		<title>Our paper has been published in Genome Research</title>
-		<link>https://bo1929.github.io/news/published-paper-in-genome-research-2024/</link>
+		<link>http://localhost:1313/news/published-paper-in-genome-research-2024/</link>
 		<pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/published-paper-in-genome-research-2024/</guid>
+		<guid>http://localhost:1313/news/published-paper-in-genome-research-2024/</guid>
 		<description>KRANK has been published in Genome Research (RECOMB 2024 Special Issue). The tool is available at GitHub, together with links to pre-built indexes of varying sizes, utilizing WoL reference database and a RefSeq snapshot. Using these indexes, KRANK showed superior performance in taxonomic classification and abundance profiling on CAMI benchmarking datasets to many existing methods. I hope you find it useful! Here is the abstract:
 Using k-mers to find sequence matches is increasingly used in many bioinformatic applications, including metagenomic sequence classification.</description>
 	</item>
 	
 	<item>
 		<title>basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*</title>
-		<link>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</link>
+		<link>http://localhost:1313/posts/basty-for-behavioral-sleep-analysis/</link>
 		<pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/posts/basty-for-behavioral-sleep-analysis/</guid>
+		<guid>http://localhost:1313/posts/basty-for-behavioral-sleep-analysis/</guid>
 		<description>&lt;p&gt;Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
 		<title>I attended RECOMB 2024 and presented KRANK</title>
-		<link>https://bo1929.github.io/news/presentation-in-recomb-2024/</link>
+		<link>http://localhost:1313/news/presentation-in-recomb-2024/</link>
 		<pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/presentation-in-recomb-2024/</guid>
+		<guid>http://localhost:1313/news/presentation-in-recomb-2024/</guid>
 		<description>I gave a talk on KRANK in RECOMB 2024. My slides are available here.
 In summary:
 This was my first time visiting Boston, and I enjoyed it very much. I think the organization was much better last year, in Istanbul. Poster sessions are definitely the best place to meet relevant people. Being the first speaker early in the morning was unfortunate, many people missed the entire (or a considerable portion) talk.</description>
@@ -62,10 +74,10 @@ This was my first time visiting Boston, and I enjoyed it very much. I think the 
 	
 	<item>
 		<title>I gave a short talk in BioSys 2024</title>
-		<link>https://bo1929.github.io/news/presentation-in-biosys-2024/</link>
+		<link>http://localhost:1313/news/presentation-in-biosys-2024/</link>
 		<pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/presentation-in-biosys-2024/</guid>
+		<guid>http://localhost:1313/news/presentation-in-biosys-2024/</guid>
 		<description>I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine) which held in conjunction with the ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
 My slides are available here, and the recording can be found here.
 A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego.</description>
@@ -73,28 +85,28 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 	
 	<item>
 		<title>Curriculum vitae</title>
-		<link>https://bo1929.github.io/curriculum-vitae/</link>
+		<link>http://localhost:1313/curriculum-vitae/</link>
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/curriculum-vitae/</guid>
+		<guid>http://localhost:1313/curriculum-vitae/</guid>
 		<description>Professional services Paper review ISMB 2022 (sub-reviewer) ACML 2022 (sub-reviewer) ACML 2021 (sub-reviewer) Machine Learning, Springer (sub-reviewer) Proceedings of Machine Learning Research (sub-reviewer) Bioinformatics Advances (sub-reviewer) </description>
 	</item>
 	
 	<item>
 		<title>Presentations</title>
-		<link>https://bo1929.github.io/presentations/</link>
+		<link>http://localhost:1313/presentations/</link>
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/presentations/</guid>
+		<guid>http://localhost:1313/presentations/</guid>
 		<description> RECOMB, 2024, Boston USA BioSys, 2024, La Jolla, USA UCSD CSE290 - Seminar in Computer Science and Engineering, Jan 2024, San Diego, USA RECOMB-CG, 2023, Istanbul, Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
 	</item>
 	
 	<item>
 		<title>Research</title>
-		<link>https://bo1929.github.io/research/</link>
+		<link>http://localhost:1313/research/</link>
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/research/</guid>
+		<guid>http://localhost:1313/research/</guid>
 		<description>I am primarily interested in sequence analysis in the context of metagenomics and phylogenetics. I develop tools that target efficient analysis of large-scale genomic datasets. Some examples are:
 CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification
 KRANK &amp;ndash; memory-bound and taxonomy-aware k-mer selection algorithm
@@ -104,87 +116,87 @@ I also briefly worked in network analysis: see our community detection method fo
 	
 	<item>
 		<title>Relevant links</title>
-		<link>https://bo1929.github.io/links/</link>
+		<link>http://localhost:1313/links/</link>
 		<pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/links/</guid>
+		<guid>http://localhost:1313/links/</guid>
 		<description></description>
 	</item>
 	
 	<item>
 		<title>CONSULT-II has been (finally) published in Bioinformatics</title>
-		<link>https://bo1929.github.io/news/published-paper-in-bioinformatics-2024/</link>
+		<link>http://localhost:1313/news/published-paper-in-bioinformatics-2024/</link>
 		<pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/published-paper-in-bioinformatics-2024/</guid>
+		<guid>http://localhost:1313/news/published-paper-in-bioinformatics-2024/</guid>
 		<description>After a long review process, CONSULT-II finally appeared in Bioinformatics. I think CONSULT-II is conceptually very exciting but as a software I am not very proud of it. The implementation is very eclectic and not user-friendly at all. Luckily, I was able to re-implement it for KRANK, and KRANK&amp;rsquo;s software offers the same functionality with an improved user experience and increase speed. Another thing is that, CONSULT-II consists of many heuristics that there are alternatives for.</description>
 	</item>
 	
 	<item>
 		<title>KRANK has been accepted in RECOMB 2024</title>
-		<link>https://bo1929.github.io/news/accepted-paper-recomb-2024/</link>
+		<link>http://localhost:1313/news/accepted-paper-recomb-2024/</link>
 		<pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/accepted-paper-recomb-2024/</guid>
+		<guid>http://localhost:1313/news/accepted-paper-recomb-2024/</guid>
 		<description>&lt;p&gt;Our paper titled &amp;ldquo;Memory-bound &lt;em&gt;k&lt;/em&gt;-mer selection for large evolutionary diverse reference libraries&amp;rdquo; has been accepted to RECOMB 2024.
 Hopefully, I&amp;rsquo;ll be in Cambridge (April 29 - May 2, 2024).&lt;/p&gt;</description>
 	</item>
 	
 	<item>
 		<title>MuDCoD has been published in Bioinformatics</title>
-		<link>https://bo1929.github.io/news/published-paper-in-bioinformatics-2023/</link>
+		<link>http://localhost:1313/news/published-paper-in-bioinformatics-2023/</link>
 		<pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/published-paper-in-bioinformatics-2023/</guid>
+		<guid>http://localhost:1313/news/published-paper-in-bioinformatics-2023/</guid>
 		<description>We published a paper in Bioinformatics. In this paper, we developed a new approach for community detection in multi-subject and dynamic networks, in particular networks constructed from scRNA-seq data. The abstract is given below, and see the figure for an illustration of what multi-subject and dynamic networks refer to.
 Motivation: With the wide availability of single-cell RNA-seq (scRNA-seq) technology, population-scale scRNA-seq datasets across multiple individuals and time points are emerging. While the initial investigations of these datasets tend to focus on standard analysis of clustering and differential expression, leveraging the power of scRNA-seq data at the personalized dynamic gene co-expression network level has the potential to unlock subject and/or time-specific network-level variation, which is critical for understanding phenotypic differences.</description>
 	</item>
 	
 	<item>
 		<title>Our paper has been published in Natural Language Engineering</title>
-		<link>https://bo1929.github.io/news/published-paper-in-natural-language-engineering-2023/</link>
+		<link>http://localhost:1313/news/published-paper-in-natural-language-engineering-2023/</link>
 		<pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/published-paper-in-natural-language-engineering-2023/</guid>
+		<guid>http://localhost:1313/news/published-paper-in-natural-language-engineering-2023/</guid>
 		<description>&lt;p&gt;We just published a &lt;a href=&#34;https://doi.org/10.1017/S1351324923000165&#34;&gt;paper&lt;/a&gt; in Natural Language Engineering after a long revision process.
 This work was a continuation and an extension of my undergraduate graduation project.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
 		<title>CONSULT-II won the best paper award</title>
-		<link>https://bo1929.github.io/news/best-paper-award-in-recombcg-2023/</link>
+		<link>http://localhost:1313/news/best-paper-award-in-recombcg-2023/</link>
 		<pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/best-paper-award-in-recombcg-2023/</guid>
-		<description>&lt;p&gt;I presented in RECOMB Comparative Genomics 2023, in Istanbul (see my &lt;a href=&#34;https://bo1929.github.io/presentations/consultii-recombcg-presentation-2023.pdf&#34;&gt;slides&lt;/a&gt;).
+		<guid>http://localhost:1313/news/best-paper-award-in-recombcg-2023/</guid>
+		<description>&lt;p&gt;I presented in RECOMB Comparative Genomics 2023, in Istanbul (see my &lt;a href=&#34;http://localhost:1313/presentations/consultii-recombcg-presentation-2023.pdf&#34;&gt;slides&lt;/a&gt;).
 Our paper, with Elenora Rachtman and Siavash Mirarab, &lt;a href=&#34;https://www.doi.org/10.1007/978-3-031-36911-7_13&#34;&gt;CONSULT-II: Taxonomic Identification Using Locality Sensitive Hashing&lt;/a&gt; won the best paper award.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
 		<title>CONSULT for Contamination Removal</title>
-		<link>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</link>
+		<link>http://localhost:1313/posts/consult-contamination-removal-tutorial/</link>
 		<pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/posts/consult-contamination-removal-tutorial/</guid>
+		<guid>http://localhost:1313/posts/consult-contamination-removal-tutorial/</guid>
 		<description>&lt;p&gt;Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset. Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
 		<title>I successfully defended my MSc thesis</title>
-		<link>https://bo1929.github.io/news/completed-msc-degree-2022/</link>
+		<link>http://localhost:1313/news/completed-msc-degree-2022/</link>
 		<pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/completed-msc-degree-2022/</guid>
+		<guid>http://localhost:1313/news/completed-msc-degree-2022/</guid>
 		<description>I have finished my thesis, titled &amp;ldquo;Automated behavioral analysis of asleep fruit fly&amp;rdquo; &amp;ndash; which is now available online, and obtained my MSc degree. The defense was on 26 July 2022, you can find my slides here. Jury members are listed below, I do appreciate their time and invaluable comments.
 Öznur Taştan, Sabancı Üniversitesi (advisor) Sündüz Keleş, University of Wisconsin-Madison (advisor) Onur Varol, Sabancı Üniversitesi Gözde Akar, Orta Doğu Teknik Üniversitesi Ercüment Çiçek, Bilkent Üniversitesi </description>
 	</item>
 	
 	<item>
 		<title>Percolation Theory in Network Science</title>
-		<link>https://bo1929.github.io/notes/percolation-theory/</link>
+		<link>http://localhost:1313/notes/percolation-theory/</link>
 		<pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/notes/percolation-theory/</guid>
+		<guid>http://localhost:1313/notes/percolation-theory/</guid>
 		<description>&lt;p&gt;Consider a lattice, where we place pebbles with probability $p$ at each intersection.
 Neighboring pebbles are considered to be connected, forming clusters of size two or more.
 We are mainly interested in sizes of these clusters.&lt;/p&gt;</description>
@@ -192,19 +204,19 @@ We are mainly interested in sizes of these clusters.&lt;/p&gt;</description>
 	
 	<item>
 		<title>Categorical Cross Entropy</title>
-		<link>https://bo1929.github.io/notes/categorical-cross-entropy/</link>
+		<link>http://localhost:1313/notes/categorical-cross-entropy/</link>
 		<pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/notes/categorical-cross-entropy/</guid>
+		<guid>http://localhost:1313/notes/categorical-cross-entropy/</guid>
 		<description>&lt;p&gt;Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
 		<title>I presented a poster and a spotlight presentation at MLCB 2021</title>
-		<link>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</link>
+		<link>http://localhost:1313/news/spotlight-presentation-in-mlcb-2021/</link>
 		<pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
 		
-		<guid>https://bo1929.github.io/news/spotlight-presentation-in-mlcb-2021/</guid>
+		<guid>http://localhost:1313/news/spotlight-presentation-in-mlcb-2021/</guid>
 		<description>I attended to 16th Machine Learning for Computational Biology Conference (MLCB), and presented our work in progress, titled &amp;ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&amp;rdquo; (see my slides, note that I ended up using a simplified version due to limited time). The 2-page long abstract is not available online, but hopefully, a preprint will be soon. We also had a poster presentation on the second day.</description>
 	</item>
 	
