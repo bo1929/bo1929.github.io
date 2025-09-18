@@ -205,197 +205,68 @@
 <hr>
 <article>
 <p>We are starting from scratch by creating a directory for the project:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir BaitsProject-ONR
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> BaitsProject-ONR
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>The very first step is to download all the mitochondrion genomes available on RefSeq as of 2024/09/13, we also retrieve the corresponding catalog to later map each genome to a taxonomic group.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 2024-09-13</span>
-</span></span><span class="line"><span class="cl">wget https://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/RefSeq-release226.catalog.gz
-</span></span><span class="line"><span class="cl">wget https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.1.genomic.fna.gz
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Next step is to simply decompress everything we downloaded:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gunzip -d mitochondrion.1.1.genomic.fna.gz
-</span></span><span class="line"><span class="cl">gunzip -d RefSeq-release226.catalog.gz
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Convert multi-line FASTA to 2-line FASTA for easier processing:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">seqtk seq -l0 mitochondrion.1.1.genomic.fna &gt; /tmp/mitochondrion_l0.1.1.genomic.fna <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  mv /tmp/mitochondrion_l0.1.1.genomic.fna mitochondrion.1.1.genomic.fna
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Then list all sequence identifiers to another file:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> grep <span class="s2">&#34;^&gt;&#34;</span> mitochondrion.1.1.genomic.fna <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;//&#39;</span> &gt; seqids_mitochondrion.txt
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>This part is somewhat idiosyncratic because of the input KRANK requires: a mapping between taxonomic IDs and files. So we have to split concatenated mitochondrion genomes into separate files:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir mitochondrion_genomic_peracc
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> mitochondrion_genomic_peracc
-</span></span><span class="line"><span class="cl">cat ../mitochondrion.1.1.genomic.fna <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;/&gt;&gt;/&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="p">|</span> awk <span class="s1">&#39;BEGIN{RS=&#34;&gt;&gt;&#34;;FS=&#34;\n&#34;} NR&gt;1{split($0,acc,&#34; &#34;); fnme=acc[1]&#34;.fasta&#34;; print &#34;&gt;&#34; $0 &gt; fnme; close(fnme);}&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ../
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Now, we can map each mitochondrion sequence to a taxonomic group which will be found in <code>RefSeq-release226.catalog</code>.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">mkdir BaitsProject-ONR
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd</span> BaitsProject-ONR
+</span></span></code></pre></div><p>The very first step is to download all the mitochondrion genomes available on RefSeq as of 2024/09/13, we also retrieve the corresponding catalog to later map each genome to a taxonomic group.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 2024-09-13</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">wget https://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/RefSeq-release226.catalog.gz
+</span></span><span class="line"><span class="ln">3</span><span class="cl">wget https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.1.genomic.fna.gz
+</span></span></code></pre></div><p>Next step is to simply decompress everything we downloaded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">gunzip -d mitochondrion.1.1.genomic.fna.gz
+</span></span><span class="line"><span class="ln">2</span><span class="cl">gunzip -d RefSeq-release226.catalog.gz
+</span></span></code></pre></div><p>Convert multi-line FASTA to 2-line FASTA for easier processing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">seqtk seq -l0 mitochondrion.1.1.genomic.fna &gt; /tmp/mitochondrion_l0.1.1.genomic.fna <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>  mv /tmp/mitochondrion_l0.1.1.genomic.fna mitochondrion.1.1.genomic.fna
+</span></span></code></pre></div><p>Then list all sequence identifiers to another file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"> grep <span class="s2">&#34;^&gt;&#34;</span> mitochondrion.1.1.genomic.fna <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;//&#39;</span> &gt; seqids_mitochondrion.txt
+</span></span></code></pre></div><p>This part is somewhat idiosyncratic because of the input KRANK requires: a mapping between taxonomic IDs and files. So we have to split concatenated mitochondrion genomes into separate files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">mkdir mitochondrion_genomic_peracc
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd</span> mitochondrion_genomic_peracc
+</span></span><span class="line"><span class="ln">3</span><span class="cl">cat ../mitochondrion.1.1.genomic.fna <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="se"></span>  <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;/&gt;&gt;/&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="se"></span>  <span class="p">|</span> awk <span class="s1">&#39;BEGIN{RS=&#34;&gt;&gt;&#34;;FS=&#34;\n&#34;} NR&gt;1{split($0,acc,&#34; &#34;); fnme=acc[1]&#34;.fasta&#34;; print &#34;&gt;&#34; $0 &gt; fnme; close(fnme);}&#39;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="nb">cd</span> ../
+</span></span></code></pre></div><p>Now, we can map each mitochondrion sequence to a taxonomic group which will be found in <code>RefSeq-release226.catalog</code>.
 The file <code>input_map-mitochondrion.tsv</code> is just a mapping between taxonomic IDs and mitochondrion sequences we found in RefSeq which we have already split into separate files.
 This file is going to be the input to KRANK.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cut -f1 -d<span class="s1">&#39; &#39;</span> seqids_mitochondrion.txt &gt; acc_mitochondrion.txt
-</span></span><span class="line"><span class="cl">grep -f acc_mitochondrion.txt RefSeq-release226.catalog &gt; metadata_mitochondrion.txt
-</span></span><span class="line"><span class="cl">cut -f1,3 metadata_mitochondrion.txt <span class="p">|</span> awk <span class="s1">&#39;{print $1&#34;\t./mitochondrion_genomic_peracc/&#34;$2&#34;.fasta&#34;;}&#39;</span> &gt; input_map-mitochondrion.tsv
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>We are almost there; KRANK also needs the corresponding taxonomy tree to relate different groups in their hierarchy. We download the most relevant NCBI taxonomy that we could find based on the release date of the catalog and the taxonomy:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://ftp.ncbi.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2024-09-01.zip
-</span></span><span class="line"><span class="cl">mkdir taxdump <span class="o">&amp;&amp;</span> mv taxdmp_2024-09-01.zip taxdump
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> taxdump <span class="o">&amp;&amp;</span> unzip taxdmp_2024-09-01.zip<span class="o">&amp;&amp;</span> rm taxdmp_2024-09-01.zip
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ../
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>There is only one missing/conflicting entry in this taxonomy and it is somewhat irrelevant to our species of interest so we just exclude it:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Exclude Erynnis montana (3342064), it is the only conflicting tax ID w/ the taxonomy we are using</span>
-</span></span><span class="line"><span class="cl">grep -v -w <span class="m">3342064</span> input_map-mitochondrion.tsv &gt; .input_map.tsv <span class="o">&amp;&amp;</span> mv .input_map.tsv input_map-mitochondrion.tsv
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Clone KRANK from its GitHub repository and compile it:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/bo1929/KRANK.git
-</span></span><span class="line"><span class="cl">cd KRANK
-</span></span><span class="line"><span class="cl">make
-</span></span><span class="line"><span class="cl">cd ..
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>After that, we can directly start by initializing a library which we will build using all mitochondrion genomic data, this might take a while reading all the data and extracting <em>k</em>-mers:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">KRANK/krank --seed <span class="m">0</span> build <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -l mitochondrion_lib -t ./taxdump/ <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -i ./input_map-mitochondrion.tsv  <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -k <span class="m">29</span> -w <span class="m">30</span> -h <span class="m">13</span> -b <span class="m">32</span> -s <span class="m">5</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --from-scratch --input-sequences <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --kmer-ranking random --free-size --lca soft <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --num-threads <span class="m">16</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Here, <code>mitochondrion_lib</code> is the name of the directory which we will save the library in. For all other parameters you can refer to the tutorial in the GitHub repository.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">cut -f1 -d<span class="s1">&#39; &#39;</span> seqids_mitochondrion.txt &gt; acc_mitochondrion.txt
+</span></span><span class="line"><span class="ln">2</span><span class="cl">grep -f acc_mitochondrion.txt RefSeq-release226.catalog &gt; metadata_mitochondrion.txt
+</span></span><span class="line"><span class="ln">3</span><span class="cl">cut -f1,3 metadata_mitochondrion.txt <span class="p">|</span> awk <span class="s1">&#39;{print $1&#34;\t./mitochondrion_genomic_peracc/&#34;$2&#34;.fasta&#34;;}&#39;</span> &gt; input_map-mitochondrion.tsv
+</span></span></code></pre></div><p>We are almost there; KRANK also needs the corresponding taxonomy tree to relate different groups in their hierarchy. We download the most relevant NCBI taxonomy that we could find based on the release date of the catalog and the taxonomy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">wget https://ftp.ncbi.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2024-09-01.zip
+</span></span><span class="line"><span class="ln">2</span><span class="cl">mkdir taxdump <span class="o">&amp;&amp;</span> mv taxdmp_2024-09-01.zip taxdump
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nb">cd</span> taxdump <span class="o">&amp;&amp;</span> unzip taxdmp_2024-09-01.zip<span class="o">&amp;&amp;</span> rm taxdmp_2024-09-01.zip
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nb">cd</span> ../
+</span></span></code></pre></div><p>There is only one missing/conflicting entry in this taxonomy and it is somewhat irrelevant to our species of interest so we just exclude it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Exclude Erynnis montana (3342064), it is the only conflicting tax ID w/ the taxonomy we are using</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">grep -v -w <span class="m">3342064</span> input_map-mitochondrion.tsv &gt; .input_map.tsv <span class="o">&amp;&amp;</span> mv .input_map.tsv input_map-mitochondrion.tsv
+</span></span></code></pre></div><p>Clone KRANK from its GitHub repository and compile it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">git clone https://github.com/bo1929/KRANK.git
+</span></span><span class="line"><span class="ln">2</span><span class="cl">cd KRANK
+</span></span><span class="line"><span class="ln">3</span><span class="cl">make
+</span></span><span class="line"><span class="ln">4</span><span class="cl">cd ..
+</span></span></code></pre></div><p>After that, we can directly start by initializing a library which we will build using all mitochondrion genomic data, this might take a while reading all the data and extracting <em>k</em>-mers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">KRANK/krank --seed <span class="m">0</span> build <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>  -l mitochondrion_lib -t ./taxdump/ <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="se"></span>  -i ./input_map-mitochondrion.tsv  <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="se"></span>  -k <span class="m">29</span> -w <span class="m">30</span> -h <span class="m">13</span> -b <span class="m">32</span> -s <span class="m">5</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="se"></span>  --from-scratch --input-sequences <span class="se">\
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="se"></span>  --kmer-ranking random --free-size --lca soft <span class="se">\
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="se"></span>  --num-threads <span class="m">16</span>
+</span></span></code></pre></div><p>Here, <code>mitochondrion_lib</code> is the name of the directory which we will save the library in. For all other parameters you can refer to the tutorial in the GitHub repository.</p>
 <p>Now we can build the LSH tables, this will take quite a while so make sure to have a stable connecting (or use <code>screen</code>/<code>tmux</code> etc.) if you are on a remote server. The resource usage is also going to be high so using a machine with high-memory would help:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">KRANK/krank --seed <span class="m">0</span> build <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -l mitochondrion_lib -t ./taxdump/ <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -i ./input_map-mitochondrion.tsv  <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -k <span class="m">29</span> -w <span class="m">30</span> -h <span class="m">13</span> -b <span class="m">32</span> -s <span class="m">5</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --target-batch <span class="m">0</span> --fast-mode --from-library --input-sequences <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --kmer-ranking random --free-size --lca soft <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --num-threads <span class="m">16</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>If you fail to run this command due to insufficient memory; increase <code>-s</code> to 6 or 7 and don&rsquo;t forget to initialize again!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">KRANK/krank --seed <span class="m">0</span> build <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>  -l mitochondrion_lib -t ./taxdump/ <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="se"></span>  -i ./input_map-mitochondrion.tsv  <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="se"></span>  -k <span class="m">29</span> -w <span class="m">30</span> -h <span class="m">13</span> -b <span class="m">32</span> -s <span class="m">5</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="se"></span>  --target-batch <span class="m">0</span> --fast-mode --from-library --input-sequences <span class="se">\
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="se"></span>  --kmer-ranking random --free-size --lca soft <span class="se">\
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="se"></span>  --num-threads <span class="m">16</span>
+</span></span></code></pre></div><p>If you fail to run this command due to insufficient memory; increase <code>-s</code> to 6 or 7 and don&rsquo;t forget to initialize again!</p>
 <p>We can finally query our baits:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">KRANK/krank query -l mitochondrion_lib -q N_elephant_seal/angustirostris_mitogenome_chunks.fasta -o N_elephant_seal
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">KRANK/krank query -l mitochondrion_lib -q Humpback_whale/novaeangliae_mitogenome_chunks.fasta -o Humpback_whale/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Resulting file will associate each candidate sequence with a taxonomic group, choose higher ranks for increased sensitivity and lower ranks for better specificity.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">KRANK/krank query -l mitochondrion_lib -q N_elephant_seal/angustirostris_mitogenome_chunks.fasta -o N_elephant_seal
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">KRANK/krank query -l mitochondrion_lib -q Humpback_whale/novaeangliae_mitogenome_chunks.fasta -o Humpback_whale/
+</span></span></code></pre></div><p>Resulting file will associate each candidate sequence with a taxonomic group, choose higher ranks for increased sensitivity and lower ranks for better specificity.</p>
 
 
 <div id="nextprev">

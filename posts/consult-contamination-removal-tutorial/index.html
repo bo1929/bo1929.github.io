@@ -210,38 +210,18 @@
 <ul>
 <li>
 <p>You can use <code>make</code> to compile CONSULT.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make all <span class="c1"># for all components of CONSULT</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># OR</span>
-</span></span><span class="line"><span class="cl">make minimize <span class="c1"># for the minimization script</span>
-</span></span><span class="line"><span class="cl">make map <span class="c1"># for consult_map to construct a library</span>
-</span></span><span class="line"><span class="cl">make search <span class="c1"># for consult_search to query</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">make all <span class="c1"># for all components of CONSULT</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"># OR</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">make minimize <span class="c1"># for the minimization script</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">make map <span class="c1"># for consult_map to construct a library</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">make search <span class="c1"># for consult_search to query</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Alternatively, you can run <code>g++</code> directly.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">g++ minimize.cpp -std<span class="o">=</span>c++11 -o minimize <span class="c1"># for the minimization script</span>
-</span></span><span class="line"><span class="cl">g++ consult_map.cpp -std<span class="o">=</span>c++11 -O3 -o consult_map  <span class="c1"># for consult_map to construct a library</span>
-</span></span><span class="line"><span class="cl">g++ consult_search.cpp -std<span class="o">=</span>c++11 -fopenmp -O3 -o consult_search <span class="c1"># for consult_search to query</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">g++ minimize.cpp -std<span class="o">=</span>c++11 -o minimize <span class="c1"># for the minimization script</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">g++ consult_map.cpp -std<span class="o">=</span>c++11 -O3 -o consult_map  <span class="c1"># for consult_map to construct a library</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">g++ consult_search.cpp -std<span class="o">=</span>c++11 -fopenmp -O3 -o consult_search <span class="c1"># for consult_search to query</span>
+</span></span></code></pre></div></li>
 </ul>
 <h2 id="constructing-a-consult-reference-library">Constructing a CONSULT reference library</h2>
 <ul>
@@ -264,24 +244,10 @@
 </li>
 </ul>
 <p>To construct a reference library, go to the place where CONSULT is compiled and use the following command to run <code>consult_map</code>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./consult_map -i /path/to/file --output-library-dir /path/to/directory
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Alternatively, one can use long command-line arguments:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./consult_map --input-fasta-file /path/to/file --output-library-dir /path/to/directory
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Description of command-line arguments for <code>consult_map</code>:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">./consult_map -i /path/to/file --output-library-dir /path/to/directory
+</span></span></code></pre></div><p>Alternatively, one can use long command-line arguments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">./consult_map --input-fasta-file /path/to/file --output-library-dir /path/to/directory
+</span></span></code></pre></div><p><strong>Description of command-line arguments for <code>consult_map</code>:</strong></p>
 <ul>
 <li>
 <p><code>-i</code> or <code>--input-fasta-file</code>: input <code>.fasta</code> file of list of <em>k</em>-mers to construct library.</p>
@@ -308,24 +274,10 @@
 <p>Default parameter values of optional arguments are determined by a heuristic using the genome size given with the <code>-i</code> argument.</p>
 <h2 id="searching-queries-against-a-reference-library">Searching Queries against a Reference Library</h2>
 <p>To query a set of sequences against a reference, go to the directory where executables are and execute the <code>consult_search</code> command:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> ./consult_search -i /path/to/directory -q /path/to/queries -o /path/to/directory
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Alternatively, one can use long command-line arguments:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> ./consult_search --input-library-dir /path/to/directory --query-path /path/to/queries --output-library-dir /path/to/directory
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Description of command-line arguments for <code>consult_search</code>:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"> ./consult_search -i /path/to/directory -q /path/to/queries -o /path/to/directory
+</span></span></code></pre></div><p>Alternatively, one can use long command-line arguments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"> ./consult_search --input-library-dir /path/to/directory --query-path /path/to/queries --output-library-dir /path/to/directory
+</span></span></code></pre></div><p><strong>Description of command-line arguments for <code>consult_search</code>:</strong></p>
 <ul>
 <li>
 <p><code>-i</code> or <code>input-library-dir</code>: directory of the CONSULT library that will be used as the reference database.</p>
