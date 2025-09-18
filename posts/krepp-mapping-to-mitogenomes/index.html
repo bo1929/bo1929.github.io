@@ -213,8 +213,9 @@ It is quite straightforward to download an index and get started (jump to <a hre
 Alternatively, if you have your own reference mitogenomes, you can index them from scratch (see <a href="#indexing-mitogenomes">Indexing mitogenomes</a>).
 Once you do either of these, the next step is querying your skimming data (e.g., a FASTA or FASTQ file), as we will discuss in detail.</p>
 <h2 id="downloading-an-existing-index">Downloading an existing index</h2>
-<p>Download a relatively up-to-date mitogenome index by running the below <code>wget</code> command. Then, untar and decompress it.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">wget --no-certificate https://ter-trees.ucsd.edu/data/krepp/index_mitochondrion-RefSeq20240913.tar.gz
+<p>Download a relatively up-to-date mitogenome index by running the below <code>wget</code> command (or <a href="https://curl.se/docs/tutorial.html"><code>curl</code></a> if <code>wget</code> is not available).
+Then, untar and decompress it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">wget --no-check-certificate https://ter-trees.ucsd.edu/data/krepp/index_mitochondrion-RefSeq20240913.tar.gz
 </span></span><span class="line"><span class="ln">2</span><span class="cl">tar -xzvf index_mitochondrion-RefSeq20240913.tar.gz
 </span></span></code></pre></div><p>The resulting directory <code>index_mitochondrion-RefSeq20240913</code> stores the index that we can perform queries against.
 You can jump to the <a href="#querying-your-skimming-data">next step</a>.</p>
@@ -225,24 +226,18 @@ The very first step is to download all the mitogenomes available on RefSeq as of
 </span></span><span class="line"><span class="ln">2</span><span class="cl">wget https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.1.genomic.fna.gz
 </span></span><span class="line"><span class="ln">3</span><span class="cl">gunzip -d mitochondrion.1.1.genomic.fna.gz
 </span></span></code></pre></div><p>Convert multi-line FASTA to 2-line FASTA for easier processing.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">seqtk seq -l0 mitochondrion.1.1.genomic.fna &gt; /tmp/mitochondrion_l0.1.1.genomic.fna <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>  mv /tmp/mitochondrion_l0.1.1.genomic.fna mitochondrion.1.1.genomic.fna
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">seqtk seq -l0 mitochondrion.1.1.genomic.fna &gt; /tmp/mitochondrion_l0.1.1.genomic.fna <span class="o">&amp;&amp;</span> mv /tmp/mitochondrion_l0.1.1.genomic.fna mitochondrion.1.1.genomic.fna
 </span></span></code></pre></div><p>Since krepp requires one reference sequence per file, we have to split concatenated mitogenomes into separate files:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">mkdir mitochondrion_genomic_peracc
 </span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd</span> mitochondrion_genomic_peracc
-</span></span><span class="line"><span class="ln">3</span><span class="cl">cat ../mitochondrion.1.1.genomic.fna <span class="se">\
-</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="se"></span>  <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;/&gt;&gt;/&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="se"></span>  <span class="p">|</span> awk <span class="s1">&#39;BEGIN{RS=&#34;&gt;&gt;&#34;;FS=&#34;\n&#34;} NR&gt;1{split($0,acc,&#34; &#34;); fnme=acc[1]&#34;.fasta&#34;; print &#34;&gt;&#34; $0 &gt; fnme; close(fnme);}&#39;</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="nb">cd</span> ../
+</span></span><span class="line"><span class="ln">3</span><span class="cl">cat ../mitochondrion.1.1.genomic.fna <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;/&gt;&gt;/&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;BEGIN{RS=&#34;&gt;&gt;&#34;;FS=&#34;\n&#34;} NR&gt;1{split($0,acc,&#34; &#34;); fnme=acc[1]&#34;.fasta&#34;; print &#34;&gt;&#34; $0 &gt; fnme; close(fnme);}&#39;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nb">cd</span> ../
 </span></span></code></pre></div><p>Then, list all sequence identifiers in another file and create a mapping between accession IDs and each file corresponding to a reference sequence.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">grep <span class="s2">&#34;^&gt;&#34;</span> mitochondrion.1.1.genomic.fna <span class="p">|</span> sed <span class="s1">&#39;s/^&gt;//&#39;</span> &gt; seqids_mitochondrion.txt
-</span></span><span class="line"><span class="ln">2</span><span class="cl">cut -f1 -d<span class="s1">&#39; &#39;</span> seqids_mitochondrion.txt <span class="p">|</span> awk <span class="s1">&#39;{print $1&#34;\t./mitochondrion_genomic_peracc/&#34;$2&#34;.fasta&#34;;}&#39;</span> &gt; input_map-mitochondrion.tsv
+</span></span><span class="line"><span class="ln">2</span><span class="cl">cut -f1 -d<span class="s1">&#39; &#39;</span> seqids_mitochondrion.txt <span class="p">|</span> awk <span class="s1">&#39;{print $1&#34;\t./mitochondrion_genomic_peracc/&#34;$1&#34;.fasta&#34;;}&#39;</span> &gt; input_map-mitochondrion.tsv
 </span></span></code></pre></div><p>This file (<code>input_map-mitochondrion.tsv</code>) is going to be used as the input to krepp.</p>
 <p>We are almost there. Now that we have a mapping, we can index mitogenomes by simply running the following <code>krepp index</code> command.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">seq <span class="m">0</span> <span class="m">7</span> <span class="p">|</span> <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>    xargs -I<span class="o">{}</span> bash -c <span class="s2">&#34;krepp index \
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="s2">    -i input_map-mitochondrion.tsv -o index_mitochondrion-RefSeq20240913 \
-</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="s2">    -k 29 -w 32 -h 13 -m 8 -r {} --no-frac --sdust-t 0 --num-threads 24&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">seq <span class="m">0</span> <span class="m">7</span> <span class="p">|</span> xargs -I<span class="o">{}</span> bash -c <span class="s2">&#34;krepp index -i input_map-mitochondrion.tsv -o index_mitochondrion-RefSeq20240913 -k 29 -w 32 -h 13 -m 8 -r {} --no-frac --sdust-t 0 --num-threads 24&#34;</span>
 </span></span></code></pre></div><p>Here, <code>index_mitochondrion-RefSeq20240913</code> is the name of the directory where we store the index.
 For all other parameters, you can refer to the tutorial in the GitHub repository.</p>
 <h2 id="querying-your-skimming-data">Querying your skimming data</h2>
@@ -274,8 +269,7 @@ You can simply filter such reads using their IDs and move forward with the rest.
 You may want to change the threshold value (e.g., <code>--dist-max 0.1</code> for a more aggressive filtering or <code>--dist-max 0.2</code> for a more conservative filtering), but 15% should do a decent job for this purpose.</p>
 <p>To test these commands, I created a toy example of a skimming file consisting of 500 mitochondrial reads (generated from a randomly selected set of mitogenomes) and 500 bacterial reads.
 When I run the below command, it outputs 500 mitochondrial read IDs, meaning that we filter all bacterial reads and retain all mitochondrial reads, which is the desired output.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">krepp dist -i index_mitochondrion-RefSeq20240913 -q xyz.fq --dist-max 0.15 --filter <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span> <span class="p">|</span> grep -v NaN <span class="p">|</span> cut -f1 <span class="p">|</span> uniq
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">krepp dist -i index_mitochondrion-RefSeq20240913 -q xyz.fq --dist-max 0.15 --filter <span class="p">|</span> grep -v NaN <span class="p">|</span> cut -f1 <span class="p">|</span> uniq
 </span></span></code></pre></div><p>Good luck with your data!</p>
 
 
