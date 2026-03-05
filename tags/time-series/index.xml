@@ -37,8 +37,8 @@ Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen 
 		<pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/presentations/</guid>
-		<description>Talks Contemporary Challenges in Large-Scale Sequence Alignments and Phylogenies
-IMSI (University of Chicago), Chicago [August, 2025]
+		<description>Talks Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies
+IMSI (UChicago), Chicago [August, 2025]
 Read-genome distance calculation &amp;amp; phylogenetic placement using krepp (tutorial) [slides][recording] Mapping strongly discordant regions on the genome using hidden Markov models (short talk) [slides][recording] RECOMB 2025 - Yonsei University, Seoul [April, 2025]
 Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement) [slides] RECOMB 2024 - MIT, Boston [April, 2024]
 Memory-bound and taxonomy-aware k-mer selection for large reference databases [slides] BioSys 2024 (in conjunction with ASPLOS 2024) - La Jolla [April, 2024]</description>
@@ -125,7 +125,7 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/curriculum-vitae/</guid>
-		<description>Professional services Paper review ISMB 2022 (sub-reviewer) ACML 2022 (sub-reviewer) ACML 2021 (sub-reviewer) Machine Learning, Springer (sub-reviewer) Proceedings of Machine Learning Research (sub-reviewer) Bioinformatics Advances (sub-reviewer) </description>
+		<description>Professional services Review/subreview ISMB 2022 ACML 2021, 2022 Machine Learning Proceedings of Machine Learning Research Molecular Ecology Resources Bioinformatics Advances </description>
 	</item>
 	
 	<item>
