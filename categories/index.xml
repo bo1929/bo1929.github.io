@@ -31,6 +31,19 @@ Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen 
 	</item>
 	
 	<item>
+		<title>Presentations</title>
+		<link>https://bo1929.github.io/presentations/</link>
+		<pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/presentations/</guid>
+		<description>Talks Contemporary Challenges in Large-Scale Sequence Alignments and Phylogenies
+IMSI (University of Chicago), Chicago [August, 2025]
+Read-genome distance calculation &amp;amp; phylogenetic placement using krepp (tutorial) [slides][recording] Mapping strongly discordant regions on the genome using hidden Markov models (short talk) [slides][recording] RECOMB 2025 - Yonsei University, Seoul [April, 2025]
+Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement) [slides] RECOMB 2024 - MIT, Boston [April, 2024]
+Memory-bound and taxonomy-aware k-mer selection for large reference databases [slides] BioSys 2024 (in conjunction with ASPLOS 2024) - La Jolla [April, 2024]</description>
+	</item>
+	
+	<item>
 		<title>Our paper has been accepted in RECOMB 2025</title>
 		<link>https://bo1929.github.io/news/accepted-paper-recomb-2025/</link>
 		<pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
@@ -50,7 +63,9 @@ We then propose an intuitive and accurate heuristic to place reads on an existin
 		<pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/publications/</guid>
-		<description>Preprints Şapcı, A. O. B., &amp;amp; Mirarab, S. (2025). A k-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement. (p. 2025.01.20.633730). bioRxiv. https://doi.org/10.1101/2025.01.20.633730 Peer-reviewed journal publications Keleş, M. F., Şapcı, A. O. B., Brody, C., Palmer, I., Mehta, A., Ahmadi, S., Le, C., Taştan, Ö., Keleş, S., &amp;amp; Wu, M. N. (2025). FlyVISTA, an integrated machine learning platform for deep phenotyping of sleep in Drosophila.</description>
+		<description>Preprints Arasti, S., Şapcı, A. O. B., Rachtman, E., El-Kebir, M., &amp;amp; Mirarab, S. (2026). Deconvolving Phylogenetic Distance Mixtures (p. 2026.01.18.700179). bioRxiv. https://doi.org/10.64898/2026.01.18.700179
+Melendez, D., Şapcı, A. O. B., Bafna, V., &amp;amp; Mirarab, S. (2025). SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation (p. 2025.11.14.688492). bioRxiv. https://doi.org/10.1101/2025.11.14.688492
+Journal Publications Şapcı, A. O. B., &amp;amp; Mirarab, S. (2026). krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement.</description>
 	</item>
 	
 	<item>
@@ -110,15 +125,6 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		
 		<guid>https://bo1929.github.io/curriculum-vitae/</guid>
 		<description>Professional services Paper review ISMB 2022 (sub-reviewer) ACML 2022 (sub-reviewer) ACML 2021 (sub-reviewer) Machine Learning, Springer (sub-reviewer) Proceedings of Machine Learning Research (sub-reviewer) Bioinformatics Advances (sub-reviewer) </description>
-	</item>
-	
-	<item>
-		<title>Presentations</title>
-		<link>https://bo1929.github.io/presentations/</link>
-		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/presentations/</guid>
-		<description> Contemporary Challenges in Large-Scale Sequence Alignments and Phylogenies - Aug 2025, IMSI (University of Chicago), Chicago RECOMB - April 2025, Seoul, South Korea RECOMB - April 2024, Boston, USA BioSys - April 2024, La Jolla, USA UCSD CSE290 - Seminar in Computer Science and Engineering, Jan 2024, San Diego, USA RECOMB-CG, April 2023, Istanbul, Türkiye MLCB, 2021, held remote due to COVID-2019 SIU, 2021, held remote due to COVID-2019 </description>
 	</item>
 	
 	<item>
