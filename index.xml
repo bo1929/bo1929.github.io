@@ -39,9 +39,16 @@ Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen 
 		<guid>https://bo1929.github.io/presentations/</guid>
 		<description>Talks Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies
 IMSI (UChicago), Chicago [August, 2025]
-Read-genome distance calculation &amp;amp; phylogenetic placement using krepp (tutorial) [slides][recording] Mapping strongly discordant regions on the genome using hidden Markov models (short talk) [slides][recording] RECOMB 2025 - Yonsei University, Seoul [April, 2025]
-Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement) [slides] RECOMB 2024 - MIT, Boston [April, 2024]
-Memory-bound and taxonomy-aware k-mer selection for large reference databases [slides] BioSys 2024 (in conjunction with ASPLOS 2024) - La Jolla [April, 2024]</description>
+‣ Read-genome distance calculation &amp;amp; phylogenetic placement using krepp (tutorial)
+[slides, recording]
+‣ Mapping strongly discordant regions on the genome using hidden Markov models (short talk)
+[slides, recording] RECOMB 2025
+Yonsei University, Seoul [April, 2025]
+‣ Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)
+[slides]
+RECOMB 2024
+MIT, Boston [April, 2024]
+‣ Memory-bound and taxonomy-aware k-mer selection for large reference databases</description>
 	</item>
 	
 	<item>
