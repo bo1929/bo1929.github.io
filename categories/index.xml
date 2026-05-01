@@ -10,6 +10,25 @@
 	
 	
 	<item>
+		<title>Presentations</title>
+		<link>https://bo1929.github.io/presentations/</link>
+		<pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/presentations/</guid>
+		<description>Talks &amp;amp; Presentations Conference Presentations Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies
+IMSI (UChicago), Chicago [August, 2025]
+‣ Read-genome distance calculation &amp;amp; phylogenetic placement using krepp [tutorial]
+[slides, recording]
+‣ Mapping strongly discordant regions on the genome using hidden Markov models [short talk]
+[slides, recording] RECOMB 2025
+Yonsei University, Seoul [April, 2025]
+‣ Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)
+[slides]
+RECOMB 2024
+MIT, Boston [April, 2024]</description>
+	</item>
+	
+	<item>
 		<title>Binning mitochondrial reads from skimming data using krepp</title>
 		<link>https://bo1929.github.io/posts/krepp-mapping-to-mitogenomes/</link>
 		<pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
@@ -28,26 +47,6 @@
 My slides are available here.
 &amp;hellip;and a couple of photos:
 Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen above) during all my talks, constantly. </description>
-	</item>
-	
-	<item>
-		<title>Presentations</title>
-		<link>https://bo1929.github.io/presentations/</link>
-		<pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/presentations/</guid>
-		<description>Talks Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies
-IMSI (UChicago), Chicago [August, 2025]
-‣ Read-genome distance calculation &amp;amp; phylogenetic placement using krepp (tutorial)
-[slides, recording]
-‣ Mapping strongly discordant regions on the genome using hidden Markov models (short talk)
-[slides, recording] RECOMB 2025
-Yonsei University, Seoul [April, 2025]
-‣ Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)
-[slides]
-RECOMB 2024
-MIT, Boston [April, 2024]
-‣ Memory-bound and taxonomy-aware k-mer selection for large reference databases</description>
 	</item>
 	
 	<item>
@@ -70,9 +69,8 @@ We then propose an intuitive and accurate heuristic to place reads on an existin
 		<pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/publications/</guid>
-		<description>Preprints Arasti, S., Şapcı, A. O. B., Rachtman, E., El-Kebir, M., &amp;amp; Mirarab, S. (2026). Deconvolving Phylogenetic Distance Mixtures (p. 2026.01.18.700179). bioRxiv. https://doi.org/10.64898/2026.01.18.700179
-Melendez, D., Şapcı, A. O. B., Bafna, V., &amp;amp; Mirarab, S. (2025). SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation (p. 2025.11.14.688492). bioRxiv. https://doi.org/10.1101/2025.11.14.688492
-Journal Publications Şapcı, A. O. B., &amp;amp; Mirarab, S. (2026). krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement.</description>
+		<description>Preprints Arasti, S., Şapcı, A. O. B., Rachtman, E., El-Kebir, M., &amp;amp; Mirarab, S. (2026). Deconvolving Phylogenetic Distance Mixtures (p. 2026.01.18.700179). bioRxiv. https://doi.org/10.64898/2026.01.18.700179 Journal Publications Melendez, D., Şapcı, A. O. B., Bafna, V., &amp;amp; Mirarab, S. (2026). SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation. Molecular Ecology Resources, 26(3), e70145. https://doi.org/10.1111/1755-0998.70145
+Şapcı, A. O. B., &amp;amp; Mirarab, S. (2026). krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement.</description>
 	</item>
 	
 	<item>
@@ -131,7 +129,11 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/curriculum-vitae/</guid>
-		<description>Professional services Review/subreview ISMB 2022 ACML 2021, 2022 Machine Learning Proceedings of Machine Learning Research Molecular Ecology Resources Bioinformatics Advances </description>
+		<description>Fellowships and Awards Awards RECOMB Travel Fellowship [2026]
+30th Annual International Conference on Research in Computational Molecular Biology ($2,000). RECOMB-CG Best Paper Award [2023]
+20th Annual Conference of RECOMB on Comparative Genomics. Highest Ranking Student Award - Turkish Council of Higher Education [2015]
+Top-scoring student in the nationwide university entrance exam accepted to Sabanci University. Fellowships Powell Fellowship - The Charles Lee Powell Foundation [2022]
+$40,000 one-year award towards stipend and tuition.</description>
 	</item>
 	
 	<item>

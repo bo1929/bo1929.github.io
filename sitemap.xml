@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bo1929.github.io/presentations/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://bo1929.github.io/posts/krepp-mapping-to-mitogenomes/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -37,9 +40,6 @@
   </url><url>
     <loc>https://bo1929.github.io/news/</loc>
     <lastmod>2025-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bo1929.github.io/presentations/</loc>
-    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bo1929.github.io/news/accepted-paper-recomb-2025/</loc>
     <lastmod>2025-01-14T00:00:00+00:00</lastmod>
