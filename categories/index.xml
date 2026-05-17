@@ -179,11 +179,9 @@ $40,000 one-year award towards stipend and tuition.</description>
 		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/research/</guid>
-		<description>I am primarily interested in sequence analysis in the context of metagenomics and phylogenetics. I develop tools that target efficient analysis of large-scale genomic datasets. Some examples are:
-CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification
-KRANK &amp;ndash; memory-bound and taxonomy-aware k-mer selection algorithm
-krepp &amp;ndash; reads to genome distance estimation and phylogenetic placement
-I also briefly worked in network analysis: see our community detection method for dynamic gene co-expression networks (MuDCoD &amp;ndash; community detection in multi-subject dynamic networks from scRNA-seq data).</description>
+		<description>I study molecular sequences and (gene, species, coalescent) trees as discrete objects using algorithms (in the traditional sense), probabilistic data structures, and a bit of probabilistic modeling.
+During my PhD, I developed several metagenomic sequence analysis tools, targeting efficient taxonomic and/or phylogenomic analysis of large-scale datasets. Some examples are:
+CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification KRANK &amp;ndash; a memory-bound and taxonomy-aware k-mer selection algorithm krepp &amp;ndash; read to genome distance estimation and phylogenetic placement In the past, I briefly worked in network analysis and developed a community detection method for dynamic gene co-expression networks (MuDCoD &amp;ndash; community detection in multi-subject dynamic networks from scRNA-seq data).</description>
 	</item>
 	
 	<item>
