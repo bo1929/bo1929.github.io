@@ -7,17 +7,7 @@
 	<link rel='alternate' type='application/rss+xml' title="Ali Osman Berk Şapcı RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
-	<meta name="description" content="Talks &amp; Presentations Conference Presentations Contemporary Challenges in Large-Scale Sequence Alignments &amp; Phylogenies
-IMSI (UChicago), Chicago [August, 2025]
-‣ Read-genome distance calculation &amp; phylogenetic placement using krepp [tutorial]
-[slides, recording]
-‣ Mapping strongly discordant regions on the genome using hidden Markov models [short talk]
-[slides, recording] RECOMB 2025
-Yonsei University, Seoul [April, 2025]
-‣ Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)
-[slides]
-RECOMB 2024
-MIT, Boston [April, 2024]">
+	<meta name="description" content="Available materials used in talks, seminars, and other presentations">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
@@ -149,17 +139,27 @@ MIT, Boston [April, 2024]">
   }
 
   body.dark-mode {
-    background: #1b1b1b;
-    color: navajowhite;
+    --text: #e8dcc8;
+    --text-muted: #c4b5a8;
+    --heading-1: darksalmon;
+    --heading-2: #C5908E;
+    --heading-3: #C2E5D3;
+    --heading-4: #D5D6EA;
+    --heading-5: #EBDDE2;
+    --accent-event: #C5908E;
+    --accent-talk: #C2E5D3;
+    --link: thistle;
+    --link-visited: #F7CAC9;
+    --link-hover: #F7CAC9;
+    --bg: #1e1c1a;
+    --border: rgba(255, 222, 173, 0.2);
+    background: var(--bg);
+    color: var(--text);
   }
 
-  body.dark-mode h1 { color: darksalmon; }
-  body.dark-mode h2 { color: #C5908E; }
-  body.dark-mode h3 { color: #C2E5D3; }
-  body.dark-mode h4 { color: #D5D6EA; }
-  body.dark-mode h5, body.dark-mode h6 { color: #EBDDE2; }
-  body.dark-mode a { color: thistle; }
-  body.dark-mode a:visited { color: #F7CAC9; }
+  body.dark-mode .site-subtitle {
+    opacity: 0.92;
+  }
 </style>
 
 <script>
@@ -210,127 +210,119 @@ MIT, Boston [April, 2024]">
 
   
 
-<br>
 <body>
-<nav>
-    <ul>
-      <li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/presentations/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Presentations</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/news/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>News</span></a></li>
-    </ul>
-</nav>
+<div class="site-wrap">
 <main>
-<header><h1 id="tag - Presentations">Presentations</h1></header>
+<header class="site-header">
+	<h1 id="tag - Presentations">Presentations</h1>
+	<p class="site-subtitle">Available materials used in talks, seminars, and other presentations</p>
+</header>
 
-<hr>
-<article>
+<nav class="site-nav" aria-label="Main">
+  <ul class="site-nav-list">
+    <li class="site-nav-item">
+        <a class="site-nav-link" href="/"><span class="pre"></span><span>Home</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/publications/"><span class="pre"></span><span>Publications</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link site-nav-link--active" href="/presentations/"><span class="pre"></span><span>Presentations</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/research/"><span class="pre"></span><span>Research</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/news/"><span class="pre"></span><span>News</span></a>
+      </li>
+  </ul>
+</nav>
 
-<div class="compact-list-wrapper">
+<article class="site-content">
+<div class="outline-list">
   <h2 id="talks--presentations">Talks &amp; Presentations</h2>
 <h3 id="conference-presentations">Conference Presentations</h3>
 <ul>
-<li><strong>Contemporary Challenges in Large-Scale Sequence Alignments &amp; Phylogenies</strong><br>
-IMSI (UChicago), Chicago [<a href="https://www.imsi.institute/activities/contemporary-challenges-in-large-scale-sequence-alignments-and-phylogenies/">August, 2025</a>]<br>
-‣ <em>Read-genome distance calculation &amp; phylogenetic placement using krepp</em> [tutorial]<br>
-[<a href="/presentations/krepp-imsi-2025.pdf">slides</a>, <a href="https://www.imsi.institute/videos/krepp/">recording</a>]<br>
-‣ <em>Mapping strongly discordant regions on the genome using hidden Markov models</em> [short talk]<br>
-[<a href="/presentations/phlag-imsi-2025.pdf">slides</a>, <a href="https://www.imsi.institute/videos/lightning-talks-7/">recording</a>]</li>
-</ul>
-<!-- raw HTML omitted -->
+<li>
+<p><strong>Contemporary Challenges in Large-Scale Sequence Alignments &amp; Phylogenies</strong></p>
 <ul>
-<li>
-<p><strong>RECOMB 2025</strong><br>
-Yonsei University, Seoul [<a href="https://recomb.org/recomb2025/">April, 2025</a>]<br>
-‣ <em>Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)</em><br>
-[<a href="/presentations/krepp-recomb-2025.pdf">slides</a>]</p>
+<li>IMSI (UChicago), Chicago [<a href="https://www.imsi.institute/activities/contemporary-challenges-in-large-scale-sequence-alignments-and-phylogenies/">August, 2025</a>]</li>
+<li><em>Read-genome distance calculation &amp; phylogenetic placement using krepp</em> [tutorial] [<a href="/presentations/krepp-imsi-2025.pdf">slides</a>, <a href="https://www.imsi.institute/videos/krepp/">recording</a>]</li>
+<li><em>Mapping strongly discordant regions on the genome using hidden Markov models</em> [short talk] [<a href="/presentations/phlag-imsi-2025.pdf">slides</a>, <a href="https://www.imsi.institute/videos/lightning-talks-7/">recording</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>RECOMB 2024</strong><br>
-MIT, Boston [<a href="https://recomb.org/recomb2024/">April, 2024</a>]<br>
-‣ <em>Memory-bound and taxonomy-aware k-mer selection for large reference databases</em><br>
-[<a href="/presentations/krank-recomb-2024.pdf">slides</a>]</p>
+<p><strong>RECOMB 2025</strong></p>
+<ul>
+<li>Yonsei University, Seoul [<a href="https://recomb.org/recomb2025/">April, 2025</a>]</li>
+<li><em>Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)</em> [<a href="/presentations/krepp-recomb-2025.pdf">slides</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>BioSys 2024</strong> (in conjunction with ASPLOS 2024)<br>
-La Jolla [<a href="https://biosys-workshop.github.io/dist/index.html">April, 2024</a>]<br>
-‣ <em>Memory-bound and taxonomy-aware k-mer selection for large reference databases</em><br>
-[<a href="/presentations/krank-biosys-2024.pdf">slides</a>, <a href="https://www.youtube.com/watch?v=qL9th2V_Y68">recording</a>]</p>
+<p><strong>RECOMB 2024</strong></p>
+<ul>
+<li>MIT, Boston [<a href="https://recomb.org/recomb2024/">April, 2024</a>]</li>
+<li><em>Memory-bound and taxonomy-aware k-mer selection for large reference databases</em> [<a href="/presentations/krank-recomb-2024.pdf">slides</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>RECOMB-CG 2023</strong><br>
-ITU, Istanbul [April, 2023]<br>
-‣ <em>CONSULT-II: Taxonomic identification using locality sensitive hashing</em><br>
-[<a href="/presentations/consultii-recombcg-presentation-2023.pdf">slides</a>]</p>
+<p><strong>BioSys 2024</strong> (in conjunction with ASPLOS 2024)</p>
+<ul>
+<li>La Jolla [<a href="https://biosys-workshop.github.io/dist/index.html">April, 2024</a>]</li>
+<li><em>Memory-bound and taxonomy-aware k-mer selection for large reference databases</em> [<a href="/presentations/krank-biosys-2024.pdf">slides</a>, <a href="https://www.youtube.com/watch?v=qL9th2V_Y68">recording</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>MLCB 2021</strong><br>
-Virtual Conference [<a href="https://sites.google.com/cs.washington.edu/mlcb2021">October, 2021</a>]<br>
-‣ <em>MuDCoD: Multi-subject community detection in dynamic gene networks</em> [short talk]<br>
-[<a href="/presentations/mudcod-mlcb-presentation-2021.pdf">slides</a>]</p>
+<p><strong>RECOMB-CG 2023</strong></p>
+<ul>
+<li>ITU, Istanbul <a href="https://recomb.org/recomb-cg2023/index.html">[April, 2023]</a></li>
+<li><em>CONSULT-II: Taxonomic identification using locality sensitive hashing</em> [<a href="/presentations/consultii-recombcg-presentation-2023.pdf">slides</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>Signal Processing and Communications Applications (SIU) 2020</strong><br>
-Virtual Conference [September, 2020]<br>
-‣ <em>Active Learning for Turkish Text Classification</em></p>
+<p><strong>MLCB 2021</strong></p>
+<ul>
+<li>Virtual Conference [<a href="https://sites.google.com/cs.washington.edu/mlcb2021">October, 2021</a>]</li>
+<li><em>MuDCoD: Multi-subject community detection in dynamic gene networks</em> [short talk] [<a href="/presentations/mudcod-mlcb-presentation-2021.pdf">slides</a>]</li>
+</ul>
+</li>
+<li>
+<p><strong>Signal Processing and Communications Applications (SIU) 2020</strong></p>
+<ul>
+<li>Virtual Conference [September, 2020]</li>
+<li><em>Active Learning for Turkish Text Classification</em></li>
+</ul>
 </li>
 </ul>
 <h3 id="invited-talks--seminars">Invited Talks &amp; Seminars</h3>
 <h3 id="miscellaneous">Miscellaneous</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="posters">Posters</h2>
 <ul>
 <li>
-<p><strong>ProbGen (Probabilistic Modeling in Genomics) 2026</strong><br>
-UC Berkeley, Berkeley [<a href="https://probgen2026.github.io/">March, 2025</a>]<br>
-‣ <em>A probabilistic framework for sequence distances &amp; genome-wide (phylogenetic) pattern matching</em> <br>
-[<a href="/documents/poster-gdiff-probgen-2026.pdf">poster</a>]</p>
+<p><strong>ProbGen (Probabilistic Modeling in Genomics) 2026</strong></p>
+<ul>
+<li>UC Berkeley, Berkeley [<a href="https://probgen2026.github.io/">March, 2025</a>]</li>
+<li><em>A probabilistic framework for sequence distances &amp; genome-wide (phylogenetic) pattern matching</em> [<a href="/documents/poster-gdiff-probgen-2026.pdf">poster</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>Contemporary Challenges in Large-Scale Sequence Alignments &amp; Phylogenies</strong><br>
-IMSI (UChicago), Chicago [<a href="https://www.imsi.institute/activities/contemporary-challenges-in-large-scale-sequence-alignments-and-phylogenies/">August, 2025</a>]<br>
-‣ <em>Mapping strongly discordant regions on the genome using hidden markov models</em> <br>
-[<a href="/documents/poster-phlag-imsi-2025.pdf">poster</a>]</p>
+<p><strong>Contemporary Challenges in Large-Scale Sequence Alignments &amp; Phylogenies</strong></p>
+<ul>
+<li>IMSI (UChicago), Chicago [<a href="https://www.imsi.institute/activities/contemporary-challenges-in-large-scale-sequence-alignments-and-phylogenies/">August, 2025</a>]</li>
+<li><em>Mapping strongly discordant regions on the genome using hidden markov models</em> [<a href="/documents/poster-phlag-imsi-2025.pdf">poster</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>MLCB 2021</strong><br>
-Virtual Conference [<a href="https://sites.google.com/cs.washington.edu/mlcb2021">October, 2021</a>]<br>
-‣ <em>MuDCoD: Multi-subject community detection in dynamic gene networks</em> <br>
-[<a href="/documents/poster-mudcod-mlcb-2021.pdf">poster</a>]</p>
+<p><strong>MLCB 2021</strong></p>
+<ul>
+<li>Virtual Conference [<a href="https://sites.google.com/cs.washington.edu/mlcb2021">October, 2021</a>]</li>
+<li><em>MuDCoD: Multi-subject community detection in dynamic gene networks</em> [<a href="/documents/poster-mudcod-mlcb-2021.pdf">poster</a>]</li>
+</ul>
 </li>
 </ul>
 
 </div>
 
-<style>
-   
-  .compact-list-wrapper ul, 
-  .compact-list-wrapper ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 1.5rem;
-  }
-  .compact-list-wrapper li {
-    margin-bottom: 0 !important;  
-    line-height: 1.3;
-  }
-   
-  .compact-list-wrapper li ul {
-    margin-left: 1rem;
-  }
-</style>
-
-
 
 
 
 </article>
-
-<hr>
 </main>
 
 
@@ -338,6 +330,7 @@ Virtual Conference [<a href="https://sites.google.com/cs.washington.edu/mlcb2021
 	<a href="https://bo1929.github.io/">https://bo1929.github.io/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
 </footer>
 
+</div>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {

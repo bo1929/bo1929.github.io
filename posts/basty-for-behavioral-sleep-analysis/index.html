@@ -140,17 +140,27 @@
   }
 
   body.dark-mode {
-    background: #1b1b1b;
-    color: navajowhite;
+    --text: #e8dcc8;
+    --text-muted: #c4b5a8;
+    --heading-1: darksalmon;
+    --heading-2: #C5908E;
+    --heading-3: #C2E5D3;
+    --heading-4: #D5D6EA;
+    --heading-5: #EBDDE2;
+    --accent-event: #C5908E;
+    --accent-talk: #C2E5D3;
+    --link: thistle;
+    --link-visited: #F7CAC9;
+    --link-hover: #F7CAC9;
+    --bg: #1e1c1a;
+    --border: rgba(255, 222, 173, 0.2);
+    background: var(--bg);
+    color: var(--text);
   }
 
-  body.dark-mode h1 { color: darksalmon; }
-  body.dark-mode h2 { color: #C5908E; }
-  body.dark-mode h3 { color: #C2E5D3; }
-  body.dark-mode h4 { color: #D5D6EA; }
-  body.dark-mode h5, body.dark-mode h6 { color: #EBDDE2; }
-  body.dark-mode a { color: thistle; }
-  body.dark-mode a:visited { color: #F7CAC9; }
+  body.dark-mode .site-subtitle {
+    opacity: 0.92;
+  }
 </style>
 
 <script>
@@ -201,18 +211,31 @@
 
   
 
-<br>
 <body>
-<nav>
-    <ul>
-      <li style="display: inline-block; margin-right: 10px;"><a href="/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Home</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/publications/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Publications</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/presentations/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Presentations</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/research/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>Research</span></a></li><li style="display: inline-block; margin-right: 10px;"><a href="/news/" style="font-size: 25px; text-decoration: none;"><span class=pre></span><span>News</span></a></li>
-    </ul>
-</nav>
+<div class="site-wrap">
 <main>
-<header><h1 id="tag - basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*">basty for Behavioral Analysis of Sleep in <em>Drosophila melanogaster</em></h1></header>
+<header class="site-header">
+	<h1 id="tag - basty for Behavioral Analysis of Sleep in *Drosophila melanogaster*">basty for Behavioral Analysis of Sleep in <em>Drosophila melanogaster</em></h1>
+	
+</header>
 
-<hr>
-<article>
+<nav class="site-nav" aria-label="Main">
+  <ul class="site-nav-list">
+    <li class="site-nav-item">
+        <a class="site-nav-link" href="/"><span class="pre"></span><span>Home</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/publications/"><span class="pre"></span><span>Publications</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/presentations/"><span class="pre"></span><span>Presentations</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/research/"><span class="pre"></span><span>Research</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link" href="/news/"><span class="pre"></span><span>News</span></a>
+      </li>
+  </ul>
+</nav>
+
+<article class="site-content">
 <p>Quantifying animal behavior is the main objective of the field of computational ethology, and is not an straightforward task. From a purely computational point of view, the task can be seem as mapping spatiotemporal features (e.g., changes and postures) to behavioral categories.</p>
 <p>The behavior mapping task consists of two essential steps:</p>
 <ol>
@@ -260,8 +283,6 @@ Computational experiments show that <strong>basty</strong> attains capturing rar
 </div>
 <br clear=both><div style="clear:both" class=taglist>Related<br><a id="tag_computational-ethology" href="https://bo1929.github.io/tags/computational-ethology">computational-ethology</a> &middot; <a id="tag_machine-learning" href="https://bo1929.github.io/tags/machine-learning">machine-learning</a> &middot; <a id="tag_time-series" href="https://bo1929.github.io/tags/time-series">time-series</a> &middot; <a id="tag_semisupervised-learning" href="https://bo1929.github.io/tags/semisupervised-learning">semisupervised-learning</a> &middot; <a id="tag_dimensionality-reduction" href="https://bo1929.github.io/tags/dimensionality-reduction">dimensionality-reduction</a></div>
 </article>
-
-<hr>
 </main>
 
 
@@ -269,6 +290,7 @@ Computational experiments show that <strong>basty</strong> attains capturing rar
 	<a href="https://bo1929.github.io/">https://bo1929.github.io/</a><br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
 </footer>
 
+</div>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {

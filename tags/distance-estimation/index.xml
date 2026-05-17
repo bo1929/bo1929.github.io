@@ -17,16 +17,36 @@
 		
 		<guid>https://bo1929.github.io/presentations/</guid>
 		<description>Talks &amp;amp; Presentations Conference Presentations Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies
-IMSI (UChicago), Chicago [August, 2025]
-‣ Read-genome distance calculation &amp;amp; phylogenetic placement using krepp [tutorial]
-[slides, recording]
-‣ Mapping strongly discordant regions on the genome using hidden Markov models [short talk]
-[slides, recording] RECOMB 2025
-Yonsei University, Seoul [April, 2025]
-‣ Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement)
-[slides]
-RECOMB 2024
-MIT, Boston [April, 2024]</description>
+IMSI (UChicago), Chicago [August, 2025] Read-genome distance calculation &amp;amp; phylogenetic placement using krepp [tutorial] [slides, recording] Mapping strongly discordant regions on the genome using hidden Markov models [short talk] [slides, recording] RECOMB 2025
+Yonsei University, Seoul [April, 2025] Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement) [slides] RECOMB 2024
+MIT, Boston [April, 2024] Memory-bound and taxonomy-aware k-mer selection for large reference databases [slides] BioSys 2024 (in conjunction with ASPLOS 2024)</description>
+	</item>
+	
+	<item>
+		<title>Poster at ProbGen 2026</title>
+		<link>https://bo1929.github.io/news/poster-probgen-2026/</link>
+		<pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/poster-probgen-2026/</guid>
+		<description>A poster on sequence distances and genome-wide phylogenetic pattern matching was presented at ProbGen 2026 (UC Berkeley). PDF.</description>
+	</item>
+	
+	<item>
+		<title>SPrUCE published in Molecular Ecology Resources</title>
+		<link>https://bo1929.github.io/news/published-paper-spruce-in-molecular-ecology-resources-2026/</link>
+		<pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/published-paper-spruce-in-molecular-ecology-resources-2026/</guid>
+		<description>SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation, with Daniel Melendez, Vineet Bafna, and Siavash Mirarab, appears in Molecular Ecology Resources.</description>
+	</item>
+	
+	<item>
+		<title>krepp published in Genome Biology</title>
+		<link>https://bo1929.github.io/news/published-paper-krepp-in-genome-biology-2026/</link>
+		<pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/published-paper-krepp-in-genome-biology-2026/</guid>
+		<description>krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement, with Siavash Mirarab, appears in Genome Biology. Conference slides: RECOMB 2025.</description>
 	</item>
 	
 	<item>
@@ -39,6 +59,15 @@ MIT, Boston [April, 2024]</description>
 	</item>
 	
 	<item>
+		<title>Talks at IMSI workshop on alignments and phylogenies</title>
+		<link>https://bo1929.github.io/news/presentation-imsi-workshop-2025/</link>
+		<pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/presentation-imsi-workshop-2025/</guid>
+		<description>At the IMSI program Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies (Chicago): a krepp tutorial (slides, recording); a short talk on discordant-region mapping (slides, recording); and a poster.</description>
+	</item>
+	
+	<item>
 		<title>I presented our latest tool for phyloegentic placement in RECOMB 2025</title>
 		<link>https://bo1929.github.io/news/presentation-in-recomb-2025/</link>
 		<pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
@@ -48,6 +77,15 @@ MIT, Boston [April, 2024]</description>
 My slides are available here.
 &amp;hellip;and a couple of photos:
 Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen above) during all my talks, constantly. </description>
+	</item>
+	
+	<item>
+		<title>FlyVISTA published in Science Advances</title>
+		<link>https://bo1929.github.io/news/published-paper-in-science-advances-2025/</link>
+		<pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+		
+		<guid>https://bo1929.github.io/news/published-paper-in-science-advances-2025/</guid>
+		<description>FlyVISTA, an integrated machine learning platform for deep phenotyping of sleep in Drosophila, with Mehmet F. Keleş and colleagues, appears in Science Advances.</description>
 	</item>
 	
 	<item>
@@ -70,8 +108,7 @@ We then propose an intuitive and accurate heuristic to place reads on an existin
 		<pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://bo1929.github.io/publications/</guid>
-		<description>Preprints Arasti, S., Şapcı, A. O. B., Rachtman, E., El-Kebir, M., &amp;amp; Mirarab, S. (2026). Deconvolving Phylogenetic Distance Mixtures (p. 2026.01.18.700179). bioRxiv. https://doi.org/10.64898/2026.01.18.700179 Journal Publications Melendez, D., Şapcı, A. O. B., Bafna, V., &amp;amp; Mirarab, S. (2026). SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation. Molecular Ecology Resources, 26(3), e70145. https://doi.org/10.1111/1755-0998.70145
-Şapcı, A. O. B., &amp;amp; Mirarab, S. (2026). krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement.</description>
+		<description>Preprints Arasti, S., Şapcı, A. O. B., Rachtman, E., El-Kebir, M., &amp;amp; Mirarab, S. (2026). Deconvolving Phylogenetic Distance Mixtures (p. 2026.01.18.700179). bioRxiv. https://doi.org/10.64898/2026.01.18.700179 Journal Publications Melendez, D., Şapcı, A. O. B., Bafna, V., &amp;amp; Mirarab, S. (2026). SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation. Molecular Ecology Resources, 26(3), e70145. https://doi.org/10.1111/1755-0998.70145 Şapcı, A. O. B., &amp;amp; Mirarab, S. (2026). krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement.</description>
 	</item>
 	
 	<item>
