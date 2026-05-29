@@ -69,13 +69,10 @@
   --radius-sm:    7px;
   /* Main article column and fenced code (pre) max width */
   --page-text-max:  58rem;
-  --pre-radius:       4px;
-  --pre-pad-x:        0.75rem;
-  --pre-pad-y:        0.52rem;
-  --pre-chrome-inset: 0.22rem;
-  --pre-chrome-h:     0.94rem;
-  --pre-copy-slot:    3.35rem;
-  --pre-lang-slot:    3.55rem;
+  --pre-radius:       5px;
+  --pre-pad-x:        1rem;
+  --pre-pad-y:        0.6rem;
+  --pre-bar-h:        1.55rem;
   --pre-max:          min(calc(var(--page-text-max) - 1.25rem), calc(100% - 1.5rem));
   --pre-margin-block: 0.7rem;
 
@@ -584,9 +581,8 @@ pre {
   background: var(--code-bg);
   border: 1px solid var(--code-ring);
   border-radius: var(--pre-radius);
-  padding-block: var(--pre-pad-y);
-  padding-inline: var(--pre-pad-x);
-  margin: var(--pre-margin-block) 0;
+  padding: var(--pre-pad-y) var(--pre-pad-x);
+  margin: var(--pre-margin-block) auto;
   max-width: min(100%, var(--pre-max));
   position: relative;
   box-shadow: var(--shadow-sm);
@@ -594,23 +590,32 @@ pre {
   overflow-x: auto;
 }
 
+/* ── header bar (language tag) ──────────────────────────────── */
 pre[data-lang]:not([data-lang=""]) {
-  padding-top: calc(var(--pre-pad-y) + var(--pre-chrome-h) + 0.12rem);
+  padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
 }
 
 pre[data-lang]:not([data-lang=""])::before {
   content: attr(data-lang);
   position: absolute;
-  top: var(--pre-chrome-inset);
-  left: var(--pre-chrome-inset);
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--pre-bar-h);
+  background: var(--code-stripe);
+  border-bottom: 1px solid var(--code-ring);
+  border-radius: max(0px, calc(var(--pre-radius) - 1px)) max(0px, calc(var(--pre-radius) - 1px)) 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pre-pad-x);
   font-family: var(--font-sans);
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--text-dim);
-  line-height: 1.35;
+  line-height: 1;
+  box-sizing: border-box;
   pointer-events: none;
 }
 
@@ -627,10 +632,12 @@ pre code {
   tab-size: 4;
 }
 
+/* each line — hanging indent so wrapped lines are visually offset */
 pre code span {
   display: block;
-  padding: 0.05em 0.45rem;
-  padding-right: calc(var(--pre-copy-slot) + 0.35rem);
+  padding: 0.06em 0;
+  padding-left: 0.55rem;
+  text-indent: -0.55rem;
   min-height: 1.5em;
 }
 
@@ -641,13 +648,14 @@ p > pre {
   margin-top: 0.35rem;
 }
 
+/* ── copy button ───────────────────────────────────────────── */
 .pre-copy-btn {
   position: absolute;
-  top: var(--pre-chrome-inset);
-  right: var(--pre-chrome-inset);
+  top: 0.22rem;
+  right: var(--pre-pad-x);
   left: auto;
   z-index: 2;
-  padding: 0.12rem 0.38rem;
+  padding: 0.14rem 0.42rem;
   border: 1px solid var(--code-ring);
   border-radius: var(--pre-radius);
   background: var(--bg-elevated);
@@ -660,6 +668,12 @@ p > pre {
   line-height: 1.35;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
+}
+
+/* inside header bar — vertically centred */
+pre[data-lang]:not([data-lang=""]) > .pre-copy-btn {
+  top: calc(var(--pre-bar-h) / 2);
+  transform: translateY(-50%);
 }
 
 .pre-copy-btn:hover {
@@ -767,8 +781,8 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
 .admonition > ol,
 .admonition > pre,
 .admonition > .table-wrap {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: var(--pre-margin-block);
+  margin-bottom: var(--pre-margin-block);
 }
 
 .admonition > p:first-child { margin-top: 0; }
@@ -789,13 +803,42 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
   margin: 0.15rem 0;
 }
 
+/* Nested callouts: pre must fit the box, not the full page column (--pre-max) */
 .admonition pre,
-details.question pre,
-details.more pre,
 details.admonition pre {
+  width: 100%;
   max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   margin-inline: 0;
-  margin-block: 0.55rem;
+  margin-block: var(--pre-margin-block);
+}
+
+details.question pre,
+details.more pre {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-inline: 0;
+  margin-block: var(--pre-margin-block);
+}
+
+.admonition pre code,
+details.question pre code,
+details.more pre code,
+details.admonition pre code {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.admonition pre code span,
+details.question pre code span,
+details.more pre code span,
+details.admonition pre code span {
+  padding: 0.06em 0;
 }
 
 .admonition pre:first-child,
@@ -1241,7 +1284,7 @@ Some commands we will run may benefit from a multi-threaded setup, but this is o
 </details>
 <hr />
 <h2 id="download-and-prepare-the-tutorial-data">Download and prepare the tutorial data</h2>
-<pre data-lang="bash"><code><span class="l0">git clone https://github.com/&lt;repo&gt;/ismb2026-krepp-tutorial.git</span><span class="l1">cd ismb2026-krepp-tutorial</span><span class="l0">bash scripts/setup.sh</span></code></pre>
+<pre data-lang="bash"><code><span class="l0">git clone https://github.com/bo1929/ismb2026-krepp-tutorial-materials.git</span><span class="l1">cd ismb2026-krepp-tutorial-materials</span><span class="l0">bash scripts/setup.sh</span></code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>setup.sh</code> will download a small (~2 GB) microbial index.</p>
@@ -1251,7 +1294,7 @@ Some commands we will run may benefit from a multi-threaded setup, but this is o
 <pre data-lang="bash"><code><span class="l0">ls data/</span></code></pre>
 <details class="question">
 <summary>Expected output:</summary>
-<pre data-lang=""><code><span class="l0">input_map.tsv</span><span class="l1">profile.tsv</span><span class="l0">profile_species_accessions.tsv</span><span class="l1">query_genomes</span><span class="l0">query_info.tsv</span><span class="l1">query_mixture.fq.gz</span><span class="l0">reference_genomes</span><span class="l1">reference_info.tsv</span></code></pre>
+<pre data-lang=""><code><span class="l0">input_map.tsv</span><span class="l1">profile.tsv</span><span class="l0">profile_species_accessions.tsv</span><span class="l1">query_genomes/</span><span class="l0">query_info.tsv</span><span class="l1">query_mixture.fq.gz</span><span class="l0">reference_genomes/</span><span class="l1">reference_info.tsv</span><span class="l0">reference_tree.nwk</span><span class="l1">index-WoLv1-tiny/</span></code></pre>
 </details>
 <div class="table-wrap"><table>
 <thead>
@@ -1261,6 +1304,10 @@ Some commands we will run may benefit from a multi-threaded setup, but this is o
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>index-WoLv1-tiny/</code></td>
+<td>Lightweight Web of Life index for ~10,000 microbial genomes</td>
+</tr>
 <tr>
 <td><code>reference_genomes/</code></td>
 <td>31 reference genome assemblies (FASTA, gzip-compressed)</td>
