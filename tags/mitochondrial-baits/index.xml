@@ -11,18 +11,6 @@
 	
 	
 	<item>
-		<title>Presentations</title>
-		<link>https://bo1929.github.io/presentations/</link>
-		<pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/presentations/</guid>
-		<description>Talks &amp;amp; Presentations Conference Presentations Contemporary Challenges in Large-Scale Sequence Alignments &amp;amp; Phylogenies
-IMSI (UChicago), Chicago [August, 2025] Read-genome distance calculation &amp;amp; phylogenetic placement using krepp [tutorial] [slides, recording] Mapping strongly discordant regions on the genome using hidden Markov models [short talk] [slides, recording] RECOMB 2025
-Yonsei University, Seoul [April, 2025] Estimating read-genome distances using homologous k-mers (and genome-wide phylogenetic placement) [slides] RECOMB 2024
-MIT, Boston [April, 2024] Memory-bound and taxonomy-aware k-mer selection for large reference databases [slides] BioSys 2024 (in conjunction with ASPLOS 2024)</description>
-	</item>
-	
-	<item>
 		<title>Poster at ProbGen 2026</title>
 		<link>https://bo1929.github.io/news/poster-probgen-2026/</link>
 		<pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
@@ -103,15 +91,6 @@ We then propose an intuitive and accurate heuristic to place reads on an existin
 	</item>
 	
 	<item>
-		<title>Publications</title>
-		<link>https://bo1929.github.io/publications/</link>
-		<pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/publications/</guid>
-		<description>Preprints Arasti, S., Şapcı, A. O. B., Rachtman, E., El-Kebir, M., &amp;amp; Mirarab, S. (2026). Deconvolving Phylogenetic Distance Mixtures (p. 2026.01.18.700179). bioRxiv. https://doi.org/10.64898/2026.01.18.700179 Journal Publications Melendez, D., Şapcı, A. O. B., Bafna, V., &amp;amp; Mirarab, S. (2026). SPrUCE: Utilizing Ultraconserved Elements of DNA for Population-Level Genetic Diversity Estimation. Molecular Ecology Resources, 26(3), e70145. https://doi.org/10.1111/1755-0998.70145 Şapcı, A. O. B., &amp;amp; Mirarab, S. (2026). krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement.</description>
-	</item>
-	
-	<item>
 		<title>Mapping mitochondrial baits to taxonomic groups using KRANK</title>
 		<link>https://bo1929.github.io/posts/krank-mapping-baits/</link>
 		<pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
@@ -160,39 +139,6 @@ This was my first time visiting Boston, and I enjoyed it very much. I think the 
 		<description>I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine) which held in conjunction with the ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
 My slides are available here, and the recording can be found here.
 A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego.</description>
-	</item>
-	
-	<item>
-		<title>Curriculum vitae</title>
-		<link>https://bo1929.github.io/curriculum-vitae/</link>
-		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/curriculum-vitae/</guid>
-		<description>Fellowships and Awards Awards RECOMB Travel Fellowship [2026]
-30th Annual International Conference on Research in Computational Molecular Biology ($2,000). RECOMB-CG Best Paper Award [2023]
-20th Annual Conference of RECOMB on Comparative Genomics. Highest Ranking Student Award - Turkish Council of Higher Education [2015]
-Top-scoring student in the nationwide university entrance exam accepted to Sabanci University. Fellowships Powell Fellowship - The Charles Lee Powell Foundation [2022]
-$40,000 one-year award towards stipend and tuition.</description>
-	</item>
-	
-	<item>
-		<title>Research</title>
-		<link>https://bo1929.github.io/research/</link>
-		<pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/research/</guid>
-		<description>I study molecular sequences and (gene, species, coalescent) trees as discrete objects using algorithms (in the traditional sense), probabilistic data structures, and a bit of probabilistic modeling.
-During my PhD, I developed several metagenomic sequence analysis tools, targeting efficient taxonomic and/or phylogenomic analysis of large-scale datasets. Some examples are:
-CONSULT-II &amp;ndash; using locality-sensitive hashing for taxonomic identification KRANK &amp;ndash; a memory-bound and taxonomy-aware k-mer selection algorithm krepp &amp;ndash; read to genome distance estimation and phylogenetic placement In the past, I briefly worked in network analysis and developed a community detection method for dynamic gene co-expression networks (MuDCoD &amp;ndash; community detection in multi-subject dynamic networks from scRNA-seq data).</description>
-	</item>
-	
-	<item>
-		<title>Relevant links</title>
-		<link>https://bo1929.github.io/links/</link>
-		<pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/links/</guid>
-		<description></description>
 	</item>
 	
 	<item>
@@ -262,26 +208,6 @@ Using this invaluable information, it can remove contamination, i.e., reads that
 		<guid>https://bo1929.github.io/news/completed-msc-degree-2022/</guid>
 		<description>I have finished my thesis, titled &amp;ldquo;Automated behavioral analysis of asleep fruit fly&amp;rdquo; &amp;ndash; which is now available online, and obtained my MSc degree. The defense was on 26 July 2022, you can find my slides here. Jury members are listed below, I do appreciate their time and invaluable comments.
 Öznur Taştan, Sabancı Üniversitesi (advisor) Sündüz Keleş, University of Wisconsin-Madison (advisor) Onur Varol, Sabancı Üniversitesi Gözde Akar, Orta Doğu Teknik Üniversitesi Ercüment Çiçek, Bilkent Üniversitesi </description>
-	</item>
-	
-	<item>
-		<title>Percolation Theory in Network Science</title>
-		<link>https://bo1929.github.io/notes/percolation-theory/</link>
-		<pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/notes/percolation-theory/</guid>
-		<description>&lt;p&gt;Consider a lattice, where we place pebbles with probability $p$ at each intersection.
-Neighboring pebbles are considered to be connected, forming clusters of size two or more.
-We are mainly interested in sizes of these clusters.&lt;/p&gt;</description>
-	</item>
-	
-	<item>
-		<title>Categorical Cross Entropy</title>
-		<link>https://bo1929.github.io/notes/categorical-cross-entropy/</link>
-		<pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
-		
-		<guid>https://bo1929.github.io/notes/categorical-cross-entropy/</guid>
-		<description>&lt;p&gt;Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
