@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Distance estimation and phylogenetic placement for short metagenomic reads">
+<title>Tutorial for krepp - ISMB 2026 &mdash; pages</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bg-app: #e8e9ee;
+  --bg-card: #fdfdfd;
+  --bg-muted: #f0f1f5;
+  --border: #d5d7de;
+  --text: #2c2d34;
+  --text-head: #16171c;
+  --text-dim: #5c5e69;
+  --accent: #366391;
+  --accent-hover: #2d5580;
+  --accent-soft: rgba(54, 99, 145, 0.12);
+  --radius: 10px;
+  --radius-sm: 7px;
+  --shadow: 0 0 0 1px rgba(20, 22, 32, 0.05), 0 8px 24px rgba(20, 22, 32, 0.08);
+  --max-w: 48rem;
+}
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-app);
+  color: var(--text);
+  line-height: 1.55;
+  min-height: 100vh;
+  padding: 2rem 1.25rem 3rem;
+  -webkit-font-smoothing: antialiased;
+}
+.index-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.index-kicker {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.index-title {
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-weight: 800;
+  color: var(--text-head);
+  letter-spacing: -0.03em;
+  margin: 0.35rem 0 0.5rem;
+  line-height: 1.2;
+}
+.index-tagline {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+  max-width: 42em;
+}
+.index-hero {
+  display: block;
+  background: linear-gradient(135deg, #4f7499, var(--accent));
+  color: #fdfefe;
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: filter 0.15s ease;
+}
+.index-hero:hover {
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+.index-hero-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+.index-hero-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+.index-hero-desc {
+  font-size: 0.8125rem;
+  opacity: 0.92;
+  margin-top: 0.35rem;
+}
+.index-section {
+  margin-bottom: 1.75rem;
+}
+.index-section h2 {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+.index-lessons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.index-lessons a {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.65rem 1rem;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(20, 22, 32, 0.04);
+  transition: border-color 0.12s, box-shadow 0.12s;
+}
+.index-lessons a:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.index-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.index-lesson-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-head);
+}
+.index-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+</style>
+</head>
+<body>
+<div class="index-wrap">
+  <p class="index-kicker">ISMB 2026 • Tutorials</p>
+  <h1 class="index-title">Tutorial: krepp</h1>
+  <p class="index-tagline">Step-by-step guide for metagenomic analysis of a toy marine sample</p>
+
+  <a class="index-hero" href="full.html">
+    <div class="index-hero-label">Recommended</div>
+    <div class="index-hero-title">Open the full handbook</div>
+    <div class="index-hero-desc">Single-page version with sidebar navigation and in-browser lesson switching.</div>
+  </a>
+
+  <section class="index-section"><h2>Core Tutorial</h2><ul class="index-lessons"><li><a href="01-overview.html"><span class="index-num">1</span><span class="index-lesson-title">Overview</span></a></li><li><a href="02-setup.html"><span class="index-num">2</span><span class="index-lesson-title">Setup</span></a></li><li><a href="03-dataset.html"><span class="index-num">3</span><span class="index-lesson-title">Dataset</span></a></li><li><a href="04-indexing.html"><span class="index-num">4</span><span class="index-lesson-title">Indexing</span></a></li><li><a href="05-distance-estimation.html"><span class="index-num">5</span><span class="index-lesson-title">Distance Estimation</span></a></li><li><a href="06-phylogenetic-placement.html"><span class="index-num">6</span><span class="index-lesson-title">Phylogenetic Placement</span></a></li><li><a href="07-taxonomic-placement.html"><span class="index-num">7</span><span class="index-lesson-title">Taxonomic Placement</span></a></li><li><a href="08-visualization.html"><span class="index-num">8</span><span class="index-lesson-title">Visualization</span></a></li><li><a href="09-conclusions.html"><span class="index-num">9</span><span class="index-lesson-title">Conclusions</span></a></li></ul></section>
+
+  <p class="index-footer">9 standalone lessons. Rebuild with <code>bash scripts/build_site.sh</code>.</p>
+</div>
+</body>
+</html>

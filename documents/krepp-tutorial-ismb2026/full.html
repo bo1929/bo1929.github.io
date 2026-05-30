@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Tutorial for krepp - ISMB 2026</title>
+<style>
+/* ── Reset & base ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Menlo", Consolas,
+    "Liberation Mono", monospace;
+
+  /* Neutral gray chrome; accent only for links, active nav, CTAs */
+  --bg-app:         #e4e5e9;
+  --bg-sidebar:     #f0f1f5;
+  --bg-main:        #fdfdfd;
+  --bg-muted:       #ebecef;
+  --bg-elevated:    #ffffff;
+
+  --border:         #d5d7de;
+  --border-strong:  #bfc2cc;
+
+  --text:           #2c2d34;
+  --text-head:      #16171c;
+  --text-dim:       #5c5e69;
+
+  --accent:         #366391;
+  --accent-hover:   #2d5580;
+  --accent-soft:    rgba(54, 99, 145, 0.13);
+  --accent-muted:   #557fa5;
+  --accent-track:   #dfe6f2;
+  --chrome-border: rgba(54, 99, 145, 0.18);
+
+  --head-tint:      #212c3d;
+
+  --ok:             #2f7d6c;
+  --ok-soft:        rgba(47, 125, 108, 0.09);
+
+  --warn:           #a86b2f;
+  --warn-soft:      rgba(168, 107, 47, 0.09);
+
+  --danger:         #aa4a46;
+  --danger-soft:    rgba(170, 74, 70, 0.07);
+
+  --code-bg:        #e6e8ef;
+  --code-ring:      #b8bcc8;
+  --code-stripe:    #dcdee5;
+  --inline-bg:      #dde1ea;
+
+  --table-head:     #ebecef;
+
+  --shadow-sm:      0 1px 2px rgba(20, 22, 32, 0.05);
+  --shadow-panel:   0 0 0 1px rgba(20, 22, 32, 0.05),
+    0 6px 20px rgba(20, 22, 32, 0.07);
+
+  --btn-primary-fg:       #fdfefe;
+  --btn-primary-fg-hover: #ffffff;
+
+  --main-gutter:  0.65rem;
+
+  --sidebar-w:    274px;
+  --radius:       10px;
+  --radius-sm:    7px;
+  /* Main article column and fenced code (pre) max width */
+  --page-text-max:  58rem;
+  --pre-radius:       5px;
+  --pre-pad-x:        1rem;
+  --pre-pad-y:        0.6rem;
+  --pre-bar-h:        1.55rem;
+  --pre-max:          min(calc(var(--page-text-max) - 1.25rem), calc(100% - 1.5rem));
+  --pre-margin-block: 0.7rem;
+
+  color-scheme: light;
+}
+
+html, body { height: 100%; font-size: 16px; }
+body {
+  background: var(--bg-app);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Sidebar ---------------------------------------------------- */
+#sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#sidebar-header {
+  padding: 1.08rem 1.15rem 0.88rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-sidebar) 100%);
+}
+
+.logo {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-family: var(--font-sans);
+  margin-bottom: 0.34rem;
+}
+
+#sidebar-header h1 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--head-tint);
+  line-height: 1.32;
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.version {
+  font-size: 0.695rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+#nav-scroll {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0.42rem 0 0.88rem;
+}
+
+.nav-group {
+  padding: 0.7rem 1.15rem 0.22rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-muted);
+  margin-top: 0.28rem;
+  font-family: var(--font-sans);
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0.46rem;
+  padding: 0.34rem 0.64rem;
+  font-size: 0.8125rem;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  transition: background 0.12s ease, color 0.12s ease, border-left-color 0.12s ease;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  line-height: 1.4;
+}
+
+nav a:hover {
+  color: var(--text-head);
+  background: var(--border);
+}
+
+nav a.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+  border-left-color: var(--accent);
+}
+
+nav a .num {
+  font-size: 0.595rem;
+  color: var(--text-dim);
+  min-width: 1.18rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+nav a.active .num { color: var(--accent); }
+
+nav a[data-nav-level="2"] {
+  padding-inline-start: 1rem;
+}
+
+nav a[data-nav-level="3"] {
+  padding-inline-start: 1.3rem;
+}
+
+/* In-page TOC (current lesson h2), below main nav */
+.page-toc-wrap {
+  margin-top: 0.3rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.42rem;
+}
+
+.page-toc-wrap[hidden] {
+  display: none !important;
+}
+
+.page-toc-summary {
+  list-style: none;
+  padding: 0.42rem 1.08rem 0.3rem;
+  padding-inline-start: 1.28rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-muted);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  user-select: none;
+}
+
+.page-toc-summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-toc-summary::after {
+  content: "";
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  margin-left: 0.4rem;
+  border-right: 1.5px solid var(--accent-muted);
+  border-bottom: 1.5px solid var(--accent-muted);
+  transform: rotate(45deg) translateY(-0.1rem);
+  vertical-align: middle;
+  transition: transform 0.15s ease;
+}
+
+.page-toc-wrap[open] .page-toc-summary::after {
+  transform: rotate(-135deg) translateY(0.05rem);
+}
+
+.page-toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.06rem;
+  padding: 0 0.44rem 0.46rem;
+  padding-inline-start: 0.66rem;
+  max-height: min(40vh, 16rem);
+  overflow-y: auto;
+}
+
+.page-toc-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.36rem;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0.24rem 0.58rem 0.24rem 0.48rem;
+  font-size: 0.7425rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, border-left-color 0.12s ease;
+}
+
+.page-toc-link::before {
+  content: "";
+  flex-shrink: 0;
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-top: 0.5em;
+  border-radius: 50%;
+  background: var(--accent-muted);
+}
+
+.page-toc-link:hover {
+  color: var(--text-head);
+  background: var(--border);
+}
+
+.page-toc-link:focus {
+  outline: none;
+}
+
+.page-toc-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* --- Main column ------------------------------------------------ */
+#main {
+  flex: 1;
+  min-height: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-block: var(--main-gutter);
+  margin-inline-end: var(--main-gutter);
+  margin-inline-start: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-main);
+  box-shadow: var(--shadow-panel);
+}
+
+@media (max-width: 700px) {
+  #main {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    align-self: stretch;
+  }
+}
+
+#topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.7rem;
+  padding-inline: 1.75rem;
+  border-bottom: 1px solid var(--chrome-border);
+  background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-main) 100%);
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+#topbar .section-title {
+  font-size: 0.87rem;
+  color: var(--head-tint);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-sans);
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+
+#topbar .page-counter {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+#progress-bar {
+  height: 3px;
+  background: var(--accent-track);
+  flex-shrink: 0;
+}
+
+#progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-muted));
+  transition: width 0.25s ease;
+  width: 0%;
+}
+
+#footer-scroll-track {
+  flex: 1 1 auto;
+  min-width: 2rem;
+  max-width: 14rem;
+  height: 5px;
+  align-self: center;
+  background: var(--accent-track);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#footer-scroll-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-muted), var(--accent));
+  border-radius: inherit;
+  transition: none;
+}
+
+#pages {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-main);
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 2.75rem clamp(1.35rem, 4.5vw, 2.75rem) 2.5rem;
+  display: none;
+  animation: fadeIn 0.22s ease;
+  background: var(--bg-main);
+}
+
+.page.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-inner {
+  max-width: var(--page-text-max);
+  margin-inline: auto;
+}
+
+/* --- Footer nav ----------------------------------------------- */
+#bottomnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.75rem;
+  padding-bottom: max(1.05rem, calc(0.5rem + env(safe-area-inset-bottom, 0px)));
+  border-top: 1px solid var(--chrome-border);
+  background: linear-gradient(0deg, var(--bg-muted) 0%, var(--bg-main) 100%);
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 6.5rem;
+  padding: 0.5rem 1.1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: border-color 0.12s, background 0.12s, color 0.12s, box-shadow 0.12s;
+}
+
+.nav-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+  background: var(--bg-main);
+}
+
+.nav-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.nav-btn.primary {
+  color: var(--btn-primary-fg);
+  background: linear-gradient(180deg, #4f7499, var(--accent));
+  border-color: rgba(54, 99, 145, 0.4);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.nav-btn.primary:hover:not(:disabled) {
+  color: var(--btn-primary-fg-hover);
+  border-color: rgba(54, 99, 145, 0.6);
+  background: linear-gradient(180deg, #446687, var(--accent-hover));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset;
+}
+
+.nav-btn.primary:disabled {
+  color: rgba(253, 252, 250, 0.75);
+}
+
+.nav-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* --- Prose --------------------------------------------- */
+h1 {
+  font-size: clamp(1.55rem, 2.8vw, 1.95rem);
+  font-weight: 800;
+  color: var(--head-tint);
+  margin-bottom: 1rem;
+  line-height: 1.22;
+  font-family: var(--font-sans);
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid var(--chrome-border);
+  padding-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--head-tint);
+  margin: 2.15rem 0 0.6rem;
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  scroll-margin-top: 3.5rem;
+}
+
+h2:first-of-type { margin-top: 1.15rem; }
+
+h3 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin: 1.65rem 0 0.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+}
+
+h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-head);
+  margin: 1.1rem 0 0.35rem;
+  font-family: var(--font-sans);
+}
+
+p { margin: 0.72rem 0; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.25rem 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+strong {
+  color: var(--text-head);
+  font-weight: 650;
+}
+
+em { font-style: italic; }
+
+ul, ol {
+  padding-left: 1.35rem;
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+}
+
+li { margin: 0.32rem 0; }
+
+li::marker { color: var(--text-dim); }
+
+/* --- Code --------------------------------------------------- */
+code {
+  background: var(--inline-bg);
+  color: var(--text-head);
+  font-family: var(--font-mono);
+  font-size: 0.813em;
+  padding: 0.125em 0.4em;
+  border-radius: var(--pre-radius);
+  border: 1px solid var(--code-ring);
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-ring);
+  border-radius: var(--pre-radius);
+  padding: var(--pre-pad-y) var(--pre-pad-x);
+  margin: var(--pre-margin-block) auto;
+  max-width: min(100%, var(--pre-max));
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  tab-size: 4;
+  overflow-x: auto;
+}
+
+/* ── header bar (language tag) ──────────────────────────────── */
+pre[data-lang]:not([data-lang=""]) {
+  padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
+}
+
+pre[data-lang]:not([data-lang=""])::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--pre-bar-h);
+  background: var(--code-stripe);
+  border-bottom: 1px solid var(--code-ring);
+  border-radius: max(0px, calc(var(--pre-radius) - 1px)) max(0px, calc(var(--pre-radius) - 1px)) 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pre-pad-x);
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  line-height: 1;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+pre code {
+  display: block;
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--text-head);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  white-space: pre;
+  overflow-wrap: normal;
+  tab-size: 4;
+}
+
+/* each line — hanging indent so wrapped lines are visually offset */
+pre code span {
+  display: block;
+  padding: 0.06em 0;
+  padding-left: 0.55rem;
+  text-indent: -0.55rem;
+  min-height: 1.5em;
+}
+
+pre code span.l0 { background: var(--code-bg); }
+pre code span.l1 { background: var(--code-stripe); }
+
+p > pre {
+  margin-top: 0.35rem;
+}
+
+/* ── copy button ───────────────────────────────────────────── */
+.pre-copy-btn {
+  position: absolute;
+  top: 0.22rem;
+  right: var(--pre-pad-x);
+  left: auto;
+  z-index: 2;
+  padding: 0.14rem 0.42rem;
+  border: 1px solid var(--code-ring);
+  border-radius: var(--pre-radius);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.585rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+/* inside header bar — vertically centred */
+pre[data-lang]:not([data-lang=""]) > .pre-copy-btn {
+  top: calc(var(--pre-bar-h) / 2);
+  transform: translateY(-50%);
+}
+
+.pre-copy-btn:hover {
+  color: var(--text-head);
+  border-color: var(--border-strong);
+  background: var(--bg-main);
+}
+
+.pre-copy-btn:focus {
+  outline: none;
+}
+
+.pre-copy-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.pre-copy-btn.state-ok {
+  color: var(--ok);
+  border-color: rgba(47, 125, 108, 0.45);
+  background: var(--ok-soft);
+}
+
+.pre-copy-btn.state-err {
+  color: var(--danger);
+  border-color: rgba(170, 74, 70, 0.45);
+  background: var(--danger-soft);
+}
+
+/* --- Tables ------------------------------------------------- */
+.table-wrap {
+  overflow-x: auto;
+  margin: 0.9rem 0 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+th {
+  background: var(--table-head);
+  color: var(--text-head);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.52rem 0.92rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.54rem 0.92rem;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:hover td { background: rgba(22, 23, 30, 0.035); }
+
+/* --- Admonitions -------------------------------------------- */
+.admonition {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  padding: 0.9rem 1.05rem;
+  margin: 1.05rem 0;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  box-shadow: var(--shadow-sm);
+}
+
+.admonition-title {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: inherit;
+}
+
+.admonition-title code {
+  font-size: 0.95em;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.admonition > .admonition-title + p,
+.admonition > .admonition-title + ul,
+.admonition > .admonition-title + ol,
+.admonition > .admonition-title + pre,
+.admonition > .admonition-title + .table-wrap {
+  margin-top: 0;
+}
+
+.admonition > p,
+.admonition > ul,
+.admonition > ol,
+.admonition > pre,
+.admonition > .table-wrap {
+  margin-top: var(--pre-margin-block);
+  margin-bottom: var(--pre-margin-block);
+}
+
+.admonition > p:first-child { margin-top: 0; }
+.admonition > *:last-child { margin-bottom: 0; }
+
+.admonition ul,
+.admonition ol {
+  padding-left: 1.2rem;
+  margin-top: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
+.admonition li {
+  margin: 0.22rem 0;
+}
+
+.admonition li > p {
+  margin: 0.15rem 0;
+}
+
+/* Nested callouts: pre must fit the box, not the full page column (--pre-max) */
+.admonition pre,
+details.admonition pre,
+details.question pre,
+details.more pre {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-inline: 0;
+  margin-block: var(--pre-margin-block);
+  padding: var(--pre-pad-y) var(--pre-pad-x);
+}
+
+.admonition pre[data-lang]:not([data-lang=""]),
+details.admonition pre[data-lang]:not([data-lang=""]),
+details.question pre[data-lang]:not([data-lang=""]),
+details.more pre[data-lang]:not([data-lang=""]) {
+  padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
+}
+
+.admonition pre code,
+details.question pre code,
+details.more pre code,
+details.admonition pre code {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.admonition pre code span,
+details.question pre code span,
+details.more pre code span,
+details.admonition pre code span {
+  /* inherits base span style — no override needed */
+}
+
+.admonition pre:first-child,
+.admonition > pre:first-of-type {
+  margin-top: 0;
+}
+
+.admonition.note,
+.admonition.info {
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.admonition.tip,
+.admonition.success {
+  border-left-color: var(--ok);
+  background: var(--ok-soft);
+}
+
+.admonition.warning {
+  border-left-color: var(--warn);
+  background: var(--warn-soft);
+}
+
+.admonition.danger,
+.admonition.abstract {
+  border-left-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.admonition.next {
+  border-left-width: 5px;
+  border-left-color: var(--accent);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 99, 145, 0.16) 0,
+    rgba(54, 99, 145, 0.08) 0.85rem,
+    var(--accent-soft) 2.05rem,
+    var(--accent-soft)
+  );
+  padding-left: 2.05rem;
+  position: relative;
+  box-shadow: var(--shadow-sm), inset 0.45rem 0 0 rgba(54, 99, 145, 0.12);
+}
+
+.admonition.next::before {
+  content: "";
+  position: absolute;
+  left: 0.82rem;
+  top: 0.88rem;
+  width: 0.52rem;
+  height: 0.52rem;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: rgba(253, 253, 253, 0.85);
+}
+
+.admonition.next .admonition-title {
+  color: var(--accent);
+}
+
+/* collapsible ------------------------------------------------ */
+details.question,
+details.admonition.question {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--ok);
+  border-radius: var(--radius-sm);
+  padding: 0;
+  margin: 0.7rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+details.question > summary,
+details.admonition > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1rem 0.55rem 2.55rem;
+  font-size: 0.8725rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  font-family: var(--font-sans);
+  color: var(--text-head);
+}
+
+details.question > summary::-webkit-details-marker,
+details.admonition > summary::-webkit-details-marker { display: none; }
+
+details.question > summary::before,
+details.admonition > summary::before {
+  content: "?";
+  position: absolute;
+  left: 0.78rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.15rem;
+  height: 1.15rem;
+  background: var(--ok);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+details.question[open] > summary,
+details.admonition[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+details.question > :not(summary),
+details.admonition > :not(summary) {
+  padding: 0.7rem 1rem 0.85rem 2.55rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+details.question > :not(summary) > p,
+details.admonition > :not(summary) > p,
+details.more > :not(summary) > p {
+  margin: 0.4rem 0;
+}
+
+details.question > :not(summary) > p:first-child,
+details.admonition > :not(summary) > p:first-child,
+details.more > :not(summary) > p:first-child {
+  margin-top: 0;
+}
+
+details.question > :not(summary) > p:last-child,
+details.admonition > :not(summary) > p:last-child,
+details.more > :not(summary) > p:last-child {
+  margin-bottom: 0;
+}
+
+details.question > :not(summary) ul,
+details.question > :not(summary) ol,
+details.more > :not(summary) ul,
+details.more > :not(summary) ol {
+  padding-left: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+/* collapsible optional detail (`??? more`), not quiz-style --------- */
+details.more {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-muted);
+  border-radius: var(--radius-sm);
+  padding: 0;
+  margin: 0.7rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+details.more > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1rem 0.55rem 2.55rem;
+  font-size: 0.8725rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  font-family: var(--font-sans);
+  color: var(--text-head);
+}
+
+details.more > summary::-webkit-details-marker { display: none; }
+
+details.more > summary::before {
+  content: "+";
+  position: absolute;
+  left: 0.78rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.15rem;
+  height: 1.15rem;
+  background: var(--accent-muted);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+details.more[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+details.more[open] > summary::before {
+  content: "-";
+  font-size: 0.85rem;
+}
+
+details.more > :not(summary) {
+  padding: 0.7rem 1rem 0.85rem 2.55rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+/* badges (unused in source but kept) ---------------------------- */
+.section-meta {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.59rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.52rem;
+  border-radius: 5px;
+  background: var(--bg-muted);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  font-family: var(--font-sans);
+}
+
+@media (max-width: 900px) {
+  .page-inner { max-width: 100%; }
+}
+
+@media (max-width: 700px) {
+  #sidebar { display: none; }
+  .page { padding: 1.35rem 1rem 1rem; }
+  #bottomnav {
+    padding-top: 0.62rem;
+    padding-inline: 1rem;
+    padding-bottom: max(1.25rem, calc(0.5rem + env(safe-area-inset-bottom, 0px)));
+  }
+  #topbar { padding: 0.55rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<aside id="sidebar">
+  <div id="sidebar-header">
+    <div class="logo">ISMB 2026 • Tutorials</div>
+    <h1>Tutorial: krepp</h1>
+    <div class="version">Step-by-step guide for metagenomic analysis of a toy marine sample</div>
+  </div>
+  <div id="nav-scroll">
+    <nav id="nav">
+      <div class="nav-group" data-level="1">Core Tutorial</div>
+      <a data-page="0" data-nav-level="2"><span class="num">1</span> Overview</a>
+      <a data-page="1" data-nav-level="2"><span class="num">2</span> Setup</a>
+      <a data-page="2" data-nav-level="2"><span class="num">3</span> Dataset</a>
+      <a data-page="3" data-nav-level="2"><span class="num">4</span> Indexing</a>
+      <a data-page="4" data-nav-level="2"><span class="num">5</span> Distance Estimation</a>
+      <a data-page="5" data-nav-level="2"><span class="num">6</span> Phylogenetic Placement</a>
+      <a data-page="6" data-nav-level="2"><span class="num">7</span> Taxonomic Placement</a>
+      <a data-page="7" data-nav-level="2"><span class="num">8</span> Visualization</a>
+      <a data-page="8" data-nav-level="2"><span class="num">9</span> Conclusions</a>
+    </nav>
+    <details id="page-toc-wrap" class="page-toc-wrap" open hidden>
+      <summary class="page-toc-summary">On this page</summary>
+      <div id="page-toc-list" class="page-toc-list"></div>
+    </details>
+  </div>
+</aside>
+
+<div id="main">
+  <div id="topbar">
+    <span class="section-title" id="topbar-title"></span>
+    <span class="page-counter" id="topbar-counter"></span>
+  </div>
+  <div id="progress-bar" role="progressbar" aria-label="Progress through tutorial sections" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div>
+
+  <div id="pages">
+    <div class="page" id="page-0">
+<div class="page-inner">
+<h1 id="overview">Overview</h1>
+<h2 id="background">Background</h2>
+<h2 id="what-krepp-can-do">What krepp can do</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>krepp index</code></td>
+<td>reference FASTAs + tree</td>
+<td>color-index</td>
+</tr>
+<tr>
+<td><code>krepp inspect</code></td>
+<td>index</td>
+<td>index statistics</td>
+</tr>
+<tr>
+<td><code>krepp dist</code></td>
+<td>index + reads</td>
+<td>per-read k-mer distances</td>
+</tr>
+<tr>
+<td><code>krepp dist --summarize</code></td>
+<td>index + reads</td>
+<td>per-reference abundance table</td>
+</tr>
+<tr>
+<td><code>krepp place</code></td>
+<td>index + reads</td>
+<td>phylogenetic placements (jplace)</td>
+</tr>
+<tr>
+<td><code>krepp place --tabular</code></td>
+<td>index + reads</td>
+<td>tabular placements (TSV)</td>
+</tr>
+<tr>
+<td><code>krepp place --summarize</code></td>
+<td>index + reads</td>
+<td>per-branch abundance table</td>
+</tr>
+<tr>
+<td><code>krepp place -l lineages.tsv</code></td>
+<td>index + reads + lineages</td>
+<td>taxonomic placements</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="learning-outcomes">Learning outcomes</h2>
+<ol>
+<li>Build a krepp index from reference genomes and a phylogenetic tree.</li>
+<li>Use <code>krepp dist</code> to estimate read-to-reference distances and infer
+   community composition.</li>
+<li>Use <code>krepp place</code> to place reads on a tree and identify the branch
+   accumulating novel-organism reads.</li>
+<li>Add taxonomic lineages to placement output and interpret the results.</li>
+<li>Visualize placements as a heat tree using gappa.</li>
+</ol>
+</div>
+</div>
+
+    <div class="page" id="page-1">
+<div class="page-inner">
+<h1 id="setup">Setup</h1>
+<h2 id="hardware-requirements">Hardware requirements</h2>
+<p>Participants should have access to a machine with at least 8 GB of RAM and 8 GB of free disk space.
+You can either run the tutorial on your personal laptop, or use a remote server that you have access to.
+Some commands we will run may benefit from a multi-threaded setup, but this is only optional.</p>
+<hr />
+<h2 id="software-requirements">Software requirements</h2>
+<p>We will be using <strong>krepp</strong> version v0.8.2.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conda / micromamba</td>
+<td>any recent</td>
+<td>environment management</td>
+</tr>
+<tr>
+<td><strong>krepp</strong></td>
+<td>0.8.2</td>
+<td>distance estimation and placement</td>
+</tr>
+<tr>
+<td>gappa</td>
+<td>0.9.0</td>
+<td>phylogenetic placement visualization and processing</td>
+</tr>
+<tr>
+<td>wget / curl</td>
+<td>any recent</td>
+<td>downloading datasets</td>
+</tr>
+</tbody>
+</table></div>
+<p>We recommend using <strong>micromamba</strong>, refer to <a href="https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html">this link</a> for installation.</p>
+<hr />
+<h2 id="create-an-environment-and-install-krepp">Create an environment and install krepp</h2>
+<p>Set up an environment and install <code>krepp</code> (version 0.8.2) via Bioconda, then verify the installation:</p>
+<pre data-lang="bash"><code><span class="l0">micromamba create -n krepp-tutorial -c conda-forge -c bioconda krepp=0.8.2 -y</span><span class="l1">micromamba activate krepp-tutorial</span><span class="l0">krepp --help</span></code></pre>
+<details class="question">
+<summary>Expected output:</summary>
+<pre data-lang=""><code><span class="l0">krepp version: v0.8.2</span><span class="l1">krepp: a tool for k-mer-based search, distance estimation &amp; phylogenetic placement.</span><span class="l0">Usage: krepp [OPTIONS] SUBCOMMAND</span><span class="l1"></span><span class="l0">Options:</span><span class="l1">--help</span><span class="l0">--verbose,--no-verbose{false}</span><span class="l1">                            Increased verbosity and progress report.</span><span class="l0">--seed UINT                 Random seed for the LSH and other parts that require randomness. [0]</span><span class="l1">--num-threads UINT          Number of threads to use in OpenMP-based parallelism. [1]</span><span class="l0"></span><span class="l1">Subcommands:</span><span class="l0">index                       Build an index from k-mers of reference genomes.</span><span class="l1">place                       Place queries on a tree with respect to an index.</span><span class="l0">dist                        Estimate distances of queries to genomes in an index.</span><span class="l1">inspect                     Display statistics and information for a given index.</span><span class="l0">sketch                      Create a sketch from k-mers in a single FASTA/FASTQ file.</span><span class="l1">seek                        Seek query sequences in a sketch and estimate distances.</span></code></pre>
+</details>
+<p>Install helper tools into the same environment, and verify:</p>
+<pre data-lang="bash"><code><span class="l0">micromamba install -c conda-forge -c bioconda gappa=0.9.0 wget -y</span><span class="l1">gappa --help</span></code></pre>
+<details class="question">
+<summary>Expected output:</summary>
+<pre data-lang=""><code><span class="l0">                                            ....      ....</span><span class="l1">                                            '' '||.   .||'</span><span class="l0">                                                ||  ||</span><span class="l1">                                                '|.|'</span><span class="l0">    ...'   ....   ... ...  ... ...   ....        .|'|.</span><span class="l1">    |  ||  '' .||   ||'  ||  ||'  || '' .||      .|'  ||</span><span class="l0">    |''   .|' ||   ||    |  ||    | .|' ||     .|'|.  ||</span><span class="l1">    '....  '|..'|'. ||...'   ||...'  '|..'|.    '||'    ||:.</span><span class="l0">    '....'          ||       ||</span><span class="l1">                ''''     ''''   v0.9.0 (c) 2017-2025</span><span class="l0">                                by Lucas Czech and Pierre Barbera</span><span class="l1"></span><span class="l0">Usage: gappa [OPTIONS] SUBCOMMAND</span><span class="l1"></span><span class="l0">Options:</span><span class="l1">--help FLAG                 Print this help message and exit.</span><span class="l0">--version FLAG              Print the gappa version and exit.</span><span class="l1"></span><span class="l0">Subcommands:</span><span class="l1">analyze                     Commands for analyzing and comparing placement data, that is, finding differences and patterns.</span><span class="l0">edit                        Commands for editing and manipulating files like jplace, fasta or newick.</span><span class="l1">examine                     Commands for examining, visualizing, and tabulating information in placement data.</span><span class="l0">prepare                     Commands for preparing and preprocessing of phylogenetic and placement data.</span><span class="l1">simulate                    Commands for random generation of phylogenetic and placement data.</span><span class="l0">tools                       Auxiliary commands of gappa.</span><span class="l1"></span><span class="l0">gappa - a toolkit for analyzing and visualizing phylogenetic (placement) data</span></code></pre>
+</details>
+<hr />
+<h2 id="download-and-prepare-the-tutorial-data">Download and prepare the tutorial data</h2>
+<pre data-lang="bash"><code><span class="l0">git clone https://github.com/bo1929/ismb2026-krepp-tutorial-materials.git</span><span class="l1">cd ismb2026-krepp-tutorial-materials</span><span class="l0">bash scripts/setup.sh</span></code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>setup.sh</code> will download a small (~2 GB) microbial index.</p>
+</div>
+<hr />
+<h2 id="verify-the-inputs-are-ready">Verify the inputs are ready</h2>
+<pre data-lang="bash"><code><span class="l0">ls data/</span></code></pre>
+<details class="question">
+<summary>Expected output:</summary>
+<pre data-lang=""><code><span class="l0">input_map.tsv</span><span class="l1">profile.tsv</span><span class="l0">profile_species_accessions.tsv</span><span class="l1">query_genomes/</span><span class="l0">query_info.tsv</span><span class="l1">query_mixture.fq.gz</span><span class="l0">reference_genomes/</span><span class="l1">reference_info.tsv</span><span class="l0">reference_tree.nwk</span><span class="l1">index-WoLv1-tiny/</span></code></pre>
+</details>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index-WoLv1-tiny/</code></td>
+<td>Lightweight Web of Life index for ~10,000 microbial genomes</td>
+</tr>
+<tr>
+<td><code>reference_genomes/</code></td>
+<td>31 reference genome assemblies (FASTA, gzip-compressed)</td>
+</tr>
+<tr>
+<td><code>reference_info.tsv</code></td>
+<td>Metadata describing reference labels, taxonomic groups and lineages, and accessions</td>
+</tr>
+<tr>
+<td><code>input_map.tsv</code></td>
+<td>Two-column TSV mapping reference labels to genome file paths (31 lines)</td>
+</tr>
+<tr>
+<td><code>query_genomes/</code></td>
+<td>Genome assemblies for the 20 query organisms (FASTA, gzip-compressed)</td>
+</tr>
+<tr>
+<td><code>query_info.tsv</code></td>
+<td>Metadata for query organisms: taxon and accession</td>
+</tr>
+<tr>
+<td><code>query_mixture.fq.gz</code></td>
+<td>100,000 Illumina reads simulated from the query genomes (FASTQ, gzip-compressed)</td>
+</tr>
+<tr>
+<td><code>profile.tsv</code></td>
+<td>Taxonomic profile of the mock community across taxa (77 lines)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+
+    <div class="page" id="page-2">
+<div class="page-inner">
+<h1 id="dataset">Dataset</h1>
+<p>We use one controlled mock metagenome: <strong>100,000 simulated Illumina reads</strong>
+from <strong>20 query genomes</strong>. The query profile is known, so every later distance,
+placement, and abundance result can be checked against the organisms that truly
+generated the reads.</p>
+<p>The tutorial uses two reference contexts. First, a <strong>31-genome toy reference
+genome set</strong> lets us inspect the behavior by hand. Second, we install the
+<strong>WoL-v1 tiny index</strong>, a Web of Life reference index with roughly <strong>10,000
+microbial references</strong> and a matching phylogeny, under
+<code>data/index-WoLv1-tiny/</code>. The toy set is for interpretation; WoL-v1 is for
+showing the same workflow on a broader database.</p>
+<p>The toy reference genome set is intentionally uneven. Each query and reference
+genome has a <strong><code>role</code></strong> in <code>query_info.tsv</code> / <code>reference_info.tsv</code>: the
+<strong>deepest shared taxonomic rank</strong> (species, genus, family, ...) between that
+genome and its closest partner in the other set. Ranks come from
+<code>query_taxonomy.tsv</code> (Kraken-style paths) and NCBI lineages for references;
+recompute with <code>python3 scripts/update_taxonomy_roles.py</code>.</p>
+<p>Some queries match a reference at <strong>species</strong> rank (same taxon, different
+assembly). Others share only <strong>genus</strong>, <strong>family</strong>, or <strong>kingdom</strong> with their
+best reference — the distant cases that drive placement on internal branches.</p>
+<p><img src="../figures/dataset_profile.png" alt="Query profile composition: kingdom bar, class bar, and per-species abundance chart." style="display: block; margin: 1rem auto; width: 100%; max-width: 760px; height: auto;" /></p>
+<p><strong>Figure 1.</strong> Query profile composition. Top: kingdom- and class-level
+stacked bars showing the overall taxonomic spread. Bottom: all 20 species
+with their relative abundances, coloured by class.</p>
+<p><img src="../figures/dataset_reference.png" alt="How query reads relate to the reference panel, and the reference panel composition by role." style="display: block; margin: 1rem auto; width: 100%; max-width: 720px; height: auto;" /></p>
+<p><strong>Figure 2.</strong> Left: query read abundance grouped by each species' <strong><code>role</code></strong>
+(deepest shared rank with the best-matching reference). Right: the 31-genome
+reference panel counted by the same rank labels. Coarser ranks (e.g. genus,
+family, kingdom) indicate a more distant best reference.</p>
+<hr />
+<h2 id="files">Files</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File or directory</th>
+<th>What it contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/profile.tsv</code></td>
+<td>Ground-truth taxonomic profile and abundances across ranks.</td>
+</tr>
+<tr>
+<td><code>data/query_taxonomy.tsv</code></td>
+<td>Taxonomy paths (<code>|</code>-separated) for each query taxon.</td>
+</tr>
+<tr>
+<td><code>data/query_info.tsv</code></td>
+<td>The 20 query organisms; <code>role</code> = match rank to best reference.</td>
+</tr>
+<tr>
+<td><code>data/reference_taxonomy.tsv</code></td>
+<td>Cached NCBI taxid paths for reference genomes.</td>
+</tr>
+<tr>
+<td><code>data/query_genomes/</code></td>
+<td>Genome assemblies for those query organisms.</td>
+</tr>
+<tr>
+<td><code>data/query_mixture.fq.gz</code></td>
+<td>The simulated read mixture used in the tutorial.</td>
+</tr>
+<tr>
+<td><code>data/input_map.tsv</code></td>
+<td>The 31 reference genomes used to build the small toy index.</td>
+</tr>
+<tr>
+<td><code>data/reference_tree.nwk</code></td>
+<td>Mash distance NJ tree over the references (tip labels match <code>input_map</code> IDs).</td>
+</tr>
+<tr>
+<td><code>data/reference_info.tsv</code></td>
+<td>Each reference genome; <code>role</code> = match rank to best query.</td>
+</tr>
+<tr>
+<td><code>data/index-WoLv1-tiny/</code></td>
+<td>The installed WoL-v1 tiny index used as a larger reference context.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="what-to-look-for">What to look for</h2>
+<p>Good results should recover the abundant close matches, keep same-genus reads
+near the right neighborhood, and place the distant fraction on plausible
+internal branches instead of treating every read as an exact reference hit.</p>
+</div>
+</div>
+
+    <div class="page" id="page-3">
+<div class="page-inner">
+<h1 id="indexing-reference-genomes">Indexing reference genomes</h1>
+<p>Whether you have a collection of reference genomes or prefer a public database, krepp expects them to be indexed using locality-sensitive hashing.
+An index is simply a directory storing certain data structures in binary format, together with a human-readable metadata file.</p>
+<p>The krepp command-line interface offers a subcommand called <code>krepp index</code> that builds an index from a collection of reference genomes.</p>
+<div class="admonition danger">
+<p class="admonition-title">Ready-to-use indexes</p>
+<p>We also offer a <a href="https://github.com/bo1929/krepp/wiki/Available-reference-indexes">catalogue</a> of ready-to-use indexes constructed from different public databases, available for download.
+In either case, you build or download it once, then perform queries and reuse it for your analyses.</p>
+</div>
+<div class="admonition type">
+<p class="admonition-title">Goals in this part of the tutorial</p>
+<ul>
+<li><strong>Download an index</strong> built from the Web of Life (WoL) database (&gt;10,000 genomes with a reference phylogeny)</li>
+<li><strong>Build a small index</strong> from a selection of 31 microbial genomes detailed in the previous section</li>
+</ul>
+</div>
+<hr />
+<h2 id="installing-wol-and-other-available-indexes">Installing WoL and other available indexes</h2>
+<p>We will use the Web of Life index (tiny version &lt;2 GB) which includes a microbial phylogeny (&gt;10,000 leaves).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not need to run the command below if you already followed the steps in the <strong>Setup</strong> section.
+Note that this index is heavily downsampled and may underperform for complex samples compared to larger indexes.</p>
+</div>
+<pre data-lang="bash"><code><span class="l0">wget https://ter-trees.ucsd.edu/data/krepp/index-WoLv1-tiny.tar</span><span class="l1">mkdir -p data</span><span class="l0">tar -xf index-WoLv1-tiny.tar -C data/</span></code></pre>
+<p>The downloaded directory contains the index.
+This particular index is small enough to fit in your laptop's memory during the tutorial.</p>
+<p>Run <code>cat data/index-WoLv1-tiny/metadata-*</code> to see the configuration and verify the download.</p>
+<details class="question">
+<summary>Expected output:</summary>
+<p><code>data/index-WoLv1-tiny/</code></p>
+</details>
+<p>See <a href="https://github.com/bo1929/krepp/wiki/Available-reference-indexes">this page</a> for the full list of available databases.</p>
+<details class="more">
+<summary>How to choose an index?</summary>
+<p>The available indexes are mostly microbial and the majority come with a reference phylogeny (for placement).
+Some major instances are listed below; they vary in size to fit the memory available to you:</p>
+<ul>
+<li>
+<p><strong>Web of Life (WoL):</strong> lightweight and a reliable phylogeny (67 GB, 41 GB, <strong>2 GB</strong> ← we downloaded this one)</p>
+</li>
+<li>
+<p><strong>RefSeq-microbial:</strong> denser sampling and an ultra-large <a href="https://doi.org/10.1038/s41587-023-01868-8">uDance phylogeny</a> (180 GB)</p>
+</li>
+<li>
+<p><strong>GTDB:</strong> the latest release, an up-to-date reference (230 GB, 100 GB)
+<p>
+<img src="../figures/ref-logos.png" alt="References." style="display: block; margin: 1rem auto; max-width: 380px;" />
+</p>
+For any reference database, the rule of thumb is to use the largest index that fits your available memory.
+The indexes vary in size but are based on the same genome set. The level of compression and the extent of <em>k</em>-mer downsampling differ.
+Depending on the query data and the task, a small index might perform as accurately as a large one.
+The downloads can be either through our servers or an AWS S3 bucket.</p>
+</li>
+</ul>
+</details>
+<hr />
+<h2 id="indexing-genomes-from-scratch">Indexing genomes from scratch</h2>
+<h3 id="input-files">Input files</h3>
+<p>Given a set of reference genomes, krepp builds an index via <code>krepp index -o /path/to/index -i /path/to/input.tsv</code>.</p>
+<p>There are only two required options:</p>
+<ul>
+<li>
+<p><code>-o</code> (<code>--index-dir</code>), which is the output directory path in which the index will be stored,</p>
+</li>
+<li>
+<p><code>-i</code> (<code>--input-file</code>) a two-column TSV file mapping reference IDs to paths/URLs for FASTA/Q files (gzip compatible).</p>
+</li>
+</ul>
+<p>Each reference (whether a complete assembly or a genome skim) is a file identified by a unique ID.
+The input map links these IDs to their file paths using a two-column, tab-separated format: <code>REF-ID&lt;TAB&gt;/path/to/ref</code>.
+The paths can be either absolute or relative to the current working directory.</p>
+<p>For the toy dataset, the input map can be seen below:</p>
+<pre data-lang="bash"><code><span class="l0">head -5 data/input_map.tsv</span></code></pre>
+<pre data-lang=""><code><span class="l0">Pyrodictium_occultum    data/reference_genomes/GCF_000007085.1.fna.gz</span><span class="l1">Thermus_thermophilus    data/reference_genomes/GCF_000006785.2.fna.gz</span><span class="l0">Allochromatium_vinosum  data/reference_genomes/GCF_900119735.1.fna.gz</span><span class="l1">Candidatus_Endolissoclinum_sp   data/reference_genomes/GCA_965228445.1.fna.gz</span><span class="l0">Psychrobacter_cryohalolentis    data/reference_genomes/GCF_000013905.1.fna.gz</span></code></pre>
+<div class="admonition danger">
+<p>The IDs are particularly important for phylogenetic placement: the leaves of the phylogeny provided for placement (i.e., a Newick file) must match the IDs given in this file.
+For distance estimation, there is no such requirement and arbitrary IDs can be used.
+Note that the indexes we make available have reference IDs compatible with the corresponding phylogeny we provide.</p>
+</div>
+<h3 id="building-the-index">Building the index</h3>
+<p>Run from inside <code>data</code> so paths in <code>input_map.tsv</code> resolve.</p>
+<pre data-lang="bash"><code><span class="l0">cd data</span><span class="l1">krepp index \</span><span class="l0">    -i input_map.tsv \</span><span class="l1">    -o toy-index \</span><span class="l0">    --num-threads 4</span><span class="l1">cd ..</span></code></pre>
+<details class="question">
+<summary>Expected output:</summary>
+<pre data-lang=""><code><span class="l0">krepp version: v0.8.2</span><span class="l1">Invocation: krepp index -i input_map.tsv -o toy-index --num-threads 4</span><span class="l0">Tue May 26 05:20:01 2026</span><span class="l1">Reading the tree and initializing the index...</span><span class="l0">No tree has given as a guide, the color index could be suboptimal.</span><span class="l1">Building the index...</span><span class="l0">Internal node: 60   size: 13408544  progress: 61/61</span><span class="l1">Finished indexing, elapsed: 19.8957 sec</span><span class="l0">Skipped saving a backbone for the index!</span><span class="l1">Done converting &amp; saving, elapsed: 0.069542 sec</span><span class="l0">Tue May 26 05:20:21 2026</span></code></pre>
+</details>
+<p>You will, of course, have different dates and exact elapsed times.</p>
+<details class="more">
+<summary>Multi-threaded indexing</summary>
+<p>The above command took ~27 seconds with a single thread.
+Using multiple threads can give significant speed-ups for large reference sets, but this is optional.
+Note that memory use increases with more threads, so you may want to reduce the thread count if you run out of memory during indexing.
+It does not affect memory use at query time, once indexing is finished.</p>
+</details>
+<h3 id="inspecting-and-verifying-an-index">Inspecting and verifying an index</h3>
+<p>We can verify an index by running</p>
+<pre data-lang="bash"><code><span class="l0">krepp inspect -i data/toy-index | head -n 15</span></code></pre>
+<details class="question">
+<summary>Expected output:</summary>
+<pre data-lang=""><code><span class="l0">Backbone tree: NA</span><span class="l1">======= Partial index: 0 =======</span><span class="l0">krepp version: v0.8.2</span><span class="l1">date: 2026-05-26 05:27:50</span><span class="l0">seed: 0</span><span class="l1">k: 29</span><span class="l0">w: 35</span><span class="l1">h: 13</span><span class="l0">m: 4</span><span class="l1">frac: true</span><span class="l0">ppos_v: [28, 26, 25, 22, 16, 14, 12, 11, 7, 5, 4, 3, 1]</span><span class="l1">npos_v: [0, 2, 6, 8, 9, 10, 13, 15, 17, 18, 19, 20, 21, 23, 24, 27]</span><span class="l0">nrows: 33554432</span><span class="l1">total_num_kmers: 13408544</span><span class="l0">sdust-t: 0</span></code></pre>
+</details>
+<p>This command also reports the parameters used during indexing for future reference.
+Alternatively, to display similar information about the index, we can check the metadata file.</p>
+<pre data-lang=""><code><span class="l0">cat data/toy-index/metadata-*</span></code></pre>
+<hr />
+<h3 id="optional-indexing-options-and-parameters">(Optional) Indexing options and parameters</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-k</code> (<code>--kmer-len</code>)</td>
+<td>29</td>
+<td>Length of <em>k</em>-mers [29]</td>
+</tr>
+<tr>
+<td><code>-w</code> (<code>--win-len</code>)</td>
+<td>35</td>
+<td>Length of minimizer window, -w must be greater than or equal to -k [k+6]</td>
+</tr>
+<tr>
+<td><code>-h</code> (<code>--num-positions</code>)</td>
+<td>13</td>
+<td>Number of positions for the LSH [k-16]</td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Defaults are calibrated with short reads and microbial genomes in mind, and should perform well for most cases.</p>
+</div>
+<p>If you only want to test different parameters and options without overwriting the bundled index, use a different <code>-o</code> directory to create a new index (for example <code>tmp-index</code>).</p>
+<details class="more">
+<summary>Advanced: batching for ultra-large datasets and FracMinHash</summary>
+<p>Peak memory usage during index construction can also be controlled by partitioning the index into smaller pieces.
+This is done by a variation of FracMinHash, controlled by options <code>-m</code> and <code>-r</code>.
+<code>krepp</code> partitions the index into <code>-m</code> (more or less) equally sized pieces; these partitions can be built independently but queried together.
+The <code>-r</code> option determines which partition is constructed: if <code>--no-frac</code> is given, only the <code>-r</code>th partition is built; otherwise all partitions from 0th to <code>-r</code>th are built and saved (see <code>krepp index --help</code> for details).
+You don't need to construct all partitions; <code>krepp</code> will search in whatever is available, and these partitions can be distributed independently.
+The default is <code>-m 4 -r 1 --frac</code>, so 50% (0th and 1st of 4 partitions) of the minimized <em>k</em>-mers will be indexed.
+The only requirement is keeping the <code>-m</code> value (and of course <code>-i</code> and <code>-t</code>) fixed across all partitions.
+For instance, one can index 3% of the reference <em>k</em>-mers and construct a lightweight index by running:</p>
+<pre data-lang="bash"><code><span class="l0">krepp index -o /path/to/index -i /path/to/input.tsv -t /path/to/tree.nwk --num-threads 8 -m 100 -r 99 --no-frac</span><span class="l1">krepp index -o /path/to/index -i /path/to/input.tsv -t /path/to/tree.nwk --num-threads 8 -m 100 -r 98 --no-frac</span><span class="l0">krepp index -o /path/to/index -i /path/to/input.tsv -t /path/to/tree.nwk --num-threads 8 -m 100 -r 97 --no-frac</span></code></pre>
+<p>or, alternatively</p>
+<pre data-lang="bash"><code><span class="l0">krepp index -o /path/to/index -i /path/to/input.tsv -t /path/to/tree.nwk --num-threads 4 -m 100 -r 2 --frac</span></code></pre>
+<p>This is faster but uses more memory during index construction, despite resulting in an index of the same size.
+If this doesn't work well for your task, you can later build the remaining 47% of the index to complete it to 50% by running</p>
+<pre data-lang="bash"><code><span class="l0">krepp index -o /path/to/index -i /path/to/input.tsv -t /path/to/tree.nwk --num-threads 4 -m 100 -r 46 --frac</span></code></pre>
+<p>or, if you have a low-memory machine, you can iterate over partitions</p>
+<pre data-lang="bash"><code><span class="l0">seq 1 46 | xargs -I{} -P2 bash -c "krepp index -o /path/to/index -i /path/to/input.tsv -t /path/to/tree.nwk --num-threads 8 -m 100 -r {} --no-frac"</span></code></pre>
+</details>
+<details class="more">
+<summary>Advanced: using a guide tree during indexing for better compression</summary>
+<p>If you have a phylogeny available (in Newick format), run <code>krepp index</code> with the <code>-t</code> option and the path to the Newick tree (inside <code>data/</code>):</p>
+<pre data-lang="bash"><code><span class="l0">krepp index \</span><span class="l1">    -i input_map.tsv \</span><span class="l0">    -o toy-index \</span><span class="l1">    -t reference_tree.nwk \</span><span class="l0">    --num-threads 4</span></code></pre>
+<p>An index constructed with a backbone can be used for phylogenetic placement without providing a tree later, and distance estimates are unaffected.
+You can always specify a backbone with the <code>krepp place</code> subcommand, using the <code>-t</code> (<code>--nwk-file</code>) option.
+Note that the tip labels of the phylogeny must match the reference IDs given in <code>-i /path/to/input.tsv</code> for <code>krepp index</code>.</p>
+</details>
+</div>
+</div>
+
+    <div class="page" id="page-4">
+<div class="page-inner">
+<h1 id="distance-estimation-krepp-dist">Distance Estimation - <code>krepp dist</code></h1>
+<p><code>krepp dist</code> computes the Jukes-Cantor k-mer distance between every read and
+every reference genome in the index. It is the fastest krepp operation and the
+most direct way to profile community composition.</p>
+<p>Examples below use <strong><code>data-new/ref_index</code></strong> and <strong><code>data-new/query_mixture.fq.gz</code></strong>
+(or the decompressed <code>.fq</code>). Create <code>results/</code> as needed.</p>
+<hr />
+<h2 id="per-read-distances-default">Per-read distances (default)</h2>
+<pre data-lang="bash"><code><span class="l0">krepp dist -i data-new/ref_index -q data-new/query_mixture.fq.gz --num-threads 4 \</span><span class="l1">    &gt; results/dist_default.tsv</span></code></pre>
+<p>Output columns: <code>SEQ_ID</code>, <code>REFERENCE_NAME</code>, <code>DIST</code></p>
+<pre data-lang=""><code><span class="l0"># software: krepp  version: v0.8.0</span><span class="l1">SEQ_ID                   REFERENCE_NAME           DIST</span><span class="l0">tip_28108_0              Alteromonas_macleodii    0.0091</span><span class="l1">novel_54248_0            Pyrodictium_occultum     0.0382</span><span class="l0">novel_54248_0            Thermus_thermophilus     0.1124</span></code></pre>
+<p>Illustrative only - your numeric distances depend on the exact tree and index.</p>
+<p>Each read can match multiple references within the reporting threshold. Reads
+from a mixture genome whose assembly <strong>differs</strong> from the closest indexed
+reference often land at <strong>non-zero</strong> distance on that neighbor - the raw signal
+for downstream placement.</p>
+<hr />
+<h2 id="best-hit-filter">Best-hit filter</h2>
+<p><code>--filter</code> retains only the single closest reference per read:</p>
+<pre data-lang="bash"><code><span class="l0">krepp dist -i data-new/ref_index -q data-new/query_mixture.fq.gz --filter \</span><span class="l1">    --num-threads 4 &gt; results/dist_filter.tsv</span></code></pre>
+<details class="question">
+<summary>Q 4.1</summary>
+<p>For a read simulated from a query whose <code>role</code> in <code>query_info.tsv</code> is coarse
+(e.g. <code>kingdom</code> or <code>family</code>), which reference label tends to win <code>--filter</code>?
+Does the mash / k-mer distance match your expectation from the phylogeny?</p>
+</details>
+<hr />
+<h2 id="community-abundance-summarize">Community abundance - <code>--summarize</code></h2>
+<p>For a quick abundance estimate without storing per-read output:</p>
+<pre data-lang="bash"><code><span class="l0">krepp dist -i data-new/ref_index -q data-new/query_mixture.fq.gz \</span><span class="l1">    --summarize --num-threads 4 &gt; results/dist_summarize.tsv</span></code></pre>
+<p>Output columns: <code>REFERENCE_NAME</code>, <code>WEIGHTED_COUNT</code>, <code>SEQUENCE_ABUNDANCE</code></p>
+<pre data-lang=""><code><span class="l0">REFERENCE_NAME           WEIGHTED_COUNT   SEQUENCE_ABUNDANCE</span><span class="l1">Spiribacter_roseus       ...</span><span class="l0">Nitrosococcus_watsonii   ...</span><span class="l1">Alteromonas_macleodii    ...</span></code></pre>
+<div class="admonition danger">
+<p class="admonition-title">Nearest-neighbor inflation</p>
+<p>When mixture reads come from assembly <strong>A</strong> but the index holds a related
+assembly <strong>B</strong> (another strain, species in the same genus, or a deliberate
+surrogate with a coarser shared rank, e.g. <code>genus</code> or <code>kingdom</code>), <strong><code>krepp dist --summarize</code></strong>
+credits much of that mass to <strong>B</strong>. Compare summaries to <code>profile.tsv</code> and
+<code>reference_info.tsv</code> to see which references act as sinks.</p>
+</div>
+<details class="question">
+<summary>Q 4.2</summary>
+<p>Without opening <code>profile.tsv</code>, which references would you inspect first as
+likely sinks for reads from <strong>different assemblies</strong> of the same taxon?</p>
+</details>
+<details class="question">
+<summary>Q 4.3</summary>
+<p>Pick one species with multiple indexed assemblies (for example two
+<em>Spiribacter</em> rows). How does summed abundance across those labels relate to
+the species fraction in <code>profile.tsv</code>?</p>
+</details>
+<hr />
+<h2 id="single-reference-mode-no-multi">Single-reference mode - <code>--no-multi</code></h2>
+<p>By default, krepp reports a read against multiple references when it is nearly
+equally distant from several. <code>--no-multi</code> enforces a single hit:</p>
+<pre data-lang="bash"><code><span class="l0">krepp dist -i data-new/ref_index -q data-new/query_mixture.fq.gz \</span><span class="l1">    --no-multi --num-threads 4</span></code></pre>
+<hr />
+<h2 id="distance-interpretation">Distance interpretation</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>d_JC</th>
+<th>Biological meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 0.01</td>
+<td>Same strain or very close ecotype</td>
+</tr>
+<tr>
+<td>0.01 - 0.05</td>
+<td>Within-species / ecotype divergence</td>
+</tr>
+<tr>
+<td>0.05 - 0.15</td>
+<td>Different species in the same genus</td>
+</tr>
+<tr>
+<td>0.15 - 0.30</td>
+<td>Different genus within a family</td>
+</tr>
+<tr>
+<td>&gt; 0.30</td>
+<td>Family or higher divergence</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reads from a query whose best reference shares only a <strong>coarse</strong> rank (see
+<code>role</code> in <code>query_info.tsv</code>) often land on that surrogate with distances in the
+<strong>within-genus</strong> band or wider, depending on how far apart the taxa are.</p>
+</div>
+</div>
+
+    <div class="page" id="page-5">
+<div class="page-inner">
+<h1 id="phylogenetic-placement-krepp-place">Phylogenetic Placement - <code>krepp place</code></h1>
+<p><code>krepp place</code> extends distance estimation to tree placement: given the
+per-reference distances for a read, it computes a likelihood-weighted
+placement on every branch of the reference phylogeny.</p>
+<p>Commands assume <strong><code>data-new/ref_index</code></strong> and <strong><code>data-new/query_mixture.fq.gz</code></strong>.</p>
+<hr />
+<h2 id="jplace-output">jplace output</h2>
+<pre data-lang="bash"><code><span class="l0">krepp place -i data-new/ref_index -q data-new/query_mixture.fq.gz \</span><span class="l1">    --num-threads 4 -o results/placements.jplace</span></code></pre>
+<p>The <code>.jplace</code> format (JSON) is the standard for evolutionary placement
+algorithms (EPA, pplacer). It embeds the reference tree and a placement
+record per read, and is directly consumable by gappa and iTOL.</p>
+<hr />
+<h2 id="tabular-placement-output">Tabular placement output</h2>
+<pre data-lang="bash"><code><span class="l0">krepp place -i data-new/ref_index -q data-new/query_mixture.fq.gz \</span><span class="l1">    --tabular --num-threads 4 &gt; results/place_tab.tsv</span></code></pre>
+<p>Output columns: <code>SEQ_ID</code>, <code>DISTAL_NODE</code>, <code>EDGE_NUM</code>, <code>LWR</code>, <code>DIST</code></p>
+<pre data-lang=""><code><span class="l0">SEQ_ID                   DISTAL_NODE              EDGE_NUM  LWR     DIST</span><span class="l1">tip_28108_0              Alteromonas_macleodii    12        1.0000  0.0091</span><span class="l0">novel_54248_0            Pyrodictium_occultum     45        0.6200  0.0382</span><span class="l1">novel_54248_0            NA                       46        0.3800  0.0599</span></code></pre>
+<p>Edge integers depend on your Newick; treat them as opaque IDs stable within one run.</p>
+<div class="admonition danger">
+<p class="admonition-title">Internal branch = unresolved divergence</p>
+<p><code>DISTAL_NODE = NA</code> marks mass on an <strong>internal</strong> branch - reads evolve from
+an ancestor <strong>between</strong> named references. That is the hallmark placement when
+the sample contains variation <strong>not</strong> represented on either adjacent leaf
+(different assembly, species surrogate, or broader novelty).</p>
+</div>
+<p>Filter reads that were simulated as holdouts:</p>
+<pre data-lang="bash"><code><span class="l0">grep '^novel_' results/place_tab.tsv | head -10</span></code></pre>
+<p>Compare placement concentration on surrogate terminals vs internal branches for
+rows whose <strong><code>role</code></strong> in <code>reference_info.tsv</code> is coarser than <code>species</code> (e.g.
+<code>genus</code>, <code>family</code>, <code>kingdom</code>).</p>
+<details class="question">
+<summary>Q 5.1</summary>
+<p>Sketch the subtree around <code>Alteromonas_macleodii</code> and its genus neighbors in
+the reference tree. Where should reads from the profile genome accumulate if
+the indexed reference is a <strong>different species</strong> in <em>Alteromonas</em>?</p>
+</details>
+<details class="question">
+<summary>Q 5.2</summary>
+<p>What does LWR = 1.0 on a terminal genome id mean? What does a split LWR
+across a terminal edge and an internal edge imply about residual divergence?</p>
+</details>
+<hr />
+<h2 id="community-level-placement-summarize">Community-level placement - <code>--summarize</code></h2>
+<pre data-lang="bash"><code><span class="l0">krepp place -i data-new/ref_index -q data-new/query_mixture.fq.gz \</span><span class="l1">    --summarize --num-threads 4 &gt; results/place_summarize.tsv</span></code></pre>
+<p>Output columns: <code>DISTAL_NODE</code>, <code>EDGE_NUM</code>, <code>WEIGHTED_COUNT</code>, <code>SEQUENCE_ABUNDANCE</code></p>
+<p>Internal-branch rows (<code>DISTAL_NODE = NA</code>) aggregate uncertainty between references.
+Surrogate references with a coarse shared <code>role</code> often deposit measurable mass there even
+when <code>--summarize</code> also peaks on the closest labeled genome.</p>
+<details class="question">
+<summary>Q 5.3</summary>
+<p>Why can internal edges carry placement mass even when every genome in the
+mixture is represented <strong>somewhere</strong> in the reference genome set?</p>
+</details>
+<hr />
+<h2 id="sensitivity-controls">Sensitivity controls</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--tau 3</code></td>
+<td>Stricter cutoff - fewer noisy placements</td>
+</tr>
+<tr>
+<td><code>--tau 10</code></td>
+<td>Looser - useful for very divergent novel taxa</td>
+</tr>
+<tr>
+<td><code>--no-multi</code></td>
+<td>Single best placement per read only</td>
+</tr>
+<tr>
+<td><code>--no-filter</code></td>
+<td>Disable distance pre-filter; include all branches</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+
+    <div class="page" id="page-6">
+<div class="page-inner">
+<h1 id="taxonomic-placement-krepp-place-l">Taxonomic Placement - <code>krepp place -l</code></h1>
+<p>Phylogenetic placement tells you <em>where</em> on a tree a read belongs.
+Taxonomic placement adds the <em>name</em>: kingdom, phylum, class, order, family,
+genus, or species.</p>
+<p>krepp integrates taxonomy via a lineage file that annotates every <strong>indexed</strong>
+genome id (column 1 of <code>data-new/input_map.tsv</code>) with a GTDB-style path.</p>
+<div class="admonition warning">
+<p class="admonition-title">Build <code>lineages_refs.tsv</code> for data-new</p>
+<p>The <strong><code>data-new/</code></strong> bundle does not ship <code>lineages_refs.tsv</code>. Export ranks from
+GTDB/NCBI for each genome id, one tab-separated lineage string per row:</p>
+<pre data-lang=""><code><span class="l0">Alteromonas_macleodii   k__Bacteria; p__...; g__Alteromonas; s__...</span></code></pre>
+<p>Names must match the tree leaves exactly.</p>
+</div>
+<hr />
+<h2 id="the-lineage-file">The lineage file</h2>
+<pre data-lang="bash"><code><span class="l0">head data-new/lineages_refs.tsv</span></code></pre>
+<pre data-lang=""><code><span class="l0">Alteromonas_macleodii   k__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;...</span><span class="l1">Pyrodictium_occultum    k__Archaea;p__Crenarchaeota;...</span></code></pre>
+<p>Format: <code>&lt;genome_id&gt;&lt;TAB&gt;&lt;semicolon-separated lineage&gt;</code> with rank prefixes
+(<code>k__</code>, <code>p__</code>, <code>c__</code>, <code>o__</code>, <code>f__</code>, <code>g__</code>, <code>s__</code>).</p>
+<hr />
+<h2 id="running-taxonomic-placement">Running taxonomic placement</h2>
+<pre data-lang="bash"><code><span class="l0">krepp place \</span><span class="l1">    -i data-new/ref_index \</span><span class="l0">    -q data-new/query_mixture.fq.gz \</span><span class="l1">    -l data-new/lineages_refs.tsv \</span><span class="l0">    --tabular \</span><span class="l1">    --num-threads 4 \</span><span class="l0">    &gt; results/place_tax.tsv</span></code></pre>
+<p>The header comment embeds the taxonomy-expanded tree. Distal nodes can repeat the
+short genome id and longer Latin labels attached to the same edge geometry.</p>
+<hr />
+<h2 id="interpreting-novel-read-placements">Interpreting novel read placements</h2>
+<pre data-lang="bash"><code><span class="l0">grep '^novel_' results/place_tax.tsv | awk '{print $2}' | sort | uniq -c | sort -rn | head</span></code></pre>
+<p>Reads originating from mixture genomes without <strong>exact</strong> assembly matches often
+still classify within the expected <strong>genus or family</strong> because surrogates occupy
+neighboring leaves.</p>
+<div class="admonition tip">
+<p class="admonition-title">Rank-level novelty detection</p>
+<p>If an organism is novel at the genus level, reads tend to pool on internal
+branches shared by references of that genus. Higher-rank novelty moves mass
+toward deeper internal edges in the taxonomy-decorated view.</p>
+</div>
+<details class="question">
+<summary>Q 6.1</summary>
+<p>If a profile species were missing entirely from the panel but its <strong>family</strong>
+were represented, where would you expect placement density to accumulate?</p>
+</details>
+<details class="question">
+<summary>Q 6.2</summary>
+<p>When <code>DISTAL_NODE</code> lists both a short genome id and a Latin species label on
+adjacent edges with split LWR, what does that say about minimizer distances
+to each decorated node?</p>
+</details>
+<hr />
+<h2 id="summarize-at-taxonomic-level">Summarize at taxonomic level</h2>
+<pre data-lang="bash"><code><span class="l0">krepp place -i data-new/ref_index -q data-new/query_mixture.fq.gz \</span><span class="l1">    -l data-new/lineages_refs.tsv \</span><span class="l0">    --summarize --num-threads 4 &gt; results/place_tax_summarize.tsv</span></code></pre>
+<p>This produces per-taxonomic-node abundance estimates across the expanded tree.</p>
+</div>
+</div>
+
+    <div class="page" id="page-7">
+<div class="page-inner">
+<h1 id="visualization-gappa-heat-trees">Visualization - gappa Heat Trees</h1>
+<p>The <code>.jplace</code> file from <code>krepp place</code> can be passed directly to <strong>gappa</strong>
+to produce a heat tree where branch width and color reflect placement density.</p>
+<hr />
+<h2 id="install-gappa">Install gappa</h2>
+<pre data-lang="bash"><code><span class="l0">conda install -c conda-forge -c bioconda gappa -y</span><span class="l1">gappa --version</span></code></pre>
+<hr />
+<h2 id="generate-a-heat-tree">Generate a heat tree</h2>
+<pre data-lang="bash"><code><span class="l0">mkdir -p results/heat_tree</span><span class="l1"></span><span class="l0">gappa examine heat-tree \</span><span class="l1">    --jplace-path results/placements.jplace \</span><span class="l0">    --out-dir      results/heat_tree/ \</span><span class="l1">    --svg-tree-width 1000</span></code></pre>
+<p>gappa writes <code>results/heat_tree/heat_tree.svg</code>. Open in any browser or SVG
+viewer.</p>
+<hr />
+<h2 id="reading-the-heat-tree">Reading the heat tree</h2>
+<ul>
+<li><strong>Thick blue branches</strong> - many placements; dominant organisms in the sample.</li>
+<li><strong>Thin / grey branches</strong> - few or no placements.</li>
+</ul>
+<p>Branches leading to <strong>surrogate references</strong> (different assembly/genus than the
+mixture source) often appear thicker than naive abundance-from-profile estimates
+would predict - parallel to <code>krepp dist --summarize</code> inflation.</p>
+<p>Internal branches above pairs of related references thicken when reads distribute
+between terminals and the ancestral edge.</p>
+<hr />
+<h2 id="abundance-weighted-mode">Abundance-weighted mode</h2>
+<pre data-lang="bash"><code><span class="l0">gappa examine heat-tree \</span><span class="l1">    --jplace-path    results/placements.jplace \</span><span class="l0">    --out-dir        results/heat_tree/ \</span><span class="l1">    --mass-policy    accumulated \</span><span class="l0">    --svg-tree-width 1000</span></code></pre>
+<p>With <code>--mass-policy accumulated</code>, color represents cumulative LWR mass per
+branch rather than raw read count, better reflecting relative allocation across
+the tree.</p>
+<hr />
+<h2 id="separate-tip-vs-novel-reads">Separate tip vs. novel reads</h2>
+<pre data-lang="bash"><code><span class="l0"># Novel reads only (simulator prefix)</span><span class="l1">grep '^novel_' results/place_tab.tsv &gt; results/novel_reads_place.tsv</span><span class="l0"></span><span class="l1"># Tip reads only</span><span class="l0">grep -v '^novel_\|^SEQ_ID\|^#' results/place_tab.tsv &gt; results/tip_reads_place.tsv</span></code></pre>
+<p>Novel-only heat maps highlight internal versus terminal mass for rows flagged in
+<code>reference_info.tsv</code>.</p>
+</div>
+</div>
+
+    <div class="page" id="page-8">
+<div class="page-inner">
+
+</div>
+</div>
+  </div>
+
+  <div id="bottomnav">
+    <button class="nav-btn" id="prev-btn">&#8592; Previous</button>
+    <div id="footer-scroll-track" role="progressbar" aria-label="Scroll progress on this page" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="footer-scroll-fill"></div>
+    </div>
+    <button class="nav-btn primary" id="next-btn">Next &#8594;</button>
+  </div>
+</div>
+
+<script>
+const PAGES = document.querySelectorAll('.page');
+const LINKS = document.querySelectorAll('nav a[data-page]');
+const TOTAL = PAGES.length;
+
+const topbarTitle    = document.getElementById('topbar-title');
+const topbarCounter  = document.getElementById('topbar-counter');
+const progressFill   = document.getElementById('progress-fill');
+const pageIndexBar   = document.getElementById('progress-bar');
+const footerScrollFill = document.getElementById('footer-scroll-fill');
+const footerScrollTrack = document.getElementById('footer-scroll-track');
+const prevBtn        = document.getElementById('prev-btn');
+const nextBtn        = document.getElementById('next-btn');
+
+const HB_FOOTER_PREV = "Previous";
+const HB_FOOTER_NEXT = "Next";
+
+const PAGE_TITLES = [...PAGES].map((page, i) => {
+  const h1 = page.querySelector('.page-inner h1');
+  const raw = h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : '';
+  return raw || ('Page ' + (i + 1));
+});
+
+let current = 0;
+
+function updatePageIndexProgress() {
+  if (!progressFill || !pageIndexBar || TOTAL < 1) return;
+  const pct = Math.round(((current + 1) / TOTAL) * 100);
+  progressFill.style.width = pct + '%';
+  pageIndexBar.setAttribute('aria-valuenow', String(pct));
+}
+
+function updateFooterScrollProgress(scrollEl) {
+  if (!footerScrollFill || !footerScrollTrack || !scrollEl) return;
+  const denom = scrollEl.scrollHeight - scrollEl.clientHeight;
+  let pct;
+  if (denom <= 0.5) pct = 100;
+  else pct = Math.round(Math.min(100, Math.max(0, (scrollEl.scrollTop / denom) * 100)));
+  footerScrollFill.style.width = pct + '%';
+  footerScrollTrack.setAttribute('aria-valuenow', String(pct));
+}
+
+PAGES.forEach(page => {
+  page.addEventListener('scroll', e => {
+    const el = e.target;
+    if (el !== PAGES[current] || !el.classList.contains('active')) return;
+    updateFooterScrollProgress(el);
+  }, { passive: true });
+});
+
+window.addEventListener('resize', () => {
+  const p = PAGES[current];
+  if (p && p.classList.contains('active')) updateFooterScrollProgress(p);
+});
+
+const pageTocWrap = document.getElementById('page-toc-wrap');
+const pageTocList = document.getElementById('page-toc-list');
+
+function findHeadingInPage(page, id) {
+  if (!page || !id) return null;
+  return page.querySelector('[id=' + JSON.stringify(id) + ']');
+}
+
+function jumpToHeadingInActivePage(anchorId) {
+  const page = PAGES[current];
+  const target = findHeadingInPage(page, anchorId);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function rebuildPageToc() {
+  if (!pageTocWrap || !pageTocList) return;
+  pageTocList.innerHTML = '';
+
+  const page = PAGES[current];
+  if (!page) {
+    pageTocWrap.hidden = true;
+    return;
+  }
+  const headings = page.querySelectorAll('.page-inner h2[id]');
+  if (headings.length === 0) {
+    pageTocWrap.hidden = true;
+    return;
+  }
+
+  pageTocWrap.hidden = false;
+
+  headings.forEach(h2 => {
+    const id = h2.id;
+    if (!id) return;
+    const label = h2.textContent.replace(/\s+/g, ' ').trim();
+    const sideBtn = document.createElement('button');
+    sideBtn.type = 'button';
+    sideBtn.className = 'page-toc-link toc-jump';
+    sideBtn.dataset.anchorId = id;
+    sideBtn.setAttribute('aria-label', 'Jump to section: ' + label);
+    sideBtn.textContent = label;
+    pageTocList.appendChild(sideBtn);
+  });
+}
+
+document.body.addEventListener('click', e => {
+  const btn = e.target.closest('.toc-jump');
+  if (!btn || !btn.dataset.anchorId) return;
+  e.preventDefault();
+  jumpToHeadingInActivePage(btn.dataset.anchorId);
+});
+
+function goTo(n, animate = true) {
+  if (n < 0 || n >= TOTAL) return;
+  PAGES[current].classList.remove('active');
+  LINKS.forEach(a => a.classList.remove('active'));
+
+  current = n;
+
+  const page = PAGES[current];
+  if (animate) {
+    page.style.animation = 'none';
+    page.offsetHeight;
+    page.style.animation = '';
+  }
+  page.classList.add('active');
+  page.scrollTop = 0;
+
+  const link = document.querySelector(`nav a[data-page="${current}"]`);
+  if (link) {
+    link.classList.add('active');
+    link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  topbarTitle.textContent = PAGE_TITLES[current];
+  topbarCounter.textContent = `${current + 1} / ${TOTAL}`;
+  updatePageIndexProgress();
+  updateFooterScrollProgress(page);
+
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === TOTAL - 1;
+  prevBtn.textContent = current === 0 ? '\u2190 ' + HB_FOOTER_PREV
+    : '\u2190 ' + (PAGE_TITLES[current - 1].split('\u2014')[0].trim() || HB_FOOTER_PREV);
+  nextBtn.textContent = current === TOTAL - 1 ? HB_FOOTER_NEXT + ' \u2192'
+    : (PAGE_TITLES[current + 1].split('\u2014')[0].trim() || HB_FOOTER_NEXT) + ' \u2192';
+
+  history.replaceState(null, '', '#p' + current);
+  rebuildPageToc();
+}
+
+LINKS.forEach(a => { a.addEventListener('click', () => goTo(parseInt(a.dataset.page))); });
+prevBtn.addEventListener('click', () => goTo(current - 1));
+nextBtn.addEventListener('click', () => goTo(current + 1));
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown') {
+    e.preventDefault(); goTo(current + 1);
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
+    e.preventDefault(); goTo(current - 1);
+  } else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    else if (e.key === 'End')  { e.preventDefault(); goTo(TOTAL - 1); }
+});
+
+const hashMatch = location.hash.match(/^#p(\d+)$/);
+goTo(hashMatch ? Math.min(parseInt(hashMatch[1]), TOTAL - 1) : 0, false);
+
+function copyPlainText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve, reject) => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      if (document.execCommand('copy')) resolve();
+      else reject(new Error('execCommand failed'));
+    } catch (e) {
+      reject(e);
+    } finally {
+      document.body.removeChild(ta);
+    }
+  });
+}
+
+const PRE_COPY_BTN_LABEL = 'Copy';
+const PRE_COPY_FEEDBACK_OK_MS = 2000;
+const PRE_COPY_FEEDBACK_ERR_MS = 2500;
+
+function resetPreCopyButton(btn, ms) {
+  clearTimeout(btn._copyReset);
+  btn._copyReset = setTimeout(() => {
+    btn.classList.remove('state-ok', 'state-err');
+    btn.textContent = PRE_COPY_BTN_LABEL;
+  }, ms);
+}
+
+(function initPreCopyButtons() {
+  document.querySelectorAll('pre > code').forEach(code => {
+    const pre = code.parentElement;
+    if (!pre || pre.querySelector('.pre-copy-btn')) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pre-copy-btn';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.textContent = PRE_COPY_BTN_LABEL;
+
+    btn.addEventListener('click', () => {
+      const txt = code.innerText.replace(/\r\n/g, '\n');
+      copyPlainText(txt).then(
+        () => {
+          btn.classList.remove('state-err');
+          btn.classList.add('state-ok');
+          btn.textContent = 'Copied';
+          resetPreCopyButton(btn, PRE_COPY_FEEDBACK_OK_MS);
+        },
+        () => {
+          btn.classList.remove('state-ok');
+          btn.classList.add('state-err');
+          btn.textContent = 'Failed';
+          resetPreCopyButton(btn, PRE_COPY_FEEDBACK_ERR_MS);
+        }
+      );
+    });
+
+    pre.appendChild(btn);
+  });
+})();
+</script>
+</body>
+</html>
