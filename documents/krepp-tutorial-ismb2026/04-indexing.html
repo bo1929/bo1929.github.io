@@ -67,14 +67,23 @@
   --sidebar-w:    274px;
   --radius:       10px;
   --radius-sm:    7px;
-  /* Main article column and fenced code (pre) max width */
-  --page-text-max:  58rem;
+  /* Main article column and fenced code (pre) layout */
+  --page-text-max:    58rem;
   --pre-radius:       5px;
   --pre-pad-x:        1rem;
-  --pre-pad-y:        0.6rem;
-  --pre-bar-h:        1.55rem;
-  --pre-max:          min(calc(var(--page-text-max) - 1.25rem), calc(100% - 1.5rem));
-  --pre-margin-block: 0.7rem;
+  --pre-pad-y:        0.48rem;
+  --pre-bar-h:        1.35rem;
+  --pre-bar-btn-gap:  0.2rem;
+  --pre-inset-x:            0.625rem;
+  --pre-inset-admonition:   0.35rem;
+  --pre-margin-block:       0.5rem;
+
+  /* Callout padding (text column and nested code blocks stay aligned) */
+  --callout-inline:           1rem;
+  --callout-details-pad-start: 2.55rem;
+  --callout-details-pad-top:    0.7rem;
+  --callout-details-pad-bottom: 0.85rem;
+  --callout-summary-pad:        0.55rem;
 
   color-scheme: light;
 }
@@ -582,8 +591,9 @@ pre {
   border: 1px solid var(--code-ring);
   border-radius: var(--pre-radius);
   padding: var(--pre-pad-y) var(--pre-pad-x);
-  margin: var(--pre-margin-block) auto;
-  max-width: min(100%, var(--pre-max));
+  margin-block: var(--pre-margin-block);
+  margin-inline: auto;
+  max-width: calc(100% - 2 * var(--pre-inset-x));
   position: relative;
   box-shadow: var(--shadow-sm);
   tab-size: 4;
@@ -626,54 +636,56 @@ pre code {
   background: transparent;
   color: var(--text-head);
   font-size: 0.8125rem;
-  line-height: 1.5;
+  line-height: 1.45;
   white-space: pre;
   overflow-wrap: normal;
   tab-size: 4;
 }
 
-/* each line — hanging indent so wrapped lines are visually offset */
 pre code span {
   display: block;
-  padding: 0.06em 0;
-  padding-left: 0.55rem;
-  text-indent: -0.55rem;
-  min-height: 1.5em;
+  padding-block: 0.02em;
+  min-height: 1.35em;
 }
 
 pre code span.l0 { background: var(--code-bg); }
 pre code span.l1 { background: var(--code-stripe); }
 
 p > pre {
-  margin-top: 0.35rem;
+  margin-top: 0.28rem;
 }
 
 /* ── copy button ───────────────────────────────────────────── */
 .pre-copy-btn {
   position: absolute;
-  top: 0.22rem;
+  top: 0.18rem;
   right: var(--pre-pad-x);
-  left: auto;
   z-index: 2;
-  padding: 0.14rem 0.42rem;
+  padding: 0.06rem 0.32rem;
   border: 1px solid var(--code-ring);
-  border-radius: var(--pre-radius);
+  border-radius: calc(var(--pre-radius) - 1px);
   background: var(--bg-elevated);
   color: var(--text);
   font-family: var(--font-sans);
-  font-size: 0.585rem;
+  font-size: 0.54rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  line-height: 1.35;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
 }
 
-/* inside header bar — vertically centred */
+/* compact chip, vertically centred in the language banner */
 pre[data-lang]:not([data-lang=""]) > .pre-copy-btn {
-  top: calc(var(--pre-bar-h) / 2);
-  transform: translateY(-50%);
+  top: var(--pre-bar-btn-gap);
+  height: calc(var(--pre-bar-h) - 2 * var(--pre-bar-btn-gap));
+  padding-block: 0;
+  transform: none;
 }
 
 .pre-copy-btn:hover {
@@ -745,8 +757,8 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
   border-left: 4px solid var(--accent);
   border-radius: var(--radius-sm);
   background: var(--accent-soft);
-  padding: 0.9rem 1.05rem;
-  margin: 1.05rem 0;
+  padding: 0.75rem var(--callout-inline);
+  margin: 0.85rem 0;
   font-size: 0.9rem;
   font-family: var(--font-sans);
   box-shadow: var(--shadow-sm);
@@ -754,7 +766,7 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
 
 .admonition-title {
   display: block;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.38rem;
   font-size: 0.6875rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -803,53 +815,56 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
   margin: 0.15rem 0;
 }
 
-/* Nested callouts: pre must fit the box, not the full page column (--pre-max) */
-.admonition pre,
-details.admonition pre,
-details.question pre,
-details.more pre {
-  width: 100%;
-  max-width: 100%;
+/* Nested callouts: code blocks centered in the text column */
+.admonition > pre {
+  max-width: calc(100% - 2 * var(--pre-inset-admonition));
   min-width: 0;
-  box-sizing: border-box;
-  margin-inline: 0;
   margin-block: var(--pre-margin-block);
+  margin-inline: var(--pre-inset-admonition);
   padding: var(--pre-pad-y) var(--pre-pad-x);
 }
 
+details.question > pre,
+details.admonition > pre,
+details.more > pre {
+  max-width: calc(
+    100% - var(--callout-details-pad-start) - var(--callout-inline)
+    - 2 * var(--pre-inset-admonition)
+  );
+  min-width: 0;
+  margin-block: var(--pre-margin-block);
+  margin-inline-start: calc(var(--callout-details-pad-start) + var(--pre-inset-admonition));
+  margin-inline-end: calc(var(--callout-inline) + var(--pre-inset-admonition));
+  padding: var(--pre-pad-y) var(--pre-pad-x);
+}
+
+details.question > summary + pre,
+details.admonition > summary + pre,
+details.more > summary + pre {
+  margin-top: var(--callout-details-pad-top);
+}
+
+details.question > pre:last-child,
+details.admonition > pre:last-child,
+details.more > pre:last-child {
+  margin-bottom: var(--callout-details-pad-bottom);
+}
+
 .admonition pre[data-lang]:not([data-lang=""]),
-details.admonition pre[data-lang]:not([data-lang=""]),
-details.question pre[data-lang]:not([data-lang=""]),
-details.more pre[data-lang]:not([data-lang=""]) {
+details pre[data-lang]:not([data-lang=""]) {
   padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
 }
 
 .admonition pre code,
-details.question pre code,
-details.more pre code,
-details.admonition pre code {
+details pre code {
   max-width: 100%;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-.admonition pre code span,
-details.question pre code span,
-details.more pre code span,
-details.admonition pre code span {
-  /* inherits base span style — no override needed */
-}
-
-.admonition pre:first-child,
-.admonition > pre:first-of-type {
+.admonition > pre:first-child {
   margin-top: 0;
-}
-
-.admonition.note,
-.admonition.info {
-  border-left-color: var(--accent);
-  background: var(--accent-soft);
 }
 
 .admonition.tip,
@@ -900,24 +915,35 @@ details.admonition pre code span {
   color: var(--accent);
 }
 
-/* collapsible ------------------------------------------------ */
+/* collapsible details (question, more) ------------------------- */
 details.question,
-details.admonition.question {
+details.admonition.question,
+details.more {
   background: var(--bg-main);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--ok);
   border-radius: var(--radius-sm);
   padding: 0;
   margin: 0.7rem 0;
   box-shadow: var(--shadow-sm);
 }
 
+details.question,
+details.admonition.question {
+  border-left: 4px solid var(--ok);
+}
+
+details.more {
+  border-left: 4px solid var(--accent-muted);
+}
+
 details.question > summary,
-details.admonition > summary {
+details.admonition > summary,
+details.more > summary {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.55rem 1rem 0.55rem 2.55rem;
+  padding: var(--callout-summary-pad) var(--callout-inline)
+    var(--callout-summary-pad) var(--callout-details-pad-start);
   font-size: 0.8725rem;
   font-weight: 600;
   cursor: pointer;
@@ -928,36 +954,60 @@ details.admonition > summary {
 }
 
 details.question > summary::-webkit-details-marker,
-details.admonition > summary::-webkit-details-marker { display: none; }
+details.admonition > summary::-webkit-details-marker,
+details.more > summary::-webkit-details-marker { display: none; }
+
+details.question > summary::before,
+details.admonition > summary::before,
+details.more > summary::before {
+  position: absolute;
+  left: 0.78rem;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  pointer-events: none;
+}
 
 details.question > summary::before,
 details.admonition > summary::before {
   content: "?";
-  position: absolute;
-  left: 0.78rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.15rem;
-  height: 1.15rem;
   background: var(--ok);
-  color: #fff;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
+}
+
+details.more > summary::before {
+  content: "+";
+  background: var(--accent-muted);
+  padding-block-end: 0.05rem;
+}
+
+details.more[open] > summary::before {
+  content: "-";
+  padding-block-end: 0;
+  padding-block-start: 0.06rem;
 }
 
 details.question[open] > summary,
-details.admonition[open] > summary {
+details.admonition[open] > summary,
+details.more[open] > summary {
   border-bottom: 1px solid var(--border);
 }
 
-details.question > :not(summary),
-details.admonition > :not(summary) {
-  padding: 0.7rem 1rem 0.85rem 2.55rem;
+details.question > :not(summary):not(pre),
+details.admonition > :not(summary):not(pre),
+details.more > :not(summary):not(pre) {
+  padding: var(--callout-details-pad-top) var(--callout-inline)
+    var(--callout-details-pad-bottom) var(--callout-details-pad-start);
   font-family: var(--font-sans);
   font-size: 0.9rem;
 }
@@ -982,93 +1032,12 @@ details.more > :not(summary) > p:last-child {
 
 details.question > :not(summary) ul,
 details.question > :not(summary) ol,
+details.admonition > :not(summary) ul,
+details.admonition > :not(summary) ol,
 details.more > :not(summary) ul,
 details.more > :not(summary) ol {
   padding-left: 1.2rem;
   margin: 0.4rem 0;
-}
-
-/* collapsible optional detail (`??? more`), not quiz-style --------- */
-details.more {
-  background: var(--bg-main);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--accent-muted);
-  border-radius: var(--radius-sm);
-  padding: 0;
-  margin: 0.7rem 0;
-  box-shadow: var(--shadow-sm);
-}
-
-details.more > summary {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.55rem 1rem 0.55rem 2.55rem;
-  font-size: 0.8725rem;
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-  position: relative;
-  font-family: var(--font-sans);
-  color: var(--text-head);
-}
-
-details.more > summary::-webkit-details-marker { display: none; }
-
-details.more > summary::before {
-  content: "+";
-  position: absolute;
-  left: 0.78rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.15rem;
-  height: 1.15rem;
-  background: var(--accent-muted);
-  color: #fff;
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-details.more[open] > summary {
-  border-bottom: 1px solid var(--border);
-}
-
-details.more[open] > summary::before {
-  content: "-";
-  font-size: 0.85rem;
-}
-
-details.more > :not(summary) {
-  padding: 0.7rem 1rem 0.85rem 2.55rem;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-}
-
-/* badges (unused in source but kept) ---------------------------- */
-.section-meta {
-  display: flex;
-  gap: 0.45rem;
-  align-items: center;
-  margin-bottom: 1.1rem;
-  flex-wrap: wrap;
-}
-
-.badge {
-  font-size: 0.59rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.52rem;
-  border-radius: 5px;
-  background: var(--bg-muted);
-  color: var(--text-dim);
-  border: 1px solid var(--border);
-  font-family: var(--font-sans);
 }
 
 @media (max-width: 900px) {
@@ -1250,15 +1219,15 @@ In either case, you build or download it once, then perform queries and reuse it
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You do not need to run the command below if you already followed the steps in the <strong>Setup</strong> section.
-Note that this index is heavily downsampled and may underperform for complex samples compared to larger indexes.</p>
+Note that this index is intentionally made extremely lightweight for this tutorial and may underperform for complex samples compared to larger indexes.</p>
 </div>
-<pre data-lang="bash"><code><span class="l0">wget https://ter-trees.ucsd.edu/data/krepp/index-WoLv1-tiny.tar</span><span class="l1">mkdir -p data</span><span class="l0">tar -xf index-WoLv1-tiny.tar -C data/</span></code></pre>
+<pre data-lang="bash"><code><span class="l0">wget --no-check-certificate https://ter-trees.ucsd.edu/data/krepp/index-WoLv1-tiny.tar</span><span class="l1">mkdir -p data</span><span class="l0">tar -xf index-WoLv1-tiny.tar -C data/</span></code></pre>
 <p>The downloaded directory contains the index.
 This particular index is small enough to fit in your laptop's memory during the tutorial.</p>
-<p>Run <code>cat data/index-WoLv1-tiny/metadata-*</code> to see the configuration and verify the download.</p>
+<p>Run <code>cat data/index-WoLv1-tiny/metadata-*.txt</code> to see the configuration and verify the download.</p>
 <details class="question">
 <summary>Expected output:</summary>
-<p><code>data/index-WoLv1-tiny/</code></p>
+<pre data-lang=""><code><span class="l0">krepp version: v0.8.2</span><span class="l1">date: 2026-05-29 04:53:32</span><span class="l0">seed: 0</span><span class="l1">k: 27</span><span class="l0">w: 33</span><span class="l1">h: 12</span><span class="l0">m: 36</span><span class="l1">frac: false</span><span class="l0">ppos_v: [26, 25, 24, 22, 21, 17, 14, 8, 7, 5, 3, 2]</span><span class="l1">npos_v: [0, 1, 4, 6, 9, 10, 11, 12, 13, 15, 16, 18, 19, 20, 23]</span><span class="l0">nrows: 466034</span><span class="l1">total_num_kmers: 184716530</span><span class="l0">sdust-t: 0</span><span class="l1">sdust-w: 0</span></code></pre>
 </details>
 <p>See <a href="https://github.com/bo1929/krepp/wiki/Available-reference-indexes">this page</a> for the full list of available databases.</p>
 <details class="more">
@@ -1325,10 +1294,10 @@ It does not affect memory use at query time, once indexing is finished.</p>
 </details>
 <h3 id="inspecting-and-verifying-an-index">Inspecting and verifying an index</h3>
 <p>We can verify an index by running</p>
-<pre data-lang="bash"><code><span class="l0">krepp inspect -i data/toy-index | head -n 15</span></code></pre>
+<pre data-lang="bash"><code><span class="l0">krepp inspect -i data/toy-index | head -n 16</span></code></pre>
 <details class="question">
 <summary>Expected output:</summary>
-<pre data-lang=""><code><span class="l0">Backbone tree: NA</span><span class="l1">======= Partial index: 0 =======</span><span class="l0">krepp version: v0.8.2</span><span class="l1">date: 2026-05-26 05:27:50</span><span class="l0">seed: 0</span><span class="l1">k: 29</span><span class="l0">w: 35</span><span class="l1">h: 13</span><span class="l0">m: 4</span><span class="l1">frac: true</span><span class="l0">ppos_v: [28, 26, 25, 22, 16, 14, 12, 11, 7, 5, 4, 3, 1]</span><span class="l1">npos_v: [0, 2, 6, 8, 9, 10, 13, 15, 17, 18, 19, 20, 21, 23, 24, 27]</span><span class="l0">nrows: 33554432</span><span class="l1">total_num_kmers: 13408544</span><span class="l0">sdust-t: 0</span></code></pre>
+<pre data-lang=""><code><span class="l0">Backbone tree: NA</span><span class="l1">======= Partial index: 0 =======</span><span class="l0">krepp version: v0.8.2</span><span class="l1">date: 2026-05-26 05:27:50</span><span class="l0">seed: 0</span><span class="l1">k: 29</span><span class="l0">w: 35</span><span class="l1">h: 13</span><span class="l0">m: 4</span><span class="l1">frac: true</span><span class="l0">ppos_v: [28, 26, 25, 22, 16, 14, 12, 11, 7, 5, 4, 3, 1]</span><span class="l1">npos_v: [0, 2, 6, 8, 9, 10, 13, 15, 17, 18, 19, 20, 21, 23, 24, 27]</span><span class="l0">nrows: 33554432</span><span class="l1">total_num_kmers: 13408544</span><span class="l0">sdust-t: 0</span><span class="l1">sdust-w: 0</span></code></pre>
 </details>
 <p>This command also reports the parameters used during indexing for future reference.
 Alternatively, to display similar information about the index, we can check the metadata file.</p>
