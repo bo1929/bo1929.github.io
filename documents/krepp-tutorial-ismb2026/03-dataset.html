@@ -11,31 +11,30 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "Menlo", Consolas,
-    "Liberation Mono", monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "Menlo", Consolas, "Liberation Mono", monospace;
 
   /* Neutral gray chrome; accent only for links, active nav, CTAs */
-  --bg-app:         #e4e5e9;
-  --bg-sidebar:     #f0f1f5;
-  --bg-main:        #fdfdfd;
-  --bg-muted:       #ebecef;
+  --bg-app:         #e8e9ed;
+  --bg-sidebar:     #f3f4f7;
+  --bg-main:        #fefefe;
+  --bg-muted:       #eeeff3;
   --bg-elevated:    #ffffff;
 
-  --border:         #d5d7de;
-  --border-strong:  #bfc2cc;
+  --border:         #c8cad3;
+  --border-strong:  #b0b4bf;
 
-  --text:           #2c2d34;
-  --text-head:      #16171c;
-  --text-dim:       #5c5e69;
+  --text:           #1e1f26;
+  --text-head:      #0f1016;
+  --text-dim:       #4a4c58;
 
-  --accent:         #366391;
-  --accent-hover:   #2d5580;
-  --accent-soft:    rgba(54, 99, 145, 0.13);
-  --accent-muted:   #557fa5;
-  --accent-track:   #dfe6f2;
-  --chrome-border: rgba(54, 99, 145, 0.18);
+  --accent:         #2d5a85;
+  --accent-hover:   #234a6e;
+  --accent-soft:    rgba(45, 90, 133, 0.12);
+  --accent-muted:   #4a749b;
+  --accent-track:   #dae3f0;
+  --chrome-border: rgba(45, 90, 133, 0.16);
 
   --head-tint:      #212c3d;
 
@@ -48,10 +47,10 @@
   --danger:         #aa4a46;
   --danger-soft:    rgba(170, 74, 70, 0.07);
 
-  --code-bg:        #e6e8ef;
-  --code-ring:      #b8bcc8;
-  --code-stripe:    #dcdee5;
-  --inline-bg:      #dde1ea;
+  --code-bg:        #e3e5ec;
+  --code-ring:      #b0b4c0;
+  --code-stripe:    #d8dae2;
+  --inline-bg:      #eef0f5;
 
   --table-head:     #ebecef;
 
@@ -65,17 +64,17 @@
   --main-gutter:  0.65rem;
 
   --sidebar-w:    274px;
-  --radius:       10px;
-  --radius-sm:    7px;
+  --radius:       7px;
+  --radius-sm:    5px;
   /* Main article column and fenced code (pre) layout */
-  --page-text-max:    58rem;
-  --pre-radius:       5px;
+  --page-text-max:    59rem;
+  --pre-radius:       4px;
   --pre-pad-x:        1rem;
-  --pre-pad-y:        0.48rem;
-  --pre-bar-h:        1.35rem;
+  --pre-pad-y:        0.4rem;
+  --pre-bar-h:        1.25rem;
   --pre-bar-btn-gap:  0.2rem;
-  --pre-inset-x:            0.625rem;
-  --pre-inset-admonition:   0.35rem;
+  --pre-inset-x:            0.6rem;
+  --pre-inset-admonition:   0.3rem;
   --pre-margin-block:       0.5rem;
 
   /* Callout padding (text column and nested code blocks stay aligned) */
@@ -88,12 +87,12 @@
   color-scheme: light;
 }
 
-html, body { height: 100%; font-size: 16px; }
+html, body { height: 100%; font-size: 17px; }
 body {
   background: var(--bg-app);
   color: var(--text);
   font-family: var(--font-sans);
-  line-height: 1.65;
+  line-height: 1.7;
   display: flex;
   align-items: stretch;
   height: 100vh;
@@ -117,13 +116,13 @@ body {
   padding: 1.08rem 1.15rem 0.88rem;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
-  background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-sidebar) 100%);
+  background: var(--bg-sidebar);
 }
 
 .logo {
-  font-size: 0.625rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-dim);
   font-family: var(--font-sans);
@@ -131,7 +130,7 @@ body {
 }
 
 #sidebar-header h1 {
-  font-size: 1.02rem;
+  font-size: 1.06rem;
   font-weight: 700;
   color: var(--head-tint);
   line-height: 1.32;
@@ -155,9 +154,9 @@ body {
 
 .nav-group {
   padding: 0.7rem 1.15rem 0.22rem;
-  font-size: 0.625rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-muted);
   margin-top: 0.28rem;
@@ -170,7 +169,7 @@ nav a {
   gap: 0.45rem;
   margin: 0 0.46rem;
   padding: 0.34rem 0.64rem;
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   color: var(--text);
   text-decoration: none;
   border-radius: var(--radius-sm);
@@ -227,9 +226,9 @@ nav a[data-nav-level="3"] {
   list-style: none;
   padding: 0.42rem 1.08rem 0.3rem;
   padding-inline-start: 1.28rem;
-  font-size: 0.625rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-muted);
   font-family: var(--font-sans);
@@ -346,7 +345,7 @@ nav a[data-nav-level="3"] {
   padding-block: 0.7rem;
   padding-inline: 1.75rem;
   border-bottom: 1px solid var(--chrome-border);
-  background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-main) 100%);
+  background: var(--bg-elevated);
   flex-shrink: 0;
   gap: 1rem;
 }
@@ -442,7 +441,7 @@ nav a[data-nav-level="3"] {
   padding: 0.85rem 1.75rem;
   padding-bottom: max(1.05rem, calc(0.5rem + env(safe-area-inset-bottom, 0px)));
   border-top: 1px solid var(--chrome-border);
-  background: linear-gradient(0deg, var(--bg-muted) 0%, var(--bg-main) 100%);
+  background: var(--bg-elevated);
   flex-shrink: 0;
   gap: 1rem;
 }
@@ -478,16 +477,14 @@ nav a[data-nav-level="3"] {
 
 .nav-btn.primary {
   color: var(--btn-primary-fg);
-  background: linear-gradient(180deg, #4f7499, var(--accent));
-  border-color: rgba(54, 99, 145, 0.4);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .nav-btn.primary:hover:not(:disabled) {
   color: var(--btn-primary-fg-hover);
-  border-color: rgba(54, 99, 145, 0.6);
-  background: linear-gradient(180deg, #446687, var(--accent-hover));
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset;
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
 }
 
 .nav-btn.primary:disabled {
@@ -501,7 +498,7 @@ nav a[data-nav-level="3"] {
 
 /* --- Prose --------------------------------------------- */
 h1 {
-  font-size: clamp(1.55rem, 2.8vw, 1.95rem);
+  font-size: clamp(1.65rem, 2.8vw, 2.05rem);
   font-weight: 800;
   color: var(--head-tint);
   margin-bottom: 1rem;
@@ -513,7 +510,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.18rem;
+  font-size: 1.32rem;
   font-weight: 700;
   color: var(--head-tint);
   margin: 2.15rem 0 0.6rem;
@@ -526,12 +523,12 @@ h2 {
 h2:first-of-type { margin-top: 1.15rem; }
 
 h3 {
-  font-size: 0.8125rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-dim);
   margin: 1.65rem 0 0.45rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   font-family: var(--font-sans);
 }
 
@@ -543,7 +540,7 @@ h4 {
   font-family: var(--font-sans);
 }
 
-p { margin: 0.72rem 0; }
+p { margin: 0.72rem 0; font-size: 1.05rem; }
 
 hr {
   border: none;
@@ -568,7 +565,7 @@ em { font-style: italic; }
 ul, ol {
   padding-left: 1.35rem;
   margin: 0.6rem 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 li { margin: 0.32rem 0; }
@@ -580,10 +577,10 @@ code {
   background: var(--inline-bg);
   color: var(--text-head);
   font-family: var(--font-mono);
-  font-size: 0.813em;
-  padding: 0.125em 0.4em;
-  border-radius: var(--pre-radius);
-  border: 1px solid var(--code-ring);
+  font-size: 0.80em;
+  padding: 0.12em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--border);
 }
 
 pre {
@@ -591,22 +588,19 @@ pre {
   border: 1px solid var(--code-ring);
   border-radius: var(--pre-radius);
   padding: var(--pre-pad-y) var(--pre-pad-x);
+  padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
   margin-block: var(--pre-margin-block);
   margin-inline: auto;
   max-width: calc(100% - 2 * var(--pre-inset-x));
   position: relative;
   box-shadow: var(--shadow-sm);
-  tab-size: 4;
+  tab-size: 2;
   overflow-x: auto;
 }
 
-/* ── header bar (language tag) ──────────────────────────────── */
-pre[data-lang]:not([data-lang=""]) {
-  padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
-}
-
-pre[data-lang]:not([data-lang=""])::before {
-  content: attr(data-lang);
+/* ── header bar (all pre blocks get one for the copy button) ─── */
+pre::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -615,6 +609,13 @@ pre[data-lang]:not([data-lang=""])::before {
   background: var(--code-stripe);
   border-bottom: 1px solid var(--code-ring);
   border-radius: max(0px, calc(var(--pre-radius) - 1px)) max(0px, calc(var(--pre-radius) - 1px)) 0 0;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+/* Language label text  --  only when data-lang is non-empty */
+pre[data-lang]:not([data-lang=""])::before {
+  content: attr(data-lang);
   display: flex;
   align-items: center;
   padding: 0 var(--pre-pad-x);
@@ -622,11 +623,8 @@ pre[data-lang]:not([data-lang=""])::before {
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.07em;
-  text-transform: uppercase;
   color: var(--text-dim);
   line-height: 1;
-  box-sizing: border-box;
-  pointer-events: none;
 }
 
 pre code {
@@ -635,8 +633,8 @@ pre code {
   padding: 0;
   background: transparent;
   color: var(--text-head);
-  font-size: 0.8125rem;
-  line-height: 1.45;
+  font-size: 0.84rem;
+  line-height: 1.5;
   white-space: pre;
   overflow-wrap: normal;
   tab-size: 4;
@@ -658,10 +656,11 @@ p > pre {
 /* ── copy button ───────────────────────────────────────────── */
 .pre-copy-btn {
   position: absolute;
-  top: 0.18rem;
+  top: var(--pre-bar-btn-gap);
   right: var(--pre-pad-x);
   z-index: 2;
-  padding: 0.06rem 0.32rem;
+  height: calc(var(--pre-bar-h) - 2 * var(--pre-bar-btn-gap));
+  padding: 0 0.32rem;
   border: 1px solid var(--code-ring);
   border-radius: calc(var(--pre-radius) - 1px);
   background: var(--bg-elevated);
@@ -678,14 +677,6 @@ p > pre {
   box-sizing: border-box;
   cursor: pointer;
   box-shadow: none;
-}
-
-/* compact chip, vertically centred in the language banner */
-pre[data-lang]:not([data-lang=""]) > .pre-copy-btn {
-  top: var(--pre-bar-btn-gap);
-  height: calc(var(--pre-bar-h) - 2 * var(--pre-bar-btn-gap));
-  padding-block: 0;
-  transform: none;
 }
 
 .pre-copy-btn:hover {
@@ -727,7 +718,7 @@ pre[data-lang]:not([data-lang=""]) > .pre-copy-btn {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: 0.91rem;
 }
 
 th {
@@ -736,11 +727,12 @@ th {
   font-weight: 600;
   text-align: left;
   padding: 0.52rem 0.92rem;
-  font-size: 0.6875rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
   white-space: nowrap;
+  font-family: var(--font-sans);
 }
 
 td {
@@ -759,7 +751,7 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
   background: var(--accent-soft);
   padding: 0.75rem var(--callout-inline);
   margin: 0.85rem 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-family: var(--font-sans);
   box-shadow: var(--shadow-sm);
 }
@@ -767,11 +759,12 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
 .admonition-title {
   display: block;
   margin: 0 0 0.38rem;
-  font-size: 0.6875rem;
-  font-weight: 800;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   color: inherit;
+  font-family: var(--font-sans);
 }
 
 .admonition-title code {
@@ -821,7 +814,9 @@ tr:hover td { background: rgba(22, 23, 30, 0.035); }
   min-width: 0;
   margin-block: var(--pre-margin-block);
   margin-inline: var(--pre-inset-admonition);
-  padding: var(--pre-pad-y) var(--pre-pad-x);
+  padding-right: var(--pre-pad-x);
+  padding-bottom: var(--pre-pad-y);
+  padding-left: var(--pre-pad-x);
 }
 
 details.question > pre,
@@ -835,7 +830,9 @@ details.more > pre {
   margin-block: var(--pre-margin-block);
   margin-inline-start: calc(var(--callout-details-pad-start) + var(--pre-inset-admonition));
   margin-inline-end: calc(var(--callout-inline) + var(--pre-inset-admonition));
-  padding: var(--pre-pad-y) var(--pre-pad-x);
+  padding-right: var(--pre-pad-x);
+  padding-bottom: var(--pre-pad-y);
+  padding-left: var(--pre-pad-x);
 }
 
 details.question > summary + pre,
@@ -848,11 +845,6 @@ details.question > pre:last-child,
 details.admonition > pre:last-child,
 details.more > pre:last-child {
   margin-bottom: var(--callout-details-pad-bottom);
-}
-
-.admonition pre[data-lang]:not([data-lang=""]),
-details pre[data-lang]:not([data-lang=""]) {
-  padding-top: calc(var(--pre-bar-h) + var(--pre-pad-y));
 }
 
 .admonition pre code,
@@ -885,34 +877,10 @@ details pre code {
 }
 
 .admonition.next {
-  border-left-width: 5px;
+  border-left-width: 4px;
   border-left-color: var(--accent);
-  background: linear-gradient(
-    90deg,
-    rgba(54, 99, 145, 0.16) 0,
-    rgba(54, 99, 145, 0.08) 0.85rem,
-    var(--accent-soft) 2.05rem,
-    var(--accent-soft)
-  );
-  padding-left: 2.05rem;
-  position: relative;
-  box-shadow: var(--shadow-sm), inset 0.45rem 0 0 rgba(54, 99, 145, 0.12);
-}
-
-.admonition.next::before {
-  content: "";
-  position: absolute;
-  left: 0.82rem;
-  top: 0.88rem;
-  width: 0.52rem;
-  height: 0.52rem;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  background: rgba(253, 253, 253, 0.85);
-}
-
-.admonition.next .admonition-title {
-  color: var(--accent);
+  background: var(--accent-soft);
+  padding-left: 1.2rem;
 }
 
 /* collapsible details (question, more) ------------------------- */
@@ -944,7 +912,7 @@ details.more > summary {
   gap: 0.65rem;
   padding: var(--callout-summary-pad) var(--callout-inline)
     var(--callout-summary-pad) var(--callout-details-pad-start);
-  font-size: 0.8725rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   list-style: none;
@@ -1009,7 +977,7 @@ details.more > :not(summary):not(pre) {
   padding: var(--callout-details-pad-top) var(--callout-inline)
     var(--callout-details-pad-bottom) var(--callout-details-pad-start);
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 details.question > :not(summary) > p,
@@ -1198,97 +1166,235 @@ body.isolated-page {
 <main class="isolated-article">
   <div class="isolated-article-inner">
 <h1 id="dataset">Dataset</h1>
-<p>We use one controlled mock metagenome: <strong>100,000 simulated Illumina reads</strong>
-from <strong>20 query genomes</strong>. The query profile is known, so every later distance,
-placement, and abundance result can be checked against the organisms that truly
-generated the reads.</p>
-<p>The tutorial uses two reference contexts. First, a <strong>31-genome toy reference
-genome set</strong> lets us inspect the behavior by hand. Second, we install the
-<strong>WoL-v1 tiny index</strong>, a Web of Life reference index with roughly <strong>10,000
-microbial references</strong> and a matching phylogeny, under
-<code>data/index-WoLv1-tiny/</code>. The toy set is for interpretation; WoL-v1 is for
-showing the same workflow on a broader database.</p>
-<p>The toy reference genome set is intentionally uneven. Each query and reference
-genome has a <strong><code>role</code></strong> in <code>query_info.tsv</code> / <code>reference_info.tsv</code>: the
-<strong>deepest shared taxonomic rank</strong> (species, genus, family, ...) between that
-genome and its closest partner in the other set. Ranks come from
-<code>query_taxonomy.tsv</code> (Kraken-style paths) and NCBI lineages for references;
-recompute with <code>python3 scripts/update_taxonomy_roles.py</code>.</p>
-<p>Some queries match a reference at <strong>species</strong> rank (same taxon, different
-assembly). Others share only <strong>genus</strong>, <strong>family</strong>, or <strong>kingdom</strong> with their
-best reference — the distant cases that drive placement on internal branches.</p>
-<p><img src="../figures/dataset_profile.png" alt="Query profile composition: kingdom bar, class bar, and per-species abundance chart." style="display: block; margin: 1rem auto; width: 100%; max-width: 760px; height: auto;" /></p>
-<p><strong>Figure 1.</strong> Query profile composition. Top: kingdom- and class-level
-stacked bars showing the overall taxonomic spread. Bottom: all 20 species
-with their relative abundances, coloured by class.</p>
-<p><img src="../figures/dataset_reference.png" alt="How query reads relate to the reference panel, and the reference panel composition by role." style="display: block; margin: 1rem auto; width: 100%; max-width: 720px; height: auto;" /></p>
-<p><strong>Figure 2.</strong> Left: query read abundance grouped by each species' <strong><code>role</code></strong>
-(deepest shared rank with the best-matching reference). Right: the 31-genome
-reference panel counted by the same rank labels. Coarser ranks (e.g. genus,
-family, kingdom) indicate a more distant best reference.</p>
+<h2 id="query-mixture-of-reads">Query mixture of reads</h2>
+<ul>
+<li>A controlled (mock) metagenomic sample: <strong>100,000 simulated Illumina reads</strong> from <strong>20 query genomes</strong>.</li>
+<li>The mixture is based on an abundance profile mimicking a marine environment.</li>
+<li>Queries in this mixture differ in terms of <strong>abundances</strong>, <strong>taxonomies</strong>, and their <strong>novelty level</strong>.</li>
+</ul>
+<div class="admonition note">
+<p>We will be comparing our results to the known ground truth profile given in <code>data/profile.tsv</code>!</p>
+</div>
+<h3 id="abundances-of-queries-and-taxonomic-profiles">Abundances of queries and taxonomic profiles</h3>
+<ul>
+<li>Spanning two kingdoms, Bacteria (83%) and Archaea (17%), and seven classes:<ul>
+<li>Gammaproteobacteria (~66%)</li>
+<li>Thermoprotei (~11%)</li>
+<li>Alphaproteobacteria (~8%)</li>
+<li>Thermococci (~6%)</li>
+<li>Epsilonproteobacteria (~5%)</li>
+<li>Acidimicrobiia (~2%)</li>
+<li>Deinococci (~2%)</li>
+</ul>
+</li>
+</ul>
 <hr />
-<h2 id="files">Files</h2>
+<h3 id="reference-genomes-and-novelty-levels">Reference genomes and novelty levels</h3>
+<p>To see how a certain taxon can be identified depending on its representation in a reference database, we control its novelty level by measuring the lowest shared taxon of the closest reference genome.</p>
+<p>As it will be discussed in the <a href="04-indexing.html">next section</a> in more detail, we will be using two different sets of reference genomes:</p>
+<ul>
+<li>a 31-genome toy reference set for controlled novelty,</li>
+<li>a small but diverse microbial index (Web of Life) spanning many taxa.</li>
+</ul>
+<p>For the Web of Life, we do not control the novelty but we do for the toy reference set. Some queries match a reference at <strong>species</strong> rank (same taxon, different individual genomes).
+Others share only <strong>genus</strong>, <strong>family</strong>, or <strong>kingdom</strong> with their best matching reference, in terms of the ANI between them, akin to the phylogenetic distance measured in branch lengths.</p>
+<div class="admonition note">
+<p>If a read comes from a genome <strong><em>X</em></strong> of species <strong>A</strong> under genus <strong>B</strong>, and if the closest reference <strong><em>Y</em></strong> belongs to the same genus <strong>B</strong> but not the same species <strong>A</strong>, then the novelty level would be genus level.</p>
+</div>
+<p><strong>By novelty-level</strong> (the lowest shared taxonomic rank with the closest reference):</p>
+<ul>
+<li><strong>species</strong>: 11 queries (33% of reads)</li>
+<li><strong>genus</strong>: 6 queries (53% of reads)</li>
+<li><strong>family</strong>: 1 query (2% of reads)</li>
+<li><strong>kingdom</strong>: 2 queries (13% of reads)</li>
+</ul>
+<p><img src="../figures/dataset_overview.png" alt="Dataset overview." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
+<p><strong>Figure 1.</strong> Dataset overview. <strong>Left:</strong> What portion of the query reads relates to the toy reference set by <strong><code>novelty</code></strong>, then kingdom and class level abundances.
+<strong>Right:</strong> All 20 query species with relative abundances (coloured by class).</p>
+<div class="admonition note">
+<p>As novelty increases (species to kingdom), it becomes more difficult to identify a read and incorporate it in the analysis.</p>
+</div>
+<h2 id="reference-genome-set">Reference genome set</h2>
+<ul>
+<li>References cover two kingdoms (Bacteria and Archaea), five phyla (Proteobacteria, Actinobacteria, Deinococcus-Thermus, Crenarchaeota, and Euryarchaeota), and seven classes (Gammaproteobacteria, Alphaproteobacteria, Epsilonproteobacteria, Acidimicrobiia, Deinococci, Thermoprotei, and Thermococci).</li>
+<li>Below we show a phylogeny consisting of both reference genomes and query genomes.</li>
+<li>Novelty of each query can also be understood as the branch length to the closest reference in this phylogeny.</li>
+<li>We will use a similar phylogeny after excluding the queries for phylogenetic placement of the reads in the query mixture.</li>
+</ul>
+<p><img src="../figures/dataset_reference_phylogeny.png" alt="Mash neighbor-joining tree with all 31 reference genomes and all 20 query genomes as tips." style="display: block; margin: 1rem auto; width: 100%; max-width: 800px; height: auto;" /></p>
+<p><strong>Figure 2.</strong>
+A toy phylogeny built using Mash distances and neighbor-joining, queries are colored in red.
+Although this may not be the most reliable method for obtaining a microbial phylogeny (as Mash distances do not extend well to highly divergent genomes, which we have in our case), it is good enough for our purposes.
+The same species may appear at tips both as query and reference, which correspond to queries that are least novel (another genome from the exact same species is present in the reference).</p>
+<hr />
+<h2 id="goals">Goals</h2>
+<ul>
+<li>Abundant and low-novelty query reads should be identified correctly with low distances.</li>
+<li>High novelty reads should be mapped correctly to corresponding references but with potentially high distances.</li>
+<li>Rare and low-abundance queries should be detected with correct abundances.</li>
+<li>Phylogenetic placement should associate queries with correct branches, reflecting the overall composition at a higher resolution than a taxonomy.</li>
+</ul>
+<hr />
+<h2 id="summary-table">Summary table</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>File or directory</th>
-<th>What it contains</th>
+<th>Query species</th>
+<th>Kingdom</th>
+<th>Class</th>
+<th style="text-align: right;">Abundance</th>
+<th>Novelty level</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>data/profile.tsv</code></td>
-<td>Ground-truth taxonomic profile and abundances across ranks.</td>
+<td><em>Nitrosococcus halophilus</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">17.5%</td>
+<td>genus</td>
 </tr>
 <tr>
-<td><code>data/query_taxonomy.tsv</code></td>
-<td>Taxonomy paths (<code>|</code>-separated) for each query taxon.</td>
+<td><em>Spiribacter curvatus</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">15.7%</td>
+<td>genus</td>
 </tr>
 <tr>
-<td><code>data/query_info.tsv</code></td>
-<td>The 20 query organisms; <code>role</code> = match rank to best reference.</td>
+<td><em>Hyperthermus butylicus</em></td>
+<td>Archaea</td>
+<td>Thermoprotei</td>
+<td style="text-align: right;">11.1%</td>
+<td>kingdom</td>
 </tr>
 <tr>
-<td><code>data/reference_taxonomy.tsv</code></td>
-<td>Cached NCBI taxid paths for reference genomes.</td>
+<td><em>Candidatus Endolissoclinum faulkneri</em></td>
+<td>Bacteria</td>
+<td>Alphaproteobacteria</td>
+<td style="text-align: right;">6.0%</td>
+<td>genus</td>
 </tr>
 <tr>
-<td><code>data/query_genomes/</code></td>
-<td>Genome assemblies for those query organisms.</td>
+<td><em>Nitrosococcus oceani</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">5.7%</td>
+<td>species</td>
 </tr>
 <tr>
-<td><code>data/query_mixture.fq.gz</code></td>
-<td>The simulated read mixture used in the tutorial.</td>
+<td><em>Palaeococcus pacificus</em></td>
+<td>Archaea</td>
+<td>Thermococci</td>
+<td style="text-align: right;">5.7%</td>
+<td>genus</td>
 </tr>
 <tr>
-<td><code>data/input_map.tsv</code></td>
-<td>The 31 reference genomes used to build the small toy index.</td>
+<td><em>Sulfurovum sp. NBC37-1</em></td>
+<td>Bacteria</td>
+<td>Epsilonproteobacteria</td>
+<td style="text-align: right;">5.4%</td>
+<td>genus</td>
 </tr>
 <tr>
-<td><code>data/reference_tree.nwk</code></td>
-<td>Mash distance NJ tree over the references (tip labels match <code>input_map</code> IDs).</td>
+<td><em>Spiribacter salinus</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">5.1%</td>
+<td>species</td>
 </tr>
 <tr>
-<td><code>data/reference_info.tsv</code></td>
-<td>Each reference genome; <code>role</code> = match rank to best query.</td>
+<td><em>Vibrio anguillarum</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">4.6%</td>
+<td>species</td>
 </tr>
 <tr>
-<td><code>data/index-WoLv1-tiny/</code></td>
-<td>The installed WoL-v1 tiny index used as a larger reference context.</td>
+<td><em>Alteromonas mediterranea</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">4.0%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Psychrobacter sp. JCM 18900</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">2.3%</td>
+<td>genus</td>
+</tr>
+<tr>
+<td><em>Ilumatobacter coccineus</em></td>
+<td>Bacteria</td>
+<td>Acidimicrobiia</td>
+<td style="text-align: right;">2.3%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Aliivibrio salmonicida</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">2.2%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Erythrobacter litoralis</em></td>
+<td>Bacteria</td>
+<td>Alphaproteobacteria</td>
+<td style="text-align: right;">2.2%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Aliivibrio wodanis</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">2.2%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Marinomonas posidonica</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">1.7%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Thioflavicoccus mobilis</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">1.6%</td>
+<td>family</td>
+</tr>
+<tr>
+<td><em>Thalassolituus oleivorans</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">1.6%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Alteromonas macleodii</em></td>
+<td>Bacteria</td>
+<td>Gammaproteobacteria</td>
+<td style="text-align: right;">1.6%</td>
+<td>species</td>
+</tr>
+<tr>
+<td><em>Marinithermus hydrothermalis</em></td>
+<td>Bacteria</td>
+<td>Deinococci</td>
+<td style="text-align: right;">1.5%</td>
+<td>kingdom</td>
 </tr>
 </tbody>
 </table></div>
-<hr />
-<h2 id="what-to-look-for">What to look for</h2>
-<p>Good results should recover the abundant close matches, keep same-genus reads
-near the right neighborhood, and place the distant fraction on plausible
-internal branches instead of treating every read as an exact reference hit.</p>
   </div>
 </main>
 
 <footer class="isolated-footer">
   <a class="nav-btn" href="02-setup.html">← Setup</a>
-  <span class="isolated-counter">3 / 9</span>
+  <span class="isolated-counter">3 / 7</span>
   <a class="nav-btn primary" href="04-indexing.html">Indexing →</a>
 </footer>
 
