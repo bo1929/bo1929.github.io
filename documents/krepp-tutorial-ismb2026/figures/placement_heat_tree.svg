@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="947.403" height="788.668" style="background:#ffffffff">
+<!-- Created with genesis v0.30.0 (http://genesis-lib.org) on 2026-06-16 at 11:39:35 -->
+    <defs>
+        <linearGradient id="PaletteGradient_16807" x1="0%" y1="100%" x2="0%" y2="0%" spreadMethod="pad" >
+            <stop offset="0%" stop-color="#81bfff" stop-opacity="1" />
+            <stop offset="50%" stop-color="#c040be" stop-opacity="1" />
+            <stop offset="100%" stop-color="#000000" stop-opacity="1" />
+        </linearGradient>
+    </defs>
+    <g transform="translate( 200, 208.4)" >
+        <g>
+            <line x1="35.5895" y1="0" x2="46.2627" y2="0" stroke="#9695ea" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.5895" y1="6.1" x2="35.5895" y2="0" stroke="#9695ea" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.5895" y1="12.2" x2="130.603" y2="12.2" stroke="#83bcfd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.5895" y1="6.1" x2="35.5895" y2="12.2" stroke="#83bcfd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="8.07265" y1="6.1" x2="35.5895" y2="6.1" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="8.07265" y1="28.1172" x2="8.07265" y2="6.1" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="125.103" y1="48.8" x2="158.29" y2="48.8" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="125.103" y1="54.9" x2="125.103" y2="48.8" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="125.103" y1="61" x2="173.463" y2="61" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="125.103" y1="54.9" x2="125.103" y2="61" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="76.0648" y1="54.9" x2="125.103" y2="54.9" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="76.0648" y1="69.7687" x2="76.0648" y2="54.9" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="92.3378" y1="73.2" x2="99.5192" y2="73.2" stroke="#ab6ad4" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="92.3378" y1="84.6375" x2="92.3378" y2="73.2" stroke="#ab6ad4" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.841" y1="85.4" x2="167.608" y2="85.4" stroke="#bf42bf" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.841" y1="96.075" x2="101.841" y2="85.4" stroke="#bf42bf" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="128.532" y1="97.6" x2="166.216" y2="97.6" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="128.532" y1="106.75" x2="128.532" y2="97.6" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="145.454" y1="109.8" x2="183" y2="109.8" stroke="#83bafd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="145.454" y1="115.9" x2="145.454" y2="109.8" stroke="#83bafd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="145.454" y1="122" x2="165.617" y2="122" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="145.454" y1="115.9" x2="145.454" y2="122" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="128.532" y1="115.9" x2="145.454" y2="115.9" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="128.532" y1="106.75" x2="128.532" y2="115.9" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.841" y1="106.75" x2="128.532" y2="106.75" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.841" y1="96.075" x2="101.841" y2="106.75" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="92.3378" y1="96.075" x2="101.841" y2="96.075" stroke="#83bafd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="92.3378" y1="84.6375" x2="92.3378" y2="96.075" stroke="#83bafd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="76.0648" y1="84.6375" x2="92.3378" y2="84.6375" stroke="#85b7fb" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="76.0648" y1="69.7687" x2="76.0648" y2="84.6375" stroke="#85b7fb" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.6129" y1="69.7687" x2="76.0648" y2="69.7687" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.6129" y1="50.1344" x2="35.6129" y2="69.7687" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="51.4638" y1="24.4" x2="181.752" y2="24.4" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="51.4638" y1="30.5" x2="51.4638" y2="24.4" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="51.4638" y1="36.6" x2="181.752" y2="36.6" stroke="#83bbfd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="51.4638" y1="30.5" x2="51.4638" y2="36.6" stroke="#83bbfd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.6129" y1="30.5" x2="51.4638" y2="30.5" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="35.6129" y1="50.1344" x2="35.6129" y2="30.5" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="8.07265" y1="50.1344" x2="35.6129" y2="50.1344" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="8.07265" y1="28.1172" x2="8.07265" y2="50.1344" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="0" y1="28.1172" x2="8.07265" y2="28.1172" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="0" y1="122.572" x2="0" y2="28.1172" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.7773" y1="134.2" x2="61.4517" y2="134.2" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.7773" y1="150.403" x2="31.7773" y2="134.2" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="42.9925" y1="146.4" x2="75.9006" y2="146.4" stroke="#89b0f7" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="42.9925" y1="166.606" x2="42.9925" y2="146.4" stroke="#89b0f7" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="96.903" y1="158.6" x2="124.146" y2="158.6" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="96.903" y1="167.75" x2="96.903" y2="158.6" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="115.688" y1="170.8" x2="182.997" y2="170.8" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="115.688" y1="176.9" x2="115.688" y2="170.8" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="115.688" y1="183" x2="154.066" y2="183" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="115.688" y1="176.9" x2="115.688" y2="183" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="96.903" y1="176.9" x2="115.688" y2="176.9" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="96.903" y1="167.75" x2="96.903" y2="176.9" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="63.0959" y1="167.75" x2="96.903" y2="167.75" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="63.0959" y1="186.813" x2="63.0959" y2="167.75" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="94.9253" y1="195.2" x2="132.047" y2="195.2" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="94.9253" y1="205.875" x2="94.9253" y2="195.2" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.682" y1="207.4" x2="142.874" y2="207.4" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.682" y1="216.55" x2="101.682" y2="207.4" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="113.332" y1="219.6" x2="165.033" y2="219.6" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="113.332" y1="225.7" x2="113.332" y2="219.6" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="113.332" y1="231.8" x2="167.316" y2="231.8" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="113.332" y1="225.7" x2="113.332" y2="231.8" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.682" y1="225.7" x2="113.332" y2="225.7" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="101.682" y1="216.55" x2="101.682" y2="225.7" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="94.9253" y1="216.55" x2="101.682" y2="216.55" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="94.9253" y1="205.875" x2="94.9253" y2="216.55" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="63.0959" y1="205.875" x2="94.9253" y2="205.875" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="63.0959" y1="186.813" x2="63.0959" y2="205.875" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="42.9925" y1="186.813" x2="63.0959" y2="186.813" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="42.9925" y1="166.606" x2="42.9925" y2="186.813" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.7773" y1="166.606" x2="42.9925" y2="166.606" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.7773" y1="150.403" x2="31.7773" y2="166.606" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="6.4232" y1="150.403" x2="31.7773" y2="150.403" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="6.4232" y1="217.027" x2="6.4232" y2="150.403" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="30.6698" y1="292.8" x2="70.4728" y2="292.8" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="30.6698" y1="312.625" x2="30.6698" y2="292.8" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="60.8445" y1="305" x2="82.1232" y2="305" stroke="#000000" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="60.8445" y1="314.15" x2="60.8445" y2="305" stroke="#000000" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="90.2245" y1="317.2" x2="115.795" y2="317.2" stroke="#85b7fb" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="90.2245" y1="323.3" x2="90.2245" y2="317.2" stroke="#85b7fb" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="90.2245" y1="329.4" x2="87.8689" y2="329.4" stroke="#7e2a7d" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="90.2245" y1="323.3" x2="90.2245" y2="329.4" stroke="#7e2a7d" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="60.8445" y1="323.3" x2="90.2245" y2="323.3" stroke="#86b5fa" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="60.8445" y1="314.15" x2="60.8445" y2="323.3" stroke="#86b5fa" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="34.7478" y1="314.15" x2="60.8445" y2="314.15" stroke="#8ea4f1" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="34.7478" y1="332.45" x2="34.7478" y2="314.15" stroke="#8ea4f1" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="47.748" y1="341.6" x2="71.0982" y2="341.6" stroke="#ba4cc4" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="47.748" y1="350.75" x2="47.748" y2="341.6" stroke="#ba4cc4" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="71.8434" y1="353.8" x2="91.8453" y2="353.8" stroke="#a17fde" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="71.8434" y1="359.9" x2="71.8434" y2="353.8" stroke="#a17fde" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="71.8434" y1="366" x2="90.1724" y2="366" stroke="#9891e7" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="71.8434" y1="359.9" x2="71.8434" y2="366" stroke="#9891e7" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="47.748" y1="359.9" x2="71.8434" y2="359.9" stroke="#84bafc" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="47.748" y1="350.75" x2="47.748" y2="359.9" stroke="#84bafc" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="34.7478" y1="350.75" x2="47.748" y2="350.75" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="34.7478" y1="332.45" x2="34.7478" y2="350.75" stroke="#82bdfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="30.6698" y1="332.45" x2="34.7478" y2="332.45" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="30.6698" y1="312.625" x2="30.6698" y2="332.45" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="20.5438" y1="312.625" x2="30.6698" y2="312.625" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="20.5438" y1="283.65" x2="20.5438" y2="312.625" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="26.8263" y1="244" x2="42.5" y2="244" stroke="#ac68d2" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="26.8263" y1="254.675" x2="26.8263" y2="244" stroke="#ac68d2" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.2717" y1="256.2" x2="45.0197" y2="256.2" stroke="#998fe7" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.2717" y1="265.35" x2="31.2717" y2="256.2" stroke="#998fe7" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="70.366" y1="268.4" x2="107.469" y2="268.4" stroke="#85b7fb" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="70.366" y1="274.5" x2="70.366" y2="268.4" stroke="#85b7fb" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="70.366" y1="280.6" x2="130.348" y2="280.6" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="70.366" y1="274.5" x2="70.366" y2="280.6" stroke="#81beff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.2717" y1="274.5" x2="70.366" y2="274.5" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="31.2717" y1="265.35" x2="31.2717" y2="274.5" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="26.8263" y1="265.35" x2="31.2717" y2="265.35" stroke="#82bcfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="26.8263" y1="254.675" x2="26.8263" y2="265.35" stroke="#82bcfe" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="20.5438" y1="254.675" x2="26.8263" y2="254.675" stroke="#83bbfd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="20.5438" y1="283.65" x2="20.5438" y2="254.675" stroke="#83bbfd" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="6.4232" y1="283.65" x2="20.5438" y2="283.65" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="6.4232" y1="217.027" x2="6.4232" y2="283.65" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="0" y1="217.027" x2="6.4232" y2="217.027" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+            <line x1="0" y1="122.572" x2="0" y2="217.027" stroke="#81bfff" stroke-opacity="1" stroke-width="8" stroke-linecap="round" />
+        </g>
+        <g>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 135.348, 280.6 )">Allochromatium_vinosum</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 112.469, 268.4 )">Psychrobacter_cryohalolentis</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 50.0197, 256.2 )">Alteromonas_macleodii</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 47.5, 244 )">Alteromonas_mediterranea</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 95.1724, 366 )">Aliivibrio_wodanis</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 96.8453, 353.8 )">Aliivibrio_salmonicida</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 76.0982, 341.6 )">Vibrio_anguillarum</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 92.8689, 329.4 )">Nitrosococcus_oceani</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 120.795, 317.2 )">Nitrosococcus_watsonii</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 87.1232, 305 )">Nitrosococcus_wardiae</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 75.4728, 292.8 )">Alteromonas_stellipolaris</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 172.316, 231.8 )">Mycobacterium_tuberculosis</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 170.033, 219.6 )">Pyrodictium_occultum</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 147.874, 207.4 )">Thermus_thermophilus</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 137.047, 195.2 )">Bacillus_subtilis</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 159.066, 183 )">Fusobacterium_nucleatum</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 187.997, 170.8 )">Moorella_thermoacetica</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 129.146, 158.6 )">Staphylococcus_aureus</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 80.9006, 146.4 )">Marinomonas_posidonica</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 66.4517, 134.2 )">Marinomonas_mediterranea</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 186.752, 36.6 )">Palaeococcus_ferrophilus</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 186.752, 24.4 )">Bacteroides_fragilis</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 170.617, 122 )">Erythrobacter_litoralis</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 188, 109.8 )">Erythrobacter_aurantius</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 171.216, 97.6 )">Candidatus_Endolissoclinum_sp</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 172.608, 85.4 )">Spiribacter_salinus</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 104.519, 73.2 )">Spiribacter_roseus</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 178.463, 61 )">Ilumatobacter_coccineus</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 163.29, 48.8 )">Ilumatobacter_sp_AH-269-C13</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 135.603, 12.2 )">Sulfurovum_mangrovi</text>
+            <text x="0" y="0" font-size="10" font-family="Verdana" fill="#000000" fill-opacity="1" alignment-baseline="middle" transform="translate( 51.2627, 0 )">Thalassolituus_oleivorans</text>
+        </g>
+        <g transform="translate( 398.793, 189 )">
+            <rect x="0" y="0" width="18.9" height="189" stroke="#000000" stroke-opacity="1" stroke-width="1" fill="url(#PaletteGradient_16807)" />
+            <text x="0" y="0" font-size="6.3" font-family="Verdana" fill="#000000" fill-opacity="1" transform="translate( 19.845, 189 )">0</text>
+            <line x1="0" y1="146.04" x2="2.835" y2="146.04" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <line x1="16.065" y1="146.04" x2="18.9" y2="146.04" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <text x="0" y="0" font-size="6.3" font-family="Verdana" fill="#000000" fill-opacity="1" transform="translate( 19.845, 146.04 )">0.05</text>
+            <line x1="0" y1="103.079" x2="2.835" y2="103.079" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <line x1="16.065" y1="103.079" x2="18.9" y2="103.079" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <text x="0" y="0" font-size="6.3" font-family="Verdana" fill="#000000" fill-opacity="1" transform="translate( 19.845, 103.079 )">0.1</text>
+            <line x1="0" y1="60.1186" x2="2.835" y2="60.1186" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <line x1="16.065" y1="60.1186" x2="18.9" y2="60.1186" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <text x="0" y="0" font-size="6.3" font-family="Verdana" fill="#000000" fill-opacity="1" transform="translate( 19.845, 60.1186 )">0.15</text>
+            <line x1="0" y1="17.1582" x2="2.835" y2="17.1582" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <line x1="16.065" y1="17.1582" x2="18.9" y2="17.1582" stroke="#000000" stroke-opacity="1" stroke-width="1" />
+            <text x="0" y="0" font-size="6.3" font-family="Verdana" fill="#000000" fill-opacity="1" transform="translate( 19.845, 17.1582 )">0.2</text>
+            <text x="0" y="0" font-size="6.3" font-family="Verdana" fill="#000000" fill-opacity="1" transform="translate( 19.845, 0 )">0.21997</text>
+        </g>
+    </g>
+</svg>

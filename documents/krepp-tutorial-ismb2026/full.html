@@ -1250,7 +1250,7 @@ Others share only <strong>genus</strong>, <strong>family</strong>, or <strong>ki
 <li><strong>family</strong>: 1 query (2% of reads)</li>
 <li><strong>kingdom</strong>: 2 queries (13% of reads)</li>
 </ul>
-<p><img src="../figures/dataset_overview.png" alt="Dataset overview." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
+<p><img src="figures/dataset_overview.png" alt="Dataset overview." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
 <p><strong>Figure 1.</strong> Dataset overview. <strong>Left:</strong> What portion of the query reads relates to the toy reference set by <strong><code>novelty</code></strong>, then kingdom and class level abundances.
 <strong>Right:</strong> All 20 query species with relative abundances (coloured by class).</p>
 <div class="admonition note">
@@ -1263,7 +1263,7 @@ Others share only <strong>genus</strong>, <strong>family</strong>, or <strong>ki
 <li>Novelty of each query can also be understood as the branch length to the closest reference in this phylogeny.</li>
 <li>We will use a similar phylogeny after excluding the queries for phylogenetic placement of the reads in the query mixture.</li>
 </ul>
-<p><img src="../figures/dataset_reference_phylogeny.png" alt="Mash neighbor-joining tree with all 31 reference genomes and all 20 query genomes as tips." style="display: block; margin: 1rem auto; width: 100%; max-width: 800px; height: auto;" /></p>
+<p><img src="figures/dataset_reference_phylogeny.png" alt="Mash neighbor-joining tree with all 31 reference genomes and all 20 query genomes as tips." style="display: block; margin: 1rem auto; width: 100%; max-width: 800px; height: auto;" /></p>
 <p><strong>Figure 2.</strong>
 A toy phylogeny built using Mash distances and neighbor-joining, queries are colored in red.
 Although this may not be the most reliable method for obtaining a microbial phylogeny (as Mash distances do not extend well to highly divergent genomes, which we have in our case), it is good enough for our purposes.
@@ -1587,7 +1587,7 @@ Some major instances are listed below; they vary in size to fit the memory avail
 <li>
 <p><strong>GTDB:</strong> the latest release, an up-to-date reference (230 GB, 100 GB)
 <p>
-<img src="../figures/ref-logos.png" alt="References." style="display: block; margin: 1rem auto; max-width: 380px;" />
+<img src="figures/ref-logos.png" alt="References." style="display: block; margin: 1rem auto; max-width: 380px;" />
 </p>
 For any reference database, the rule of thumb is to use the largest index that fits your available memory.
 The indexes vary in size but are based on the same genome set. The level of compression and the extent of <em>k</em>-mer downsampling differ.
@@ -1654,7 +1654,7 @@ The downloads can be either through our servers or an AWS S3 bucket.</p>
 <p>Run <code>krepp dist --help</code> to list all options and see their descriptions.</p>
 <hr />
 <h2 id="interpretation-of-results">Interpretation of results</h2>
-<p><img src="../figures/distance_by_novelty.png" alt="Distribution of krepp distances grouped by novelty level." style="display: block; margin: 1rem auto; width: 100%; max-width: 760px; height: auto;" /></p>
+<p><img src="figures/distance_by_novelty.png" alt="Distribution of krepp distances grouped by novelty level." style="display: block; margin: 1rem auto; width: 100%; max-width: 760px; height: auto;" /></p>
 <p><strong>Figure 3.</strong> Distribution of per-read krepp distances, grouped by the novelty level of the source query genome. Species-level queries (the index contains another genome of the exact same species) have distances centred near zero (mean 0.034) with a high mapping rate (81%). Queries with genus-level novelty are spread much more widely, with mean and median both well above 0.1, as expected.
 Family and kingdom-level queries have much lower mapping rates, reflecting the absence of any close relative in the reference set, and are biased towards reads from more conserved regions. Mapped reads with distances saturating near 0.20 also demonstrate the limits of sensitivity (at least in this setting with only a few references and a toy index).</p>
 <!-- - Species-level queries are clearly separable. -->
@@ -1662,7 +1662,7 @@ Family and kingdom-level queries have much lower mapping rates, reflecting the a
 <!-- For example, 97% of *Alteromonas macleodii* reads hit *Alteromonas macleodii* at a mean distance of 0.0024, and 89% of *Spiribacter salinus* reads hit *Spiribacter salinus* at a mean of 0.020. -->
 <!-- - Genus-level queries occupy an intermediate range. Reads from organisms whose closest reference shares only a genus (e.g., *Nitrosococcus halophilus* relative to *Nitrosococcus oceani/wardiae/watsonii*) distribute broadly between ~0.08 and ~0.17. The best-matching reference is usually correct at the genus level, but distances are high too. -->
 
-<p><img src="../figures/distance_comparison-e.png" alt="Genome-wide distances vs. mean per-read krepp distances for the top 10 query organisms by mapping rate." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
+<p><img src="figures/distance_comparison-e.png" alt="Genome-wide distances vs. mean per-read krepp distances for the top 10 query organisms by mapping rate." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
 <p><strong>Figure 4.</strong> Genome-wide distance (measured by Mash) vs. average per-read distance measured by krepp for each query organism's closest reference genome. <strong>Left:</strong> top-5 species-level queries by mapping rate. Pairs cluster tightly near the diagonal at distances below 2%, showing close agreement between krepp per-read estimates and whole-genome Mash distances. <strong>Right:</strong> top-5 genus-level queries, for which krepp means track Mash distances across a wider range (0.10–0.27). <em>Nitrosococcus halophilus</em> hits <em>N. wardiae</em> at exactly 0.0953 on both axes. However, at very high genome-wide distances, krepp starts to underestimate due to the large portion of reads that are not mapped, and also due to mapping bias towards reads that come from more conserved regions. <strong>Bottom:</strong> mapping rate (fraction of reads with at least 1 hit) for the same 10 organisms, ranging from 99.9% (<em>Alteromonas macleodii</em>) down to 12.6% (<em>Palaeococcus pacificus</em>).</p>
 <div class="admonition danger">
 <p>Please note that this is only a toy example where we utilized a very small number of arbitrarily chosen reference genomes. We also downsampled considerably using minimizers and FracMinHash to obtain a small index for the sake of the tutorial. Actual mapping rates and distance accuracy may change in a more realistic setting with more resources and time, most likely in a positive direction!</p>
@@ -1723,7 +1723,7 @@ Family and kingdom-level queries have much lower mapping rates, reflecting the a
 <h3 id="visualization-and-interpretation-of-placements">Visualization and interpretation of placements</h3>
 <p>You may rightfully hesitate to get your hands dirty and write your own scripts for analyzing <code>.jplace</code> files. Luckily, <a href="https://github.com/lczech/gappa"><code>gappa</code></a> (a tool we downloaded during the setup step) offers solutions for a good collection of tasks and post-processing needs, one of which is visualizing placements as a heat-tree (similar to a heat-map) from the <code>.jplace</code> outputs, coloring branches by the total placement mass they accumulate:</p>
 <pre data-lang="bash"><code><span class="l0">gappa examine heat-tree \</span><span class="l1">    --jplace-path results/placements_default.jplace --mass-norm relative \</span><span class="l0">    --write-svg-tree --out-dir results/ --file-prefix heat_ --allow-file-overwriting \</span><span class="l1">    --svg-tree-shape rectangular --svg-tree-ladderize --svg-tree-stroke-width 3</span></code></pre>
-<p><img src="../figures/placement_heat_tree-e.png" alt="Heat-tree of placement mass across the reference phylogeny." style="display: block; margin: 1rem auto; width: 100%; max-width: 750px; height: auto;" /></p>
+<p><img src="figures/placement_heat_tree-e.png" alt="Heat-tree of placement mass across the reference phylogeny." style="display: block; margin: 1rem auto; width: 100%; max-width: 750px; height: auto;" /></p>
 <p><strong>Figure 5.</strong> Heat-tree generated by the above command, showing per-branch placement mass (proportion of placements).
 Notice that a high mass has been placed within the Nitrosococcus clade, reflecting the high abundance queries <em>Nitrosococcus halophilus</em> (17.5%) and <em>Nitrosococcus oceani</em> (5.7%). Similar observations can be made for <em>Spiribacter roseus</em> and <em>Spiribacter salinus</em>. Overall, phylogenetic placements are in agreement with the input query abundances.</p>
 <!-- Terminal branches corresponding to species-level references (e.g., *Alteromonas macleodii*, *Nitrosococcus oceani*) attract concentrated mass from their conspecific reads. -->
@@ -1803,10 +1803,10 @@ Both support tabular (<code>--tabular</code>) and summarised (<code>--summarize<
 <h2 id="exercises-with-web-of-life">Exercises with Web of Life</h2>
 <p>For further exercises, you can use the same type of commands with a slightly larger index we downloaded earlier.
 This is the tiny (i.e., heavily minimized and downsampled) version of the Web of Life index (&gt;10,000 microbial genomes, see <a href="https://github.com/bo1929/krepp/wiki/Available-reference-indexes">this page</a> for the full versions) on the same query mixture:</p>
-<p><img src="../figures/wol_query_summary.png" alt="Per-query mapping rate and best-reference distance for WoL index." style="display: block; margin: 1rem auto; width: 100%; max-width: 850px; height: auto;" /></p>
+<p><img src="figures/wol_query_summary.png" alt="Per-query mapping rate and best-reference distance for WoL index." style="display: block; margin: 1rem auto; width: 100%; max-width: 850px; height: auto;" /></p>
 <p><strong>Figure 6.</strong> Per-query mapping rate and mean distance to the best-matching reference, using the WoL index.
 With denser sampling and a more diverse representation, mapping rates are uniformly high and best-reference distances are consistently low, meaning that all these queries have relatively close matches in this index compared to the toy index we built.</p>
-<p><img src="../figures/wol_heat_tree-e.png" alt="Heat-tree of placement mass on the WoL phylogeny." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
+<p><img src="figures/wol_heat_tree-e.png" alt="Heat-tree of placement mass on the WoL phylogeny." style="display: block; margin: 1rem auto; width: 100%; max-width: 900px; height: auto;" /></p>
 <p><strong>Figure 7.</strong> Placement heat-tree on the WoL reference phylogeny (&gt;10,000 leaves). Since the toy sample we generated has low complexity, only a few clades/branches are highlighted. Real and complex samples could result in more widely spread placements.</p>
 </div>
 </div>
