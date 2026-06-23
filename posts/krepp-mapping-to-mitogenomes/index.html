@@ -275,7 +275,7 @@ For all other parameters, you can refer to the tutorial in the GitHub repository
 <p>We will use the <code>dist</code> subcommand of krepp via <code>krepp dist</code>.
 Suppose you have a FASTQ file named <code>xyz.fq</code> and an index in a directory <code>mito-RefSeq20240913</code>.
 To compute the distance between each read in <code>xyz.fq</code> and all sufficiently close mitogenomes indexed, run the command below.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Compute distances and filter any mapping above 15% sequence similarity</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Compute distances and filter any mapping above 15% sequence distance</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">krepp dist -i mito-RefSeq20240913 -q xyz.fq --dist-max 0.15 --filter
 </span></span></code></pre></div><p>This will output estimated distances to stdout in a tab-separated format.
 You can save this to a file with the <code>-o</code> option (e.g., add <code>-o xyz-distances.tsv</code> to the command above).
