@@ -5,7 +5,7 @@
 	<description>Recent content in News on Ali Osman Berk Şapcı</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Tue, 10 Mar 2026 00:00:00 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://alisapci.xyz/news/index.xml" rel="self" type="application/rss+xml" />
 	
@@ -17,15 +17,6 @@
 		
 		<guid>https://alisapci.xyz/news/poster-probgen-2026/</guid>
 		<description>A poster on sequence distances and genome-wide phylogenetic pattern matching was presented at ProbGen 2026 (UC Berkeley). PDF.</description>
-	</item>
-	
-	<item>
-		<title>SPrUCE published in Molecular Ecology Resources</title>
-		<link>https://alisapci.xyz/news/published-paper-spruce-in-molecular-ecology-resources-2026/</link>
-		<pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-		
-		<guid>https://alisapci.xyz/news/published-paper-spruce-in-molecular-ecology-resources-2026/</guid>
-		<description> </description>
 	</item>
 	
 	<item>
@@ -56,15 +47,15 @@
 	</item>
 	
 	<item>
-		<title>I presented our latest tool for phyloegentic placement in RECOMB 2025</title>
+		<title>I presented our latest tool for phylogenetic placement in RECOMB 2025</title>
 		<link>https://alisapci.xyz/news/presentation-in-recomb-2025/</link>
 		<pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/presentation-in-recomb-2025/</guid>
-		<description>I really enjoyed RECOMB 2025 in Seoul. This was my first time in East Asia. I somewhat enjoyed it. The conference coincided with Yeon Deung Hoe (perhaps on purpose?) and it&amp;rsquo;s been quite an experience.
-My slides are available here.
-&amp;hellip;and a couple of photos:
-Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen above) during all my talks, constantly. </description>
+		<description>&lt;p&gt;I really enjoyed &lt;a href=&#34;https://recomb.org/recomb2025/&#34;&gt;RECOMB 2025&lt;/a&gt; in Seoul.
+This was my first time in East Asia. I somewhat enjoyed it.
+The conference coincided with Yeon Deung Hoe (perhaps on purpose?) and it&amp;rsquo;s been quite an experience.&lt;/p&gt;
+&lt;p&gt;My slides are available &lt;a href=&#34;https://alisapci.xyz/presentations/krepp-recomb-2025.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
@@ -82,8 +73,8 @@ Yonsei University, Seoul, South Korea. I seem to make the same gesture (as seen 
 		<pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/accepted-paper-recomb-2025/</guid>
-		<description>&lt;p&gt;Our paper titled “A &lt;em&gt;k&lt;/em&gt;-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement” has been accepted in RECOMB 2025.
-I’m looking forward to my presentation in Seoul, which will be my first visiting East Asia.&lt;/p&gt;
+		<description>&lt;p&gt;Our paper titled &amp;ldquo;A &lt;em&gt;k&lt;/em&gt;-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement&amp;rdquo; has been accepted in RECOMB 2025.
+I&amp;rsquo;m looking forward to my presentation in Seoul, which will be my first visit to East Asia.&lt;/p&gt;
 &lt;p&gt;We introduced a technique to estimate read-to-genome distances from &lt;em&gt;k&lt;/em&gt;-mer hits.
 The idea is based on the search for matching &lt;em&gt;k&lt;/em&gt;-mers up to a certain Hamming distance in a colored &lt;em&gt;k&lt;/em&gt;-mer index, and then finding the maximum likelihood distance based on &lt;em&gt;k&lt;/em&gt;-mer matches and corresponding distances for each hitting reference.
 These distances approximate alignment Hamming distance at the read level, and 1-ANI between a query genome and the matching reference(s) on average across all reads.
@@ -105,9 +96,7 @@ We then propose an intuitive and accurate heuristic to place reads on an existin
 		<pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/published-paper-in-genome-research-2024/</guid>
-		<description>KRANK has been published in Genome Research (RECOMB 2024 Special Issue). The tool is available at GitHub, together with links to pre-built indexes of varying sizes, utilizing WoL reference database and a RefSeq snapshot. Using these indexes, KRANK showed superior performance in taxonomic classification and abundance profiling on CAMI benchmarking datasets to many existing methods.
-Here is the abstract:
-Using k-mers to find sequence matches is increasingly used in many bioinformatic applications, including metagenomic sequence classification.</description>
+		<description>KRANK appears in Genome Research (RECOMB 2024 Special Issue), with pre-built indexes and CAMI benchmarking results.</description>
 	</item>
 	
 	<item>
@@ -125,9 +114,8 @@ Using k-mers to find sequence matches is increasingly used in many bioinformatic
 		<pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/presentation-in-recomb-2024/</guid>
-		<description>I gave a talk on KRANK in RECOMB 2024. My slides are available here.
-In summary:
-This was my first time visiting Boston, and I enjoyed it very much. I think the organization was much better last year, in Istanbul. Poster sessions are definitely the best place to meet relevant people. Being the first speaker early in the morning was unfortunate, many people missed the entire (or a considerable portion) talk.</description>
+		<description>&lt;p&gt;I gave a talk on KRANK in &lt;a href=&#34;https://recomb.org/recomb2024/&#34;&gt;RECOMB 2024&lt;/a&gt;.
+My slides are available &lt;a href=&#34;https://alisapci.xyz/presentations/krank-recomb-2024.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
@@ -136,9 +124,9 @@ This was my first time visiting Boston, and I enjoyed it very much. I think the 
 		<pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/presentation-in-biosys-2024/</guid>
-		<description>I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine) which held in conjunction with the ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
-My slides are available here, and the recording can be found here.
-A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego.</description>
+		<description>I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine), which was held in conjunction with ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
+My slides and the recording are available.
+A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego. </description>
 	</item>
 	
 	<item>
@@ -147,7 +135,7 @@ A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines
 		<pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/published-paper-in-bioinformatics-2024/</guid>
-		<description>After a long review process, CONSULT-II finally appeared in Bioinformatics. I think CONSULT-II is conceptually very exciting but as a software I am not very proud of it. The implementation is very eclectic and not user-friendly at all. I was able to re-implement it for KRANK, and KRANK&amp;rsquo;s software offers the same functionality with an improved user experience and increased scalability. Another thing is that, CONSULT-II consists of many heuristics that there are alternatives for.</description>
+		<description>CONSULT-II, our locality-sensitive hashing method for taxonomic identification and profiling, is out in Bioinformatics.</description>
 	</item>
 	
 	<item>
@@ -166,8 +154,9 @@ Hopefully, I&amp;rsquo;ll be in Cambridge (April 29 - May 2, 2024).&lt;/p&gt;</d
 		<pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/published-paper-in-bioinformatics-2023/</guid>
-		<description>We published a paper in Bioinformatics. We describe a new approach for community detection in multi-subject and dynamic networks, in particular networks constructed from scRNA-seq data. The abstract is given below, and see the figure for an illustration of what multi-subject and dynamic networks refer to.
-Motivation: With the wide availability of single-cell RNA-seq (scRNA-seq) technology, population-scale scRNA-seq datasets across multiple individuals and time points are emerging. While the initial investigations of these datasets tend to focus on standard analysis of clustering and differential expression, leveraging the power of scRNA-seq data at the personalized dynamic gene co-expression network level has the potential to unlock subject and/or time-specific network-level variation, which is critical for understanding phenotypic differences.</description>
+		<description>&lt;p&gt;We published a &lt;a href=&#34;https://doi.org/10.1093/bioinformatics/btad592&#34;&gt;paper&lt;/a&gt; in Bioinformatics.
+We describe a new approach for community detection in multi-subject and dynamic networks, in particular networks constructed from scRNA-seq data.
+The abstract is given below, and see the figure for an illustration of what multi-subject and dynamic networks refer to.&lt;/p&gt;</description>
 	</item>
 	
 	<item>
@@ -206,7 +195,7 @@ Using this invaluable information, it can remove contamination, i.e., reads that
 		<pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
 		
 		<guid>https://alisapci.xyz/news/completed-msc-degree-2022/</guid>
-		<description>I have finished my thesis, titled &amp;ldquo;Automated behavioral analysis of asleep fruit fly&amp;rdquo; &amp;ndash; which is now available online, and obtained my MSc degree. The defense was on 26 July 2022, you can find my slides here. Jury members are listed below, I do appreciate their time and invaluable comments.
+		<description>I have finished my thesis, titled &amp;ldquo;Automated behavioral analysis of asleep fruit fly&amp;rdquo; &amp;ndash; which is now available online, and obtained my MSc degree. The defense was on 26 July 2022; my slides are available. Jury members are listed below, I do appreciate their time and invaluable comments.
 Öznur Taştan, Sabancı Üniversitesi (advisor) Sündüz Keleş, University of Wisconsin-Madison (advisor) Onur Varol, Sabancı Üniversitesi Gözde Akar, Orta Doğu Teknik Üniversitesi Ercüment Çiçek, Bilkent Üniversitesi </description>
 	</item>
 	

@@ -5,14 +5,8 @@
     <loc>https://alisapci.xyz/presentations/</loc>
     <lastmod>2026-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/news/</loc>
-    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://alisapci.xyz/news/poster-probgen-2026/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alisapci.xyz/news/published-paper-spruce-in-molecular-ecology-resources-2026/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/news/published-paper-krepp-in-genome-biology-2026/</loc>
     <lastmod>2026-02-10T00:00:00+00:00</lastmod>
@@ -36,9 +30,6 @@
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/mitochondrial-reads/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alisapci.xyz/posts/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/read-mapping/</loc>
@@ -68,7 +59,7 @@
     <loc>https://alisapci.xyz/tags/mitochondrial-baits/</loc>
     <lastmod>2024-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/tags/taxonomic-clasification/</loc>
+    <loc>https://alisapci.xyz/tags/taxonomic-classification/</loc>
     <lastmod>2024-10-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/news/published-paper-in-genome-research-2024/</loc>
@@ -117,6 +108,12 @@
     <lastmod>2023-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alisapci.xyz/news/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alisapci.xyz/posts/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/news/published-paper-in-natural-language-engineering-2023/</loc>

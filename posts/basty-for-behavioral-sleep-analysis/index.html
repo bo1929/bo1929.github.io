@@ -237,7 +237,7 @@
 <p>Quantifying animal behavior is the main objective of computational ethology. This task is not straightforward. From a computational perspective, it involves mapping spatiotemporal features, such as changes and postures, to behavioral categories.</p>
 <p>The behavior mapping task consists of two essential steps:</p>
 <ol>
-<li>computing meaningful representations capturing the interesting characteristics and dynamics of the</li>
+<li>computing meaningful representations that capture the interesting characteristics and dynamics of the behavior</li>
 <li>analyzing and interpreting the behavioral representations to explore and categorize animal behaviors.</li>
 </ol>
 <p>A recent trend in achieving the first step is to apply manifold-based dimensionality reduction algorithms to high-dimensional time-series features.
@@ -263,7 +263,7 @@ How can one combine and interpret these different views and end up with behavior
 For instance, if one has $N$ different annotated experiments, the semi-supervised embeddings approach would generate $N$ different embeddings.
 To this end, we designed a nearest neighbor-based analysis scheme to assign behavioral similarity scores to each time point.
 Here, the main idea is computing a behavior mapping by incorporating uncertainties of the views and dissimilarities between repertoires.
-So, using the categorical distributions of nearest neighbors’ annotations and local distances in the semi-supervised pair embedding space, our method tunes the contributions of each annotated experiment.
+So, using the categorical distributions of nearest neighbors&rsquo; annotations and local distances in the semi-supervised pair embedding space, our method tunes the contributions of each annotated experiment.
 Moreover, our method considers the imbalanced distribution of behavior occurrences and the scarcity of particular behaviors.
 Computational experiments show that <strong>basty</strong> is able to capture rarely exhibited behaviors and even is able to detect and discover unseen, unannotated behavioral categories using behavioral scores.</p>
 <p>See <a href="https://mfkeles.github.io/FlyVISTA/">FlyVISTA</a> for the details about the entire experimental setup, including both hardware and software. The software repository of basty, implemented in Python, is available on <a href="https://github.com/bo1929/basty">GitHub</a>.</p>
