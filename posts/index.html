@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Resources | Ali Osman Berk Şapcı</title>
+	<title>All Posts | Ali Osman Berk Şapcı</title>
 	<link rel="canonical" href="https://alisapci.xyz/">
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
@@ -224,7 +224,7 @@
 <div class="site-wrap">
 <main>
 <header class="site-header">
-	<h1 id="tag - Resources">Resources</h1>
+	<h1 id="tag - All posts">All posts</h1>
 	<p class="site-subtitle">Notes and resources, newest first</p>
 </header>
 
@@ -240,12 +240,43 @@
         <a class="site-nav-link" href="/research/"><span class="pre"></span><span>Research</span></a>
       </li><li class="site-nav-item">
         <a class="site-nav-link" href="/news/"><span class="pre"></span><span>News</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link site-nav-link--active" href="/posts/"><span class="pre"></span><span>All posts</span></a>
       </li>
   </ul>
 </nav>
 
 <article class="site-content">
-<article class="feed-entry" id="krepp-mapping-to-mitogenomes">
+<div class="tag-filter" data-tag-filter>
+  <div class="tag-filter-head">
+    <span class="tag-filter-label">Filter by tag</span>
+    <span class="tag-filter-count" data-filter-count aria-live="polite"></span>
+  </div>
+  <ul class="tag-filter-list">
+    <li><button type="button" class="tag-chip is-active" data-tag="">All <span class="tag-chip-n">5</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="metagenomics">metagenomics <span class="tag-chip-n">3</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="k-mers">k-mers <span class="tag-chip-n">2</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="computational-ethology">computational-ethology <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="contamination-removal">contamination-removal <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="dimensionality-reduction">dimensionality-reduction <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="distance-estimation">distance-estimation <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="genome-skimming">genome-skimming <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="krepp">krepp <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="locality-sensitive-hashing">locality-sensitive-hashing <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="machine-learning">machine-learning <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="mitochondrial-baits">mitochondrial-baits <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="mitochondrial-reads">mitochondrial-reads <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="network-clusters">network-clusters <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="network-communities">network-communities <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="networks">networks <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="percolation-theory">percolation-theory <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="read-mapping">read-mapping <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="semisupervised-learning">semisupervised-learning <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="taxonomic-classification">taxonomic-classification <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="time-series">time-series <span class="tag-chip-n">1</span></button></li>
+    <li><button type="button" class="tag-chip" data-tag="tutorial">tutorial <span class="tag-chip-n">1</span></button></li>
+  </ul>
+</div><div class="feed-entries" data-feed-entries><article class="feed-entry" id="krepp-mapping-to-mitogenomes" data-tags="k-mers metagenomics mitochondrial-reads distance-estimation krepp genome-skimming read-mapping">
 	<header class="feed-head">
 		<div class="feed-meta">
 			<time class="feed-date" datetime="2025-09-17T00:00:00Z">2025 Sep 17</time>
@@ -256,10 +287,11 @@
 		</h2>
 	</header>
 	<div class="feed-body">
-		Binning mitochondrial reads from skimming data using krepp and all mitogenomes available on RefSeq.<p class="feed-more"><a href="/posts/krepp-mapping-to-mitogenomes/">Read more&nbsp;&rsaquo;</a></p>
+		Installing krepp We start by installing krepp, the easiest way is through bioconda.
+1conda install bioconda::krepp 2krepp --help To perform any kind of query, you need to either build an index from reference genomes or download a public krepp index from one of our servers. It is quite straightforward to download an index and get started (jump to Downloading an existing index). Alternatively, if you have your own reference mitogenomes, you can index them from scratch (see Indexing mitogenomes).<p class="feed-tags"><a class="feed-tag" href="/tags/k-mers/">k-mers</a> <a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/mitochondrial-reads/">mitochondrial-reads</a> <a class="feed-tag" href="/tags/distance-estimation/">distance-estimation</a> <a class="feed-tag" href="/tags/krepp/">krepp</a> <a class="feed-tag" href="/tags/genome-skimming/">genome-skimming</a> <a class="feed-tag" href="/tags/read-mapping/">read-mapping</a></p><p class="feed-more"><a href="/posts/krepp-mapping-to-mitogenomes/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
-<article class="feed-entry" id="KRANK-mapping-baits">
+<article class="feed-entry" id="KRANK-mapping-baits" data-tags="k-mers metagenomics mitochondrial-baits taxonomic-classification">
 	<header class="feed-head">
 		<div class="feed-meta">
 			<time class="feed-date" datetime="2024-10-28T00:00:00Z">2024 Oct 28</time>
@@ -270,10 +302,13 @@
 		</h2>
 	</header>
 	<div class="feed-body">
-		Mapping mitochondrial baits to taxonomic groups using KRANK and all mitogenomes on RefSeq.<p class="feed-more"><a href="/posts/krank-mapping-baits/">Read more&nbsp;&rsaquo;</a></p>
+		We are starting from scratch by creating a directory for the project:
+1mkdir BaitsProject-ONR 2cd BaitsProject-ONR The very first step is to download all the mitochondrion genomes available on RefSeq as of 2024/09/13, we also retrieve the corresponding catalog to later map each genome to a taxonomic group.
+1# 2024-09-13 2wget https://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/RefSeq-release226.catalog.gz 3wget https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.1.genomic.fna.gz Next step is to simply decompress everything we downloaded:
+1gunzip -d mitochondrion.1.1.genomic.fna.gz 2gunzip -d RefSeq-release226.catalog.gz Convert multi-line FASTA to 2-line FASTA for easier processing:<p class="feed-tags"><a class="feed-tag" href="/tags/k-mers/">k-mers</a> <a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/mitochondrial-baits/">mitochondrial-baits</a> <a class="feed-tag" href="/tags/taxonomic-classification/">taxonomic-classification</a></p><p class="feed-more"><a href="/posts/krank-mapping-baits/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
-<article class="feed-entry" id="basty-for-behavioral-sleep-analysis">
+<article class="feed-entry" id="basty-for-behavioral-sleep-analysis" data-tags="computational-ethology machine-learning time-series semisupervised-learning dimensionality-reduction">
 	<header class="feed-head">
 		<div class="feed-meta">
 			<time class="feed-date" datetime="2024-07-06T00:00:00Z">2024 Jul 06</time>
@@ -284,10 +319,10 @@
 		</h2>
 	</header>
 	<div class="feed-body">
-		<p>Quantifying animal behavior is the main objective of computational ethology. This task is not straightforward. From a computational perspective, it involves mapping spatiotemporal features, such as changes and postures, to behavioral categories.</p><p class="feed-more"><a href="/posts/basty-for-behavioral-sleep-analysis/">Read more&nbsp;&rsaquo;</a></p>
+		<p>Quantifying animal behavior is the main objective of computational ethology. This task is not straightforward. From a computational perspective, it involves mapping spatiotemporal features, such as changes and postures, to behavioral categories.</p><p class="feed-tags"><a class="feed-tag" href="/tags/computational-ethology/">computational-ethology</a> <a class="feed-tag" href="/tags/machine-learning/">machine-learning</a> <a class="feed-tag" href="/tags/time-series/">time-series</a> <a class="feed-tag" href="/tags/semisupervised-learning/">semisupervised-learning</a> <a class="feed-tag" href="/tags/dimensionality-reduction/">dimensionality-reduction</a></p><p class="feed-more"><a href="/posts/basty-for-behavioral-sleep-analysis/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
-<article class="feed-entry" id="CONSULT-contamination-removal-tutorial">
+<article class="feed-entry" id="CONSULT-contamination-removal-tutorial" data-tags="metagenomics tutorial contamination-removal locality-sensitive-hashing">
 	<header class="feed-head">
 		<div class="feed-meta">
 			<time class="feed-date" datetime="2023-02-15T00:00:00Z">2023 Feb 15</time>
@@ -299,10 +334,10 @@
 	</header>
 	<div class="feed-body">
 		<p>Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset.
-Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.</p><p class="feed-more"><a href="/posts/consult-contamination-removal-tutorial/">Read more&nbsp;&rsaquo;</a></p>
+Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.</p><p class="feed-tags"><a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/tutorial/">tutorial</a> <a class="feed-tag" href="/tags/contamination-removal/">contamination-removal</a> <a class="feed-tag" href="/tags/locality-sensitive-hashing/">locality-sensitive-hashing</a></p><p class="feed-more"><a href="/posts/consult-contamination-removal-tutorial/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
-<article class="feed-entry" id="percolation-theory">
+<article class="feed-entry" id="percolation-theory" data-tags="networks network-clusters network-communities percolation-theory">
 	<header class="feed-head">
 		<div class="feed-meta">
 			<time class="feed-date" datetime="2022-05-19T00:00:00Z">2022 May 19</time>
@@ -315,7 +350,7 @@ Using this invaluable information, it can remove contamination, i.e., reads that
 	<div class="feed-body">
 		<p>Consider a lattice, where we place pebbles with probability $p$ at each intersection.
 Neighboring pebbles are considered to be connected, forming clusters of size two or more.
-We are mainly interested in sizes of these clusters.</p><p class="feed-more"><a href="/notes/percolation-theory/">Read more&nbsp;&rsaquo;</a></p>
+We are mainly interested in sizes of these clusters.</p><p class="feed-tags"><a class="feed-tag" href="/tags/networks/">networks</a> <a class="feed-tag" href="/tags/network-clusters/">network-clusters</a> <a class="feed-tag" href="/tags/network-communities/">network-communities</a> <a class="feed-tag" href="/tags/percolation-theory/">percolation-theory</a></p><p class="feed-more"><a href="/notes/percolation-theory/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
 <article class="feed-entry" id="categorical-cross-entropy">
@@ -332,6 +367,7 @@ We are mainly interested in sizes of these clusters.</p><p class="feed-more"><a 
 		<p>Deriving categorical cross entropy is quite trivial, and could help understanding the loss function better.</p><p class="feed-more"><a href="/notes/categorical-cross-entropy/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
+</div>
 
 
 </article>
@@ -343,6 +379,47 @@ We are mainly interested in sizes of these clusters.</p><p class="feed-more"><a 
 </footer>
 
 </div>
+<script>
+(function () {
+  var root = document.querySelector('[data-tag-filter]');
+  var list = document.querySelector('[data-feed-entries]');
+  if (!root || !list) return;
+
+  var chips = [].slice.call(root.querySelectorAll('.tag-chip'));
+  var entries = [].slice.call(list.querySelectorAll('.feed-entry'));
+  var count = root.querySelector('[data-filter-count]');
+
+  
+  entries.forEach(function (entry) { entry.hidden = false; });
+
+  function apply(tag) {
+    var shown = 0;
+    entries.forEach(function (entry) {
+      var tags = (entry.getAttribute('data-tags') || '').split(/\s+/);
+      var match = !tag || tags.indexOf(tag) !== -1;
+      entry.hidden = !match;
+      if (match) shown++;
+    });
+    chips.forEach(function (chip) {
+      chip.classList.toggle('is-active', chip.getAttribute('data-tag') === tag);
+    });
+    if (count) {
+      count.textContent = tag
+        ? shown + (shown === 1 ? ' post tagged ' : ' posts tagged ') + tag
+        : '';
+    }
+  }
+
+  root.addEventListener('click', function (event) {
+    var chip = event.target.closest('.tag-chip');
+    if (!chip) return;
+    apply(chip.getAttribute('data-tag'));
+  });
+
+  apply('');
+})();
+</script>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {

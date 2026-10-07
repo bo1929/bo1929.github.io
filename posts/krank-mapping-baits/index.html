@@ -6,7 +6,10 @@
 	<link rel="canonical" href="https://alisapci.xyz/">
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
-	<meta name="description" content="Mapping mitochondrial baits to taxonomic groups using KRANK and all mitogenomes on RefSeq.">
+	<meta name="description" content="We are starting from scratch by creating a directory for the project:
+1mkdir BaitsProject-ONR 2cd BaitsProject-ONR The very first step is to download all the mitochondrion genomes available on RefSeq as of 2024/09/13, we also retrieve the corresponding catalog to later map each genome to a taxonomic group.
+1# 2024-09-13 2wget https://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/RefSeq-release226.catalog.gz 3wget https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.1.genomic.fna.gz Next step is to simply decompress everything we downloaded:
+1gunzip -d mitochondrion.1.1.genomic.fna.gz 2gunzip -d RefSeq-release226.catalog.gz Convert multi-line FASTA to 2-line FASTA for easier processing:">
 	<meta name="keywords" content="k-mers, metagenomics, mitochondrial-baits, taxonomic-classification">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
@@ -241,6 +244,8 @@
         <a class="site-nav-link" href="/research/"><span class="pre"></span><span>Research</span></a>
       </li><li class="site-nav-item">
         <a class="site-nav-link" href="/news/"><span class="pre"></span><span>News</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link site-nav-link--active" href="/posts/"><span class="pre"></span><span>All posts</span></a>
       </li>
   </ul>
 </nav>
@@ -283,10 +288,10 @@ This file is going to be the input to KRANK.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Exclude Erynnis montana (3342064), it is the only conflicting tax ID w/ the taxonomy we are using</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">grep -v -w <span class="m">3342064</span> input_map-mitochondrion.tsv &gt; .input_map.tsv <span class="o">&amp;&amp;</span> mv .input_map.tsv input_map-mitochondrion.tsv
 </span></span></code></pre></div><p>Clone KRANK from its GitHub repository and compile it:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">git clone https://github.com/bo1929/KRANK.git
-</span></span><span class="line"><span class="ln">2</span><span class="cl">cd KRANK
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">git clone https://github.com/bo1929/KRANK.git
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd</span> KRANK
 </span></span><span class="line"><span class="ln">3</span><span class="cl">make
-</span></span><span class="line"><span class="ln">4</span><span class="cl">cd ..
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nb">cd</span> ..
 </span></span></code></pre></div><p>After that, we can directly start by initializing a library which we will build using all mitochondrion genomic data, this might take a while reading all the data and extracting <em>k</em>-mers:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">KRANK/krank --seed <span class="m">0</span> build <span class="se">\
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>  -l mitochondrion_lib -t ./taxdump/ <span class="se">\
@@ -324,6 +329,7 @@ This file is going to be the input to KRANK.</p>
 </footer>
 
 </div>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {

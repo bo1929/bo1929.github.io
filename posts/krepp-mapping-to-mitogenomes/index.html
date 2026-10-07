@@ -6,7 +6,8 @@
 	<link rel="canonical" href="https://alisapci.xyz/">
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
-	<meta name="description" content="Binning mitochondrial reads from skimming data using krepp and all mitogenomes available on RefSeq.">
+	<meta name="description" content="Installing krepp We start by installing krepp, the easiest way is through bioconda.
+1conda install bioconda::krepp 2krepp --help To perform any kind of query, you need to either build an index from reference genomes or download a public krepp index from one of our servers. It is quite straightforward to download an index and get started (jump to Downloading an existing index). Alternatively, if you have your own reference mitogenomes, you can index them from scratch (see Indexing mitogenomes).">
 	<meta name="keywords" content="k-mers, metagenomics, mitochondrial-reads, distance-estimation, krepp, genome-skimming, read-mapping">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
@@ -241,6 +242,8 @@
         <a class="site-nav-link" href="/research/"><span class="pre"></span><span>Research</span></a>
       </li><li class="site-nav-item">
         <a class="site-nav-link" href="/news/"><span class="pre"></span><span>News</span></a>
+      </li><li class="site-nav-item">
+        <a class="site-nav-link site-nav-link--active" href="/posts/"><span class="pre"></span><span>All posts</span></a>
       </li>
   </ul>
 </nav>
@@ -295,7 +298,7 @@ The first 10 lines would look something like this.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Print distances to stdout and get the first 10 lines</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">krepp dist -i mito-RefSeq20240913 -q xyz.fq --dist-max 0.15 --filter <span class="p">|</span> head
 </span></span></code></pre></div><p>Output:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">#software: krepp  #version: v0.5.1  #invocation :krepp dist -i mito-RefSeq20240913 -q xyz.fq --dist-max 0.15 --filter
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">#software: krepp  #version: v0.5.1  #invocation :krepp dist -i mito-RefSeq20240913 -q xyz.fq --dist-max 0.15 --filter
 </span></span><span class="line"><span class="ln">2</span><span class="cl">SEQ_ID	REFERENCE_NAME	DIST
 </span></span><span class="line"><span class="ln">3</span><span class="cl">AG-359-G18_1-1273	NaN	NaN
 </span></span><span class="line"><span class="ln">4</span><span class="cl">AG-359-G18_1-1270	NC_065012.1 Amynthas deogyusanensis mitochondrion	2.00371e-05
@@ -329,6 +332,7 @@ When I run the below command, it outputs 500 mitochondrial read IDs, meaning tha
 </footer>
 
 </div>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
