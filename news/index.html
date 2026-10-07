@@ -247,195 +247,58 @@
 </nav>
 
 <article class="site-content news-hub">
-<h2 id="poster-at-probgen-2026">Poster at ProbGen 2026</h2>
-<p><em>10 March 2026</em></p>
-<p>A poster on sequence distances and genome-wide phylogenetic pattern matching was presented at <a href="https://probgen2026.github.io/">ProbGen 2026</a> (UC Berkeley). <a href="/documents/poster-gdiff-probgen-2026.pdf">PDF</a>.</p>
-<h2 id="krepp-published-in-genome-biology">krepp published in Genome Biology</h2>
-<p><em>10 February 2026</em></p>
-<p><a href="https://doi.org/10.1186/s13059-026-03999-y"><em>krepp: A k-mer-based maximum pseudo-likelihood method for estimating read distances and genome-wide phylogenetic placement</em></a>, with Siavash Mirarab, appears in <em>Genome Biology</em>. Conference slides: <a href="/presentations/krepp-recomb-2025.pdf">RECOMB 2025</a>.</p>
-<h2 id="talks-at-imsi-workshop-on-alignments-and-phylogenies">Talks at IMSI workshop on alignments and phylogenies</h2>
-<p><em>20 August 2025</em></p>
-<p>At the IMSI program <a href="https://www.imsi.institute/activities/contemporary-challenges-in-large-scale-sequence-alignments-and-phylogenies/"><em>Contemporary Challenges in Large-Scale Sequence Alignments &amp; Phylogenies</em></a> (Chicago): a krepp tutorial (<a href="/presentations/krepp-imsi-2025.pdf">slides</a>, <a href="https://www.imsi.institute/videos/krepp/">recording</a>); a short talk on discordant-region mapping (<a href="/presentations/phlag-imsi-2025.pdf">slides</a>, <a href="https://www.imsi.institute/videos/lightning-talks-7/">recording</a>); and a <a href="/documents/poster-phlag-imsi-2025.pdf">poster</a>.</p>
-<h2 id="i-presented-our-latest-tool-for-phylogenetic-placement-in-recomb-2025">I presented our latest tool for phylogenetic placement in RECOMB 2025</h2>
-<p><em>15 May 2025</em></p>
-<p>I really enjoyed <a href="https://recomb.org/recomb2025/">RECOMB 2025</a> in Seoul.
-This was my first time in East Asia. I somewhat enjoyed it.
-The conference coincided with Yeon Deung Hoe (perhaps on purpose?) and it&rsquo;s been quite an experience.</p>
-<p>My <a href="/presentations/krepp-recomb-2025.pdf">RECOMB 2025 slides</a> are available.
-&hellip;and a couple of photos:</p>
-<div class="figures-row"><figure>
-    <img src="/images/me-presenting-at-recomb-2025-1.jpg" alt="Yonsei University, Seoul, South Korea." loading="lazy">
-    <figcaption>Yonsei University, Seoul, South Korea.</figcaption>
-  </figure><figure>
-    <img src="/images/me-presenting-at-recomb-2025-2.jpg" alt="Apparently I make this same gesture during all my talks." loading="lazy">
-    <figcaption>Apparently I make this same gesture during all my talks.</figcaption>
-  </figure>
-</div>
-
-<h2 id="flyvista-published-in-science-advances">FlyVISTA published in Science Advances</h2>
-<p><em>12 March 2025</em></p>
-<p><a href="https://doi.org/10.1126/sciadv.adq8131"><em>FlyVISTA, an integrated machine learning platform for deep phenotyping of sleep in Drosophila</em></a>, with Mehmet F. Keleş and colleagues, appears in <em>Science Advances</em>.</p>
-<h2 id="our-paper-has-been-accepted-in-recomb-2025">Our paper has been accepted in RECOMB 2025</h2>
-<p><em>14 January 2025</em></p>
-<p>Our paper titled &ldquo;A <em>k</em>-mer-based maximum likelihood method for estimating distances of reads to genomes enables genome-wide phylogenetic placement&rdquo; has been accepted in RECOMB 2025.
-I&rsquo;m looking forward to my presentation in Seoul, which will be my first visit to East Asia.</p>
-<p>We introduced a technique to estimate read-to-genome distances from <em>k</em>-mer hits.
-The idea is based on the search for matching <em>k</em>-mers up to a certain Hamming distance in a colored <em>k</em>-mer index, and then finding the maximum likelihood distance based on <em>k</em>-mer matches and corresponding distances for each hitting reference.
-These distances approximate alignment Hamming distance at the read level, and 1-ANI between a query genome and the matching reference(s) on average across all reads.
-We then propose an intuitive and accurate heuristic to place reads on an existing backbone phylogeny in a principled way using a likelihood ratio test.</p>
-<p><strong>Abstract</strong>:</p>
-<p>Consider comparing a sequencing read of unknown origin to a set of reference genomes.
-This problem underlines many applications, including metagenomic analyses.
-The exact genome generating the read is not in the reference set but may be evolutionarily related to some references.
-Ideally, we need not just the identity of the closest references to the read but also their distance to the read.
-The distances can help us identify the read at the right taxonomic level and, more ambitiously, place it on a reference phylogeny.
-Aligning reads to reference genomes, the only available approach for computing such distances, becomes impractical for very large reference sets.
-It is also not effective at higher distances when used with efficient indexes (e.g., Bowtie2).
-While <em>k</em>-mers can create scalable indexes, existing <em>k</em>-mer-based methods are incapable of distance calculation.
-Thus, estimating distances between short reads and large, diverse reference sets remains challenging and seldom used.
-We introduce a method called krepp that combines four ideas to solve this challenge and to further enable placing reads on a reference phylogeny.
-We use i) locality-sensitive hashing to find inexact <em>k</em>-mer matches, ii) a phylogeny-guided colored <em>k</em>-mer index to map each <em>k</em>-mer to all references containing it, iii) a maximum likelihood framework to estimate read-genome distances using <em>k</em>-mer matches, and iv) an extension of distances to clades of the reference tree, which enables placement using a likelihood ratio test.
-We show that krepp matches true distances using a fraction of time compared to alignment, extends to higher distances, and accurately places short reads coming from any part of the genome (not just marker genes) on the reference phylogeny.
-We demonstrate that krepp easily extends to databases with tens of thousands of reference genomes and performs well in characterizing real microbial samples.</p>
-<p><strong>Availability:</strong></p>
-<p>The tool is available on <a href="https://github.com/bo1929/krepp">GitHub</a>, and under active development.
-All results, auxiliary data, and scripts used in the analyses can be found in the <a href="https://github.com/bo1929/shared.krepp">shared.krepp repository</a>.</p>
-<h2 id="our-paper-has-been-published-in-genome-research">Our paper has been published in Genome Research</h2>
-<p><em>29 August 2024</em></p>
-<p><a href="https://genome.cshlp.org/content/34/9/1455">KRANK</a> has been published in Genome Research (RECOMB 2024 Special Issue).
-The tool is available at <a href="https://github.com/bo1929/KRANK">GitHub</a>, together with links to pre-built indexes of varying sizes, utilizing <a href="https://biocore.github.io/wol/">WoL reference database</a> and a RefSeq snapshot.
-Using these indexes, KRANK showed superior performance in taxonomic classification and abundance profiling on CAMI benchmarking datasets to many existing methods.</p>
-<p>Here is the abstract:</p>
-<blockquote>
-<p>Using <em>k</em>-mers to find sequence matches is increasingly used in many bioinformatic applications, including metagenomic sequence classification.
-The accuracy of these downstream applications relies on the density of the reference databases, which are rapidly growing.
-Although the increased density provides hope for improvements in accuracy, scalability is a concern.
-Reference <em>k</em>-mers are kept in the memory during the query time, and saving all <em>k</em>-mers of these ever-expanding databases is fast becoming impractical.
-Several strategies for subsampling have been proposed, including minimizers and finding taxon-specific <em>k</em>-mers.
-However, we contend that these strategies are inadequate, especially when reference sets are taxonomically imbalanced, as are most microbial libraries.
-In this paper, we explore approaches for selecting a fixed-size subset of <em>k</em>-mers present in an ultra-large data set to include in a library such that the classification of reads suffers the least.
-Our experiments demonstrate the limitations of existing approaches, especially for novel and poorly sampled groups.
-We propose a library construction algorithm called <em>k</em>-mer RANKer (KRANK) that combines several components, including a hierarchical selection strategy with adaptive size restrictions and an equitable coverage strategy.
-We implement KRANK in highly optimized code and combine it with the locality-sensitive hashing classifier CONSULT-II to build a taxonomic classification and profiling method.
-On several benchmarks, KRANK <em>k</em>-mer selection significantly reduces memory consumption with minimal loss in classification accuracy.
-We show in extensive analyses based on CAMI benchmarks that KRANK outperforms <em>k</em>-mer-based alternatives in terms of taxonomic profiling and comes close to the best marker-based methods in terms of accuracy.</p>
-</blockquote>
-<h2 id="i-attended-recomb-2024-and-presented-krank">I attended RECOMB 2024 and presented KRANK</h2>
-<p><em>30 April 2024</em></p>
-<p>I gave a talk on KRANK in <a href="https://recomb.org/recomb2024/">RECOMB 2024</a>.
-My <a href="/presentations/krank-recomb-2024.pdf">RECOMB 2024 slides</a> are available.</p>
-<p>In summary:</p>
 <ul>
-<li>This was my first time visiting Boston, and I enjoyed it very much.</li>
-<li>I think the organization was much better last year, in Istanbul.</li>
-<li>Poster sessions are definitely the best place to meet relevant people.</li>
-<li>Being the first speaker early in the morning was unfortunate, many people missed the entire (or a considerable portion) talk.</li>
-<li>I am not quite sure if the concept of RECOMB is effective anymore.
-People are usually only interested in one or two sessions.
-I did not attend RECOMB-seq, but it would have been much more productive if I had done so.
-I could just jump between RECOMB-seq and RECOMB-CG.
-I believe more emphasis should be put on the satellites, and going even further, maybe RECOMB should only consist of satellites?</li>
-<li>I am also glad that the school administration did not interrupt the encampment using the conference as an excuse (I have no idea if they will shortly).</li>
-</ul>
-<h2 id="i-gave-a-short-talk-in-biosys-2024">I gave a short talk in BioSys 2024</h2>
-<p><em>27 April 2024</em></p>
-<p>I presented KRANK in <a href="https://biosys-workshop.github.io/dist/index.html">BioSys 2024</a> (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine), which was held in conjunction with <a href="https://www.asplos-conference.org/asplos2024/">ASPLOS 2024</a> (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems).
-Thanks to Yatish Turakhia and his students for the organization.</p>
-<p>My <a href="/presentations/krank-biosys-2024.pdf">slides</a> and the <a href="https://www.youtube.com/watch?v=qL9th2V_Y68">recording</a> are available.</p>
-<figure><img src="/images/me-presenting-at-biosys-2024.jpg"><figcaption>
-      <h4>A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego.</h4>
-    </figcaption>
-</figure>
-
-<h2 id="consult-ii-has-been-published-in-bioinformatics">CONSULT-II has been published in Bioinformatics</h2>
-<p><em>16 March 2024</em></p>
-<p>After a long review process, CONSULT-II finally appeared in Bioinformatics.
-I think CONSULT-II is conceptually very exciting but as a software I am not very proud of it.
-The implementation is very eclectic and not user-friendly at all.
-I was able to re-implement it for KRANK, and KRANK&rsquo;s software offers the same functionality with an improved user experience and increased scalability.
-Another thing is that, CONSULT-II consists of many heuristics that there are alternatives for.
-We have not explored much of these alternatives.
-I am not quite sure how promising to do so, investing too much time to compare different heuristics does not feel very productive.
-Anyway, I enjoyed working on this project as it was a nice introduction to metagenomics for me.
-I used C++ after many years, and (hopefully) gained some experience to use better practices in the next project.</p>
-<p>Here is the abstract:
-<strong>Motivation:</strong> Taxonomic classification of short reads and taxonomic profiling of metagenomic samples are well-studied yet challenging problems. The presence of species belonging to groups without close representation in a reference dataset is particularly challenging. While k-mer-based methods have performed well in terms of running time and accuracy, they tend to have reduced accuracy for such novel species. Thus, there is a growing need for methods that combine the scalability of k-mers with increased sensitivity.</p>
-<p><strong>Results:</strong> Here, we show that using locality-sensitive hashing (LSH) can increase the sensitivity of the k-mer-based search. Our method, which combines LSH with several heuristics techniques including soft lowest common ancestor labeling and voting, is more accurate than alternatives in both taxonomic classification of individual reads and abundance profiling.</p>
-<p><strong>Availability and implementation:</strong> CONSULT-II is implemented in C++, and the software, together with reference libraries, is publicly available on GitHub <a href="https://github.com/bo1929/CONSULT-II">https://github.com/bo1929/CONSULT-II</a>.</p>
-<figure><img src="/images/illustration-CONSULT-II.jpeg"><figcaption>
-      <h4>(a) The expected number of 32-mers matched by the LSH approach for a short read of length L=150 as the normalized distance d/k of the read to the closest match varies: (L-k&#43;1)p(d). Lines show different settings of l and h for an infinite b, i.e. all reference k-mers are stored in the library. The black line corresponds to k=35, h=35-7, and l=1, mimicking the default Kraken-II settings. (b) The probability of updating the LCA per each new k-mer goes down with the number of reference genomes in which that k-mer appears; we use w=4 and s=5 as shown. (c) Overview of the classification algorithm, consisting of three main stages: (i) finding the closest inexact k-mer match using LSH, (ii) computing vote values based on the Hamming distances (HD) and aggregating vote values on the taxonomic tree, and (iii) determining the most specific taxon, i.e. the lowest rank, above the threshold.</h4>
-    </figcaption>
-</figure>
-
-<h2 id="krank-has-been-accepted-in-recomb-2024">KRANK has been accepted in RECOMB 2024</h2>
-<p><em>22 December 2023</em></p>
-<p>Our paper titled &ldquo;Memory-bound <em>k</em>-mer selection for large evolutionary diverse reference libraries&rdquo; has been accepted to RECOMB 2024.
-Hopefully, I&rsquo;ll be in Cambridge (April 29 - May 2, 2024).</p>
-<p>We introduced a tool, called KRANK, to sample <em>k</em>-mers from a large set of reference genomes for taxonomic identification or profiling purposes.
-The abstract of the paper is below.</p>
-<blockquote>
-<p>Using long k-mers to find sequence matches is increasingly used in many bioinformatic applications, including metagenomic sequence classification. The accuracy of these downstream applications relies on the density of the reference databases, which, luckily, are rapidly growing. While the increased density provides hope for dramatic improvements in accuracy, scalability is a concern. The k-mers are kept in the memory during the query time, and saving all k-mers of these ever-expanding databases is fast becoming impractical. Several strategies for subsampling k-mers have been proposed, including minimizers and finding taxon-specific k-mers.
-However, we contend that these strategies are inadequate, especially when reference sets are taxonomically imbalanced, as are most microbial libraries. In this paper, we specifically ask the question: Given limited memory, what is the best strategy to select a subset of k-mers from an ultra-large dataset to include in a library such that the classification of reads suffers the least? We make an attempt to make this goal more formal and show a set of experiments demonstrating the limitations of existing approaches, especially for novel and poorly sampled groups. We propose a library construction algorithm called KRANK (k-mer RANKer) that combines several components, including a hierarchical selection strategy with adaptive size restrictions and a min-max coverage strategy. We implement KRANK in highly optimized code and combine it with the locality-sensitive-hashing classifier CONSULT-II. Our method is able to reduce the memory consumption from roughly 144Gb down to 6, 12, or 24Gb, with only a 3.8%, 2.5%, or 0.5% loss in F1 score. We show in extensive analyses that KRANK outperforms alternatives in both taxonomic classification and taxonomic profiling, using reasonable memory sizes.</p>
-</blockquote>
-<h2 id="mudcod-has-been-published-in-bioinformatics">MuDCoD has been published in Bioinformatics</h2>
-<p><em>23 September 2023</em></p>
-<p>We published a <a href="https://doi.org/10.1093/bioinformatics/btad592">paper</a> in Bioinformatics.
-We describe a new approach for community detection in multi-subject and dynamic networks, in particular networks constructed from scRNA-seq data.
-The abstract is given below, and see the figure for an illustration of what multi-subject and dynamic networks refer to.</p>
-<blockquote>
-<p><strong>Motivation:</strong> With the wide availability of single-cell RNA-seq (scRNA-seq) technology, population-scale scRNA-seq datasets across multiple individuals and time points are emerging. While the initial investigations of these datasets tend to focus on standard analysis of clustering and differential expression, leveraging the power of scRNA-seq data at the personalized dynamic gene co-expression network level has the potential to unlock subject and/or time-specific network-level variation, which is critical for understanding phenotypic differences. Community detection from co-expression networks of multiple time points or conditions has been well-studied; however, none of the existing settings included networks from multiple subjects and multiple time points simultaneously. To address this, we develop Multi-subject Dynamic Community Detection (MuDCoD) for multi-subject community detection in personalized dynamic gene networks from scRNA-seq. MuDCoD builds on the spectral clustering framework and promotes information sharing among the networks of the subjects as well as networks at different time points. It clusters genes in the personalized dynamic gene networks and reveals gene communities that are variable or shared not only across time but also among subjects.
-<strong>Results:</strong> Evaluation and benchmarking of MuDCoD against existing approaches reveal that MuDCoD effectively leverages apparent shared signals among networks of the subjects at individual time points, and performs robustly when there is no or little information sharing among the networks. Applications to population-scale scRNA-seq datasets of human-induced pluripotent stem cells during dopaminergic neuron differentiation and CD4 T cell activation indicate that MuDCoD enables robust inference for identifying time-varying personalized gene modules. Our results illustrate how personalized dynamic community detection can aid in the exploration of subject-specific biological processes that vary across time.</p>
-</blockquote>
-<blockquote>
-<p><strong>Availability and implementation:</strong> MuDCoD is publicly available in <a href="https://github.com/bo1929/MuDCoD">GitHub</a> as a Python package. Implementation includes simulation and real-data experiments together with extensive documentation.</p>
-</blockquote>
-<figure><img src="/images/toy-ms-dyn-nw.png"><figcaption>
-      <h4>A schematic for multi-subject dynamic gene networks. A gene network is observed for each subject at each time step among a common set of nodes. The sets of edges vary among both the subjects and the time steps. These networks are estimated from scRNA-seq data and are expected to harbor communities that are conserved at varying levels among the subject and time dimensions. Different colors mark distinct communities, where the nodes (genes) within the same communities are depicted with the same color. MuDCoD assumes that communities change smoothly across both the subject and the time dimensions.</h4>
-    </figcaption>
-</figure>
-
-<h2 id="our-paper-has-been-published-in-natural-language-engineering">Our paper has been published in Natural Language Engineering</h2>
-<p><em>6 June 2023</em></p>
-<p>We just published a <a href="https://doi.org/10.1017/S1351324923000165">paper</a> in Natural Language Engineering after a long revision process.
-This work was a continuation and an extension of my undergraduate graduation project.
-The abstract is given below.</p>
-<blockquote>
-<p>Named entity recognition (NER) aims to identify mentions of named entities in an unstructured text and classify them into predefined named entity classes. While deep learning-based pre-trained language models help to achieve good predictive performances in NER, many domain-specific NER applications still call for a substantial amount of labeled data. Active learning (AL), a general framework for the label acquisition problem, has been used for NER tasks to minimize the annotation cost without sacrificing model performance. However, the heavily imbalanced class distribution of tokens introduces challenges in designing effective AL querying methods for NER. We propose several AL sentence query evaluation functions that pay more attention to potential positive tokens and evaluate these proposed functions with both sentence-based and token-based cost evaluation strategies. We also propose a better data-driven normalization approach to penalize sentences that are too long or too short. Our experiments on three datasets from different domains reveal that the proposed approach reduces the number of annotated tokens while achieving better or comparable prediction performance with conventional methods.</p>
-</blockquote>
-<h2 id="consult-ii-won-the-best-paper-award">CONSULT-II won the best paper award</h2>
-<p><em>15 April 2023</em></p>
-<p>I presented in RECOMB Comparative Genomics 2023, in Istanbul (see my <a href="/presentations/consultii-recombcg-presentation-2023.pdf">slides</a>).
-Our paper, with Elenora Rachtman and Siavash Mirarab, <a href="https://www.doi.org/10.1007/978-3-031-36911-7_13">CONSULT-II: Taxonomic Identification Using Locality Sensitive Hashing</a> won the best paper award.
-The abstract is given below.</p>
-<blockquote>
-<p>Metagenomics is widely used to study the microbiome using environmental samples, and taxonomic classification of reads is a precursor to many analyses of such data. Taxonomic classification requires comparing sample reads against a reference dataset of known organisms. Crucially, the genomes represented in a sample may be phylogenetically distant from their closest match in the reference set. Thus, simply mapping reads to genomes is insufficient; we need to find inexact matches to species with substantial distance. While k-mer-based methods, such as Kraken, have proved popular, they have limited ability to match against distant taxa. In this paper, we use locality-sensitive hashing to design a k-mer-based method that can match reads to genomes with higher distance than existing methods. We build on an earlier contamination detection method, CONSULT, to add taxonomic classification abilities. We show in a series of experiments that our method, CONSULT-II, has higher recall than alternatives when precision is about the same. Its results can also be summarized to obtain a taxonomic profile, which we show outperforms leading methods with respect to some measurement criteria. CONSULT-II is available on GitHub <a href="https://github.com/bo1929/CONSULT-II">https://github.com/bo1929/CONSULT-II</a>.</p>
-</blockquote>
-<figure><img src="/images/me-presenting-at-recombcg-2023.jpg"><figcaption>
-      <h4>A shot taken by Can Alkan during the presentation, İTÜ Maçka Oteli, Istanbul.</h4>
-    </figcaption>
-</figure>
-
-<h2 id="i-successfully-defended-my-msc-thesis">I successfully defended my MSc thesis</h2>
-<p><em>1 August 2022</em></p>
-<p>I have finished my thesis, titled &ldquo;Automated behavioral analysis of asleep fruit fly&rdquo; (now available <a href="https://research.sabanciuniv.edu/id/eprint/47199/1/10491512.pdf">online</a>), and obtained my MSc degree.
-The defense was on 26 July 2022; my <a href="/presentations/thesis-defence-presentation-2022.pdf">slides</a> are available.
-Jury members are listed below, I do appreciate their time and invaluable comments.</p>
-<ul>
-<li>Öznur Taştan, Sabancı University (advisor)</li>
-<li>Sündüz Keleş, University of Wisconsin-Madison (advisor)</li>
-<li>Onur Varol, Sabancı University</li>
-<li>Gözde Akar, Middle East Technical University</li>
-<li>Ercüment Çiçek, Bilkent University</li>
-</ul>
-<h2 id="i-presented-a-poster-and-a-spotlight-presentation-at-mlcb-2021">I presented a poster and a spotlight presentation at MLCB 2021</h2>
-<p><em>22 November 2021</em></p>
-<p>I attended <a href="https://sites.google.com/cs.washington.edu/mlcb2021/">16th Machine Learning for Computational Biology Conference (MLCB)</a>, and presented our work in progress, titled &ldquo;MuDCoD: Multi-Subject Community Detection in Dynamic Gene Networks&rdquo; (see my <a href="/presentations/mudcod-mlcb-presentation-2021.pdf">slides</a>, note that I ended up using a simplified version due to limited time).
-The 2-page long abstract is not available online, but hopefully, a preprint will be soon.
-We also had a <a href="/documents/poster-mudcod-mlcb-2021.pdf">poster</a> presentation on the second day.</p>
-<ul class="feed-list">
-
+<li><strong>10 March 2026</strong> A poster on sequence distances and genome-wide phylogenetic pattern matching at <a href="https://probgen2026.github.io/">ProbGen 2026</a> (UC Berkeley). <a href="/documents/poster-gdiff-probgen-2026.pdf">PDF</a> <span class="news-tag">poster</span></li>
+<li><strong>10 February 2026</strong> <a href="https://doi.org/10.1186/s13059-026-03999-y"><em>krepp</em></a>, with Siavash Mirarab, appears in <em>Genome Biology</em>. <span class="news-tag">paper</span></li>
+<li><strong>20 August 2025</strong> A krepp tutorial, a short talk on discordant-region mapping, and a poster at the <a href="https://www.imsi.institute/activities/contemporary-challenges-in-large-scale-sequence-alignments-and-phylogenies/">IMSI workshop on large-scale alignments and phylogenies</a> (Chicago). <a href="/presentations/krepp-imsi-2025.pdf">Slides</a>, <a href="https://www.imsi.institute/videos/krepp/">recording</a>. <span class="news-tag">talk</span></li>
+<li><strong>12 March 2025</strong> <a href="https://doi.org/10.1126/sciadv.adq8131"><em>FlyVISTA</em></a>, with Mehmet F. Keleş and colleagues, appears in <em>Science Advances</em>. <span class="news-tag">paper</span></li>
+<li><strong>1 August 2022</strong> Defended my MSc thesis, &ldquo;Automated behavioral analysis of asleep fruit fly&rdquo;, now available <a href="https://research.sabanciuniv.edu/id/eprint/47199/1/10491512.pdf">online</a>. <a href="/presentations/thesis-defence-presentation-2022.pdf">Slides</a>. <span class="news-tag">thesis</span></li>
+<li><strong>22 November 2021</strong> A poster and a spotlight talk on MuDCoD at <a href="https://sites.google.com/cs.washington.edu/mlcb2021/">MLCB 2021</a>. <a href="/presentations/mudcod-mlcb-presentation-2021.pdf">Slides</a>, <a href="/documents/poster-mudcod-mlcb-2021.pdf">poster</a>. <span class="news-tag">poster</span></li>
 </ul>
 
+<h2 class="list-heading">More</h2>
+<ul class="post-list">
+  <li>
+    <a class="post-list-link" href="/news/2025/05/presentation-in-recomb-2025/">I presented our latest tool for phylogenetic placement in RECOMB 2025</a>
+    <time class="post-list-date" datetime="2025-05-15T00:00:00Z">2025 May 15</time><span class="post-list-tags">talk</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2025/01/accepted-paper-recomb-2025/">Our paper has been accepted in RECOMB 2025</a>
+    <time class="post-list-date" datetime="2025-01-14T00:00:00Z">2025 Jan 14</time><span class="post-list-tags">paper</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2024/08/published-paper-in-genome-research-2024/">Our paper has been published in Genome Research</a>
+    <time class="post-list-date" datetime="2024-08-29T00:00:00Z">2024 Aug 29</time><span class="post-list-tags">paper</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2024/04/presentation-in-recomb-2024/">I attended RECOMB 2024 and presented KRANK</a>
+    <time class="post-list-date" datetime="2024-04-30T00:00:00Z">2024 Apr 30</time><span class="post-list-tags">talk</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2024/04/presentation-in-biosys-2024/">I gave a short talk in BioSys 2024</a>
+    <time class="post-list-date" datetime="2024-04-27T00:00:00Z">2024 Apr 27</time><span class="post-list-tags">talk</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2024/03/published-paper-in-bioinformatics-2024/">CONSULT-II has been published in Bioinformatics</a>
+    <time class="post-list-date" datetime="2024-03-16T00:00:00Z">2024 Mar 16</time><span class="post-list-tags">paper</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2023/12/accepted-paper-recomb-2024/">KRANK has been accepted in RECOMB 2024</a>
+    <time class="post-list-date" datetime="2023-12-22T00:00:00Z">2023 Dec 22</time><span class="post-list-tags">paper</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2023/09/published-paper-in-bioinformatics-2023/">MuDCoD has been published in Bioinformatics</a>
+    <time class="post-list-date" datetime="2023-09-23T00:00:00Z">2023 Sep 23</time><span class="post-list-tags">paper</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2023/06/published-paper-in-natural-language-engineering-2023/">Our paper has been published in Natural Language Engineering</a>
+    <time class="post-list-date" datetime="2023-06-06T00:00:00Z">2023 Jun 06</time><span class="post-list-tags">paper</span>
+  </li>
+  <li>
+    <a class="post-list-link" href="/news/2023/04/best-paper-award-in-recombcg-2023/">CONSULT-II won the best paper award</a>
+    <time class="post-list-date" datetime="2023-04-15T00:00:00Z">2023 Apr 15</time><span class="post-list-tags">award</span>
+  </li>
+</ul>
 </article>
 </main>
 
