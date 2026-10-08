@@ -247,11 +247,20 @@
 </nav>
 
 <article class="site-content tightl">
-<p><strong>I study molecular sequences and genomes through (gene, species, coalescent) trees (phylogenetic trees, genealogies, taxonomies) using scalable algorithms, probabilistic data structures, and a bit of probabilistic modeling.</strong></p>
-<p><em><strong>During my PhD</strong></em>, I developed several <strong>metagenomic sequence analysis</strong> tools for efficient taxonomic and/or phylogenomic analysis of large-scale datasets. For instance, <a href="https://doi.org/10.1093/bioinformatics/btae150">CONSULT-II</a> computes Hamming distances of (pseudo)-homologous k-mers for highly sensitive taxonomic classification and accurate abundance profiling. Another, and perhaps a more notable, tool I developed is <a href="https://doi.org/10.1186/s13059-026-03999-y">krepp</a>. Using a more principled probabilistic model, krepp can estimate distances from reads to many thousands of reference genomes and perform phylogenetic placement.</p>
-<!-- - [KRANK -- a memory-bound and taxonomy-aware *k*-mer sampling algorithm](https://genome.cshlp.org/content/34/9/1455) -->
-<!-- - [Phlag] -->
-<!-- - [gdiff] -->
+<p><strong>I study molecular sequences and genomes through (gene, species, coalescent) trees using scalable algorithms, probabilistic data structures, and a bit of probabilistic modeling.</strong></p>
+<h3 id="developing-computational-methods-for-metagenomics-phylogenomics-and-sequence-analysis">Developing computational methods for metagenomics, phylogenomics, and sequence analysis</h3>
+<p><em><strong>During my PhD:</strong></em>
+I developed several <strong>metagenomic sequence analysis</strong> tools for efficient taxonomic and/or phylogenomic analysis of large-scale datasets.
+For instance, <a href="https://doi.org/10.1093/bioinformatics/btae150">CONSULT-II</a>, using (pseudo)-homologous <em>k</em>-mers, enables <strong>highly sensitive taxonomic classification</strong> and accurate abundance profiling.
+Another, and perhaps a more notable, tool I developed is <a href="https://doi.org/10.1186/s13059-026-03999-y">krepp</a>.
+Through a more principled probabilistic framework and novel data structures, krepp calculates distances from sequences of any length to large sets of reference genomes.
+Using a distance-based statistical test, it goes beyond taxonomic classification and places metagenomic sequences on phylogenies.
+Another related method is <a href="https://genome.cshlp.org/content/34/9/1455">KRANK</a>, a taxonomy-aware sequence sampling scheme for reducing computational resource requirements in metagenomic sequence analysis.</p>
+<p>Another high-level theme I study is detecting and understanding heterogeneities across the genome, whether they are evolutionary, such as horizontally transferred genes, introgression, and rate variations, or data artifacts (e.g., alignment errors or paralogy mistaken for homology).
+For instance, <strong>Phlag</strong> can detect many cases of changes in underlying evolutionary processes, including changes in recombination rates and population sizes, all using the same algorithm.
+A very different approach we have taken is <strong>Gdiff</strong>, which measures local sequence similarity between two genomes and detects deviations (beyond rate variation) from genome-wide average nucleotide identity.
+It also does a excellent job of computing average ANI while accounting for rate variation.</p>
+<h3 id="prior-to-my-phd-network-and-time-series-analysis--active-learning">Prior to my PhD: network and time series analysis &amp; active learning</h3>
 <p><em><strong>In the past</strong></em>, I briefly worked in network analysis and developed a community detection method for dynamic gene co-expression networks (<a href="https://doi.org/10.1093/bioinformatics/btad592">MuDCoD</a>).
 During my undergraduate and master&rsquo;s studies, I focused mostly on (applied) machine learning, in particular time series analysis in computational ethology (<a href="https://mfkeles.github.io/FlyVISTA/">behavioral analysis of sleep in fruit flies</a>), and <a href="https://doi.org/10.1017/S1351324923000165">active learning in natural language processing</a>.
 I have never worked in the industry.</p>

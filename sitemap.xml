@@ -17,13 +17,10 @@
     <loc>https://alisapci.xyz/tags/k-mers/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/tags/krepp/</loc>
-    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://alisapci.xyz/tags/metagenomics/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/tags/mitochondrial-reads/</loc>
+    <loc>https://alisapci.xyz/tags/mtdna/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/read-mapping/</loc>
@@ -83,10 +80,10 @@
     <loc>https://alisapci.xyz/research/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/resources/</loc>
+    <loc>https://alisapci.xyz/resources/datasets/</loc>
     <lastmod>2024-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/resources/data/</loc>
+    <loc>https://alisapci.xyz/resources/</loc>
     <lastmod>2024-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/news/2024/03/published-paper-in-bioinformatics-2024/</loc>
