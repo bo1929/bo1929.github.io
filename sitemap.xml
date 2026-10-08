@@ -5,7 +5,7 @@
     <loc>https://alisapci.xyz/presentations/</loc>
     <lastmod>2026-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/posts/krepp-mapping-to-mitogenomes/</loc>
+    <loc>https://alisapci.xyz/resources/krepp-mapping-to-mitogenomes/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/distance-estimation/</loc>
@@ -41,7 +41,7 @@
     <loc>https://alisapci.xyz/publications/</loc>
     <lastmod>2024-10-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/posts/krank-mapping-baits/</loc>
+    <loc>https://alisapci.xyz/resources/krank-mapping-baits/</loc>
     <lastmod>2024-10-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/mitochondrial-baits/</loc>
@@ -53,7 +53,7 @@
     <loc>https://alisapci.xyz/news/2024/08/published-paper-in-genome-research-2024/</loc>
     <lastmod>2024-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/posts/basty-for-behavioral-sleep-analysis/</loc>
+    <loc>https://alisapci.xyz/resources/basty-for-behavioral-sleep-analysis/</loc>
     <lastmod>2024-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/computational-ethology/</loc>
@@ -83,7 +83,10 @@
     <loc>https://alisapci.xyz/research/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/links/</loc>
+    <loc>https://alisapci.xyz/resources/</loc>
+    <lastmod>2024-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alisapci.xyz/resources/data/</loc>
     <lastmod>2024-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/news/2024/03/published-paper-in-bioinformatics-2024/</loc>
@@ -98,10 +101,10 @@
     <loc>https://alisapci.xyz/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/posts/</loc>
+    <loc>https://alisapci.xyz/news/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/news/</loc>
+    <loc>https://alisapci.xyz/posts/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/news/2023/06/published-paper-in-natural-language-engineering-2023/</loc>
@@ -110,7 +113,7 @@
     <loc>https://alisapci.xyz/news/2023/04/best-paper-award-in-recombcg-2023/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alisapci.xyz/posts/consult-contamination-removal-tutorial/</loc>
+    <loc>https://alisapci.xyz/resources/consult-contamination-removal-tutorial/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alisapci.xyz/tags/contamination-removal/</loc>

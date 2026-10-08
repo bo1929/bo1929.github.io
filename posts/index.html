@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>All | Ali Osman Berk Şapcı</title>
+	<title>Posts | Ali Osman Berk Şapcı</title>
 	<link rel="canonical" href="https://alisapci.xyz/">
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="favicon.ico">
-	<meta name="description" content="Notes and resources, newest first">
+	<meta name="description" content="All posts in a single feed">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
@@ -226,8 +226,8 @@
 <div class="site-wrap">
 <main>
 <header class="site-header">
-	<h1 id="tag - All">All</h1>
-	<p class="site-subtitle">Notes and resources, newest first</p>
+	<h1 id="tag - Posts">Posts</h1>
+	<p class="site-subtitle">All posts in a single feed</p>
 </header>
 
 <nav class="site-nav" aria-label="Main">
@@ -253,10 +253,10 @@
     <span class="type-filter-count" data-filter-count aria-live="polite"></span>
   </div>
   <ul class="type-filter-list">
-    <li><button type="button" class="type-chip is-active" data-type="">All <span class="type-chip-n">16</span></button></li>
+    <li><button type="button" class="type-chip is-active" data-type="">All <span class="type-chip-n">17</span></button></li>
     <li><button type="button" class="type-chip" data-type="news">news <span class="type-chip-n">10</span></button></li>
     <li><button type="button" class="type-chip" data-type="notes">notes <span class="type-chip-n">2</span></button></li>
-    <li><button type="button" class="type-chip" data-type="resources">resources <span class="type-chip-n">4</span></button></li>
+    <li><button type="button" class="type-chip" data-type="resources">resources <span class="type-chip-n">5</span></button></li>
   </ul>
 </div>
 <div class="feed-entries" data-feed-entries><article class="feed-entry" id="krepp-mapping-to-mitogenomes" data-type="resources">
@@ -266,12 +266,12 @@
 			<span class="feed-type">resources</span>
 		</div>
 		<h2 class="feed-title">
-			<a class="feed-title-link" href="/posts/krepp-mapping-to-mitogenomes/">Binning mitochondrial reads from skimming data using krepp</a>
+			<a class="feed-title-link" href="/resources/krepp-mapping-to-mitogenomes/">Binning mitochondrial reads from skimming data using krepp</a>
 		</h2>
 	</header>
 	<div class="feed-body">
 		Installing krepp We start by installing krepp, the easiest way is through bioconda.
-1conda install bioconda::krepp 2krepp --help To perform any kind of query, you need to either build an index from reference genomes or download a public krepp index from one of our servers. It is quite straightforward to download an index and get started (jump to Downloading an existing index). Alternatively, if you have your own reference mitogenomes, you can index them from scratch (see Indexing mitogenomes).<p class="feed-tags"><a class="feed-tag" href="/tags/k-mers/">k-mers</a> <a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/mitochondrial-reads/">mitochondrial-reads</a> <a class="feed-tag" href="/tags/distance-estimation/">distance-estimation</a> <a class="feed-tag" href="/tags/krepp/">krepp</a> <a class="feed-tag" href="/tags/genome-skimming/">genome-skimming</a> <a class="feed-tag" href="/tags/read-mapping/">read-mapping</a></p><p class="feed-more"><a href="/posts/krepp-mapping-to-mitogenomes/">Read more&nbsp;&rsaquo;</a></p>
+1conda install bioconda::krepp 2krepp --help To perform any kind of query, you need to either build an index from reference genomes or download a public krepp index from one of our servers. It is quite straightforward to download an index and get started (jump to Downloading an existing index). Alternatively, if you have your own reference mitogenomes, you can index them from scratch (see Indexing mitogenomes).<p class="feed-tags"><a class="feed-tag" href="/tags/k-mers/">k-mers</a> <a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/mitochondrial-reads/">mitochondrial-reads</a> <a class="feed-tag" href="/tags/distance-estimation/">distance-estimation</a> <a class="feed-tag" href="/tags/krepp/">krepp</a> <a class="feed-tag" href="/tags/genome-skimming/">genome-skimming</a> <a class="feed-tag" href="/tags/read-mapping/">read-mapping</a></p><p class="feed-more"><a href="/resources/krepp-mapping-to-mitogenomes/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
 <article class="feed-entry" id="presentation-in-recomb-2025" data-type="news">
@@ -312,14 +312,14 @@ We introduced a technique to estimate read-to-genome distances from k-mer hits. 
 			<span class="feed-type">resources</span>
 		</div>
 		<h2 class="feed-title">
-			<a class="feed-title-link" href="/posts/krank-mapping-baits/">Mapping mitochondrial baits to taxonomic groups using KRANK</a>
+			<a class="feed-title-link" href="/resources/krank-mapping-baits/">Mapping mitochondrial baits to taxonomic groups using KRANK</a>
 		</h2>
 	</header>
 	<div class="feed-body">
 		We are starting from scratch by creating a directory for the project:
 1mkdir BaitsProject-ONR 2cd BaitsProject-ONR The very first step is to download all the mitochondrion genomes available on RefSeq as of 2024/09/13, we also retrieve the corresponding catalog to later map each genome to a taxonomic group.
 1# 2024-09-13 2wget https://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/RefSeq-release226.catalog.gz 3wget https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.1.genomic.fna.gz Next step is to simply decompress everything we downloaded:
-1gunzip -d mitochondrion.1.1.genomic.fna.gz 2gunzip -d RefSeq-release226.catalog.gz Convert multi-line FASTA to 2-line FASTA for easier processing:<p class="feed-tags"><a class="feed-tag" href="/tags/k-mers/">k-mers</a> <a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/mitochondrial-baits/">mitochondrial-baits</a> <a class="feed-tag" href="/tags/taxonomic-classification/">taxonomic-classification</a></p><p class="feed-more"><a href="/posts/krank-mapping-baits/">Read more&nbsp;&rsaquo;</a></p>
+1gunzip -d mitochondrion.1.1.genomic.fna.gz 2gunzip -d RefSeq-release226.catalog.gz Convert multi-line FASTA to 2-line FASTA for easier processing:<p class="feed-tags"><a class="feed-tag" href="/tags/k-mers/">k-mers</a> <a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/mitochondrial-baits/">mitochondrial-baits</a> <a class="feed-tag" href="/tags/taxonomic-classification/">taxonomic-classification</a></p><p class="feed-more"><a href="/resources/krank-mapping-baits/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
 <article class="feed-entry" id="published-paper-in-genome-research-2024" data-type="news">
@@ -345,11 +345,11 @@ Using k-mers to find sequence matches is increasingly used in many bioinformatic
 			<span class="feed-type">resources</span>
 		</div>
 		<h2 class="feed-title">
-			<a class="feed-title-link" href="/posts/basty-for-behavioral-sleep-analysis/">basty for Behavioral Analysis of Sleep in <em>Drosophila melanogaster</em></a>
+			<a class="feed-title-link" href="/resources/basty-for-behavioral-sleep-analysis/">basty for Behavioral Analysis of Sleep in <em>Drosophila melanogaster</em></a>
 		</h2>
 	</header>
 	<div class="feed-body">
-		<p>Quantifying animal behavior is the main objective of computational ethology. This task is not straightforward. From a computational perspective, it involves mapping spatiotemporal features, such as changes and postures, to behavioral categories.</p><p class="feed-tags"><a class="feed-tag" href="/tags/computational-ethology/">computational-ethology</a> <a class="feed-tag" href="/tags/machine-learning/">machine-learning</a> <a class="feed-tag" href="/tags/time-series/">time-series</a> <a class="feed-tag" href="/tags/semisupervised-learning/">semisupervised-learning</a> <a class="feed-tag" href="/tags/dimensionality-reduction/">dimensionality-reduction</a></p><p class="feed-more"><a href="/posts/basty-for-behavioral-sleep-analysis/">Read more&nbsp;&rsaquo;</a></p>
+		<p>Quantifying animal behavior is the main objective of computational ethology. This task is not straightforward. From a computational perspective, it involves mapping spatiotemporal features, such as changes and postures, to behavioral categories.</p><p class="feed-tags"><a class="feed-tag" href="/tags/computational-ethology/">computational-ethology</a> <a class="feed-tag" href="/tags/machine-learning/">machine-learning</a> <a class="feed-tag" href="/tags/time-series/">time-series</a> <a class="feed-tag" href="/tags/semisupervised-learning/">semisupervised-learning</a> <a class="feed-tag" href="/tags/dimensionality-reduction/">dimensionality-reduction</a></p><p class="feed-more"><a href="/resources/basty-for-behavioral-sleep-analysis/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
 <article class="feed-entry" id="presentation-in-recomb-2024" data-type="news">
@@ -375,13 +375,27 @@ This was my first time visiting Boston, and I enjoyed it very much. I think the 
 			<span class="feed-type">news</span>
 		</div>
 		<h2 class="feed-title">
-			<a class="feed-title-link" href="/news/2024/04/presentation-in-biosys-2024/">I gave a short talk in BioSys 2024</a>
+			<a class="feed-title-link" href="/news/2024/04/presentation-in-biosys-2024/">I gave a talk in BioSys 2024</a>
 		</h2>
 	</header>
 	<div class="feed-body">
 		I presented KRANK in BioSys 2024 (Workshop on Emerging Computer Systems Challenges and Applications in Biomedicine), which was held in conjunction with ASPLOS 2024 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems). Thanks to Yatish Turakhia and his students for the organization.
 My slides and the recording are available.
 A shot taken by Kyle Smith during the presentation, Hilton La Jolla Torrey Pines, San Diego. <p class="feed-more"><a href="/news/2024/04/presentation-in-biosys-2024/">Read more&nbsp;&rsaquo;</a></p>
+	</div>
+</article>
+<article class="feed-entry" id="data" data-type="resources">
+	<header class="feed-head">
+		<div class="feed-meta">
+			<time class="feed-date" datetime="2024-04-06T00:00:00Z">2024 Apr 06</time>
+			<span class="feed-type">resources</span>
+		</div>
+		<h2 class="feed-title">
+			<a class="feed-title-link" href="/resources/data/">Resources</a>
+		</h2>
+	</header>
+	<div class="feed-body">
+		<p>I will do my best to maintain these. You can let me know if any of the links is dead.</p><p class="feed-more"><a href="/resources/data/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
 <article class="feed-entry" id="published-paper-in-bioinformatics-2024" data-type="news">
@@ -466,12 +480,12 @@ Metagenomics is widely used to study the microbiome using environmental samples,
 			<span class="feed-type">resources</span>
 		</div>
 		<h2 class="feed-title">
-			<a class="feed-title-link" href="/posts/consult-contamination-removal-tutorial/">CONSULT for Contamination Removal</a>
+			<a class="feed-title-link" href="/resources/consult-contamination-removal-tutorial/">CONSULT for Contamination Removal</a>
 		</h2>
 	</header>
 	<div class="feed-body">
 		<p>Relying on locality-sensitive hashing, CONSULT-II k-mers from a query set and tests whether they fall within a user-specified hamming distance of k-mers in the reference dataset.
-Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.</p><p class="feed-tags"><a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/tutorial/">tutorial</a> <a class="feed-tag" href="/tags/contamination-removal/">contamination-removal</a> <a class="feed-tag" href="/tags/locality-sensitive-hashing/">locality-sensitive-hashing</a></p><p class="feed-more"><a href="/posts/consult-contamination-removal-tutorial/">Read more&nbsp;&rsaquo;</a></p>
+Using this invaluable information, it can remove contamination, i.e., reads that do not belong to the reference set, at least predicted to do so.</p><p class="feed-tags"><a class="feed-tag" href="/tags/metagenomics/">metagenomics</a> <a class="feed-tag" href="/tags/tutorial/">tutorial</a> <a class="feed-tag" href="/tags/contamination-removal/">contamination-removal</a> <a class="feed-tag" href="/tags/locality-sensitive-hashing/">locality-sensitive-hashing</a></p><p class="feed-more"><a href="/resources/consult-contamination-removal-tutorial/">Read more&nbsp;&rsaquo;</a></p>
 	</div>
 </article>
 <article class="feed-entry" id="percolation-theory" data-type="notes">
@@ -513,7 +527,7 @@ We are mainly interested in sizes of these clusters.</p><p class="feed-tags"><a 
 
 <footer>
 	<nav class="footer-nav" aria-label="Footer">
-		<a class="footer-link" href="/posts/">All</a>
+		<a class="footer-link" href="/posts/">~/all/~</a>
 	</nav>
 	<a class="footer-url" href="https://alisapci.xyz/">https://alisapci.xyz/</a>
 </footer>
